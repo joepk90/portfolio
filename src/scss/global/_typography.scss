@@ -1,0 +1,53 @@
+body {
+    @extend %baseFont;
+    font-size: $baseFontSize;
+    color: $textBaseColor;
+    line-height: 1.5em;
+}
+
+h1 {
+    @extend %headingFont;
+    @include h1FontSizes();
+  }
+  
+  h2 {
+    @extend %headingFont;
+    @include h2FontSizes();
+  }
+  
+  h3 {
+    @extend %headingFont;
+    @include h3FontSizes();
+  }
+  
+  h4 {
+    font-size: $h4FontSize;
+  }
+  
+  h5 {
+    font-size: $h5FontSize;
+  }
+  
+  h6 {
+    font-size: $h6FontSize;
+  }
+  
+  h4, h5, h6 {
+    font-family: $headingFont;
+    margin: 0px 0px 10px 0px;
+    line-height: 1.2;
+  }
+  
+  p {
+    margin: 0 0 rem(5px);
+  }
+  
+  a {
+    @extend %defaultAnimation;
+    @include linkColor();
+    text-decoration: none; 
+  }
+
+  .text-center {
+    text-align: center;
+  }

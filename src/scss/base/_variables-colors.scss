@@ -1,0 +1,70 @@
+/*
+    Whites, Greys, Blacks
+*/
+$white: #fff;
+$white-smoke: #f4f4f4;
+$zirconGrey: #e7e8e9;
+$silver: #c5c5c5;
+$nobelGrey: #999999;
+$dim-grey: #717171;
+$gondolaGrey: #353535;
+$neroGrey: #161616;
+$black: #000;
+
+/*
+    Colors
+*/
+$buttercup: #dd9425;
+$endeavour: #2d5c88;
+$curiousBlue: #428bca;
+
+/*
+    Primary Colors
+*/
+$colorPrimary: $buttercup;
+$colorSecondary: $endeavour;
+
+/*
+    Text Colors
+*/
+$textWhite: $white;
+$textSubtle-white: $zirconGrey;
+$textLightGrey: $nobelGrey;
+$textGrey: $dimGrey;
+$textDarkGrey: $gondolaGrey;
+$textBlack: $black;
+
+/*
+    Text Utility Colors
+*/
+$textPrimary: $colorPrimary;
+$textSecondary: $colorSecondary;
+$textBaseColor: $textDarkGrey;
+
+/*
+    Background Shades
+*/
+$backgroundWhite: $white;
+$backgroundSubtleWhite: $white-smoke;
+$backgroundLightGrey: $zirconGrey;
+$backgroundGrey: $silver;
+$backgroundDarkGrey: $gondolaGrey;
+$backgroundBlack: $black;
+
+/*
+    Border Colors
+*/
+$borderSubtleWhite: $whiteSmoke;
+$borderLightGrey: $zirconGrey;
+$borderGrey: $nobelGrey;
+$borderDarkGrey: $gondolaGrey;
+
+/*
+    Link Colors
+*/
+$linkColor: $textSecondary;
+$linkHover: $curiousBlue;
+$linkColorLight: $textLightGrey;
+$linkHoverLight: $textWhite;
+$linkColorDark: $textGrey;
+$linkHoverDark: $textDarkGrey;
