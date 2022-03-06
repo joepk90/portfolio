@@ -1,0 +1,21 @@
+
+   
+%container {
+    margin: 0 auto;
+    max-width: $maxWidth;
+    padding: 0 rem(20px);
+}
+
+%defaultAnimation {
+    transition: all $animationTime ease-in-out;
+}
+
+%disabledStyles {
+    &:disabled {
+        cursor: default;
+        background-color: $backgroundGrey;
+        &:hover {
+            background-color: $backgroundGrey;
+        }
+    }
+}
