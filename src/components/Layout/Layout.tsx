@@ -1,10 +1,14 @@
+import React from 'react';
+
 type Props = {
     children: any;
 }
 
 const Layout = ({ children }: Props) => {
     return (
-        <main>{children}</main>
+        <React.Fragment>
+            <main>{children}</main>
+        </React.Fragment>
     )
 }
 
