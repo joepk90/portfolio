@@ -1,0 +1,43 @@
+
+/*
+    Breakpoint Variables
+*/
+$mediumHandsetName: 'medium-handset';
+$mediumHandsetSize: 360;
+
+$largeHandsetName: 'large-handset';
+$largeHandsetSize: 400;
+
+$smallHandsetLandscapeName: 'small-handset-landscape';
+$smallHandsetLandscapeSize: 480;
+
+$mediumHandsetLandscapeName: 'medium-handset-landscape';
+$mediumHandsetLandscapeSize: 600;
+
+$largeHandsetLandscapeName: 'large-handset-landscape';
+$largeHandsetLandscapeSize: 720;
+
+$largeTabletName: 'large-tablet';
+$largeTabletSize: 840;
+
+$smallTabletLandscapeName: 'small-tablet-landscape';
+$smallTabletLandscapeSize: 960;
+
+$largeTabletLandscapeName: 'large-tablet-landscape';
+$largeTabletLandscapeSize: 1024;
+
+$largeDesktopName: 'large-desktop';
+$largeDesktopSize: 1280;
+
+/*
+    Generic Breakpoints
+*/
+$breakPointDesktop: $largeTabletLandscapeName;
+$breakPointTablet: $largeTabletName;
+$breakPointHandsetLandscape: $largeHandsetLandscapeName;
+$breakPointNavigationName: $largeHandsetLandscapeName;
+$breakPointNavigationSize: $largeHandsetLandscapeSize;
+
+:export {
+    breakPointNavigationSize: $breakPointNavigationSize;
+}
