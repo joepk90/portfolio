@@ -1,0 +1,15 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
+.header {
+    width: 100%;
+    padding: rem(25px) rem(20px);
+    border-bottom: 1px solid $borderLightGrey;
+
+    &__branding {
+        font-family: $styledFont;
+        font-weight: $fontWeightBold;
+        font-size: $h4FontSize;
+    }
+
+}
