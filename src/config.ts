@@ -11,3 +11,26 @@ export const SEO = {
     description: siteTagLine,
     canonical: siteURL,
 }
+
+export const menuItems = [
+    {
+        id: 'home',
+        label: "Home",
+        path: "/"
+    },
+    // {
+    //     name: 'about',
+    //     label: "About",
+    //     path: "/about",
+    // },
+    // {
+    //     name: 'contact',
+    //     label: "Contact",
+    //     path: "/contact",
+    // },
+    {
+        id: 'projects',
+        label: "View Work",
+        path: "/projects",
+    },
+];
