@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app'
 import { DefaultSeo } from 'next-seo';
-import SEO from '@src/seo-config';
+import { SEO } from '@src/config';
 import 'normalize.css';
 import '@styles/style.scss';
 
