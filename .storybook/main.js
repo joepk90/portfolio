@@ -1,4 +1,5 @@
 const path = require("path");
+const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
   "stories": [
@@ -26,6 +27,9 @@ module.exports = {
       use: ['style-loader', 'css-loader?url=false', 'sass-loader'],
       include: path.resolve(__dirname, '../'),
     });
+
+    // include aliases defined in tsconfig.ts
+    config.resolve.plugins = [new TsconfigPathsPlugin({ extensions: config.resolve.extensions })]
 
     // Return the altered config
     return config;
