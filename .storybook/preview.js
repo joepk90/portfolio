@@ -1,4 +1,5 @@
 import { withA11y } from '@storybook/addon-a11y';
+import GlobalCSS from '@components/GlobalCSS/GlobalCSS';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -14,6 +15,14 @@ export const parameters = {
     }
   }
 }
+
+// theme decorator (applies logic to all stories)
+const themeDecorator = (Story) => (
+  <>
+    <GlobalCSS />
+    <Story />
+  </>
+)
 
 export const decorators = [
   withA11y,
