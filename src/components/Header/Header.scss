@@ -3,13 +3,26 @@
 
 .header {
     width: 100%;
-    padding: rem(25px) rem(20px);
     border-bottom: 1px solid $borderLightGrey;
+
+    &__container {
+        @extend %container;
+    }
+
+    &__section {
+        @extend %section;
+    }
+
+    &__details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     &__branding {
         font-family: $styledFont;
         font-weight: $fontWeightBold;
-        font-size: $h4FontSize;
+        font-size: $h3FontSize;
     }
 
 }

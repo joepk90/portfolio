@@ -2,58 +2,58 @@
   Breakpoints
 */
 @mixin breakpoint($point) {
-  @if $point == 'medium-handset' {
-    @media (min-width: rem(360px)) {
+  @if $point == $mediumHandsetName {
+    @media (min-width: rem($mediumHandsetSize+0px)) {
       @content;
     }
   }
 
-  @if $point == 'large-handset' {
-    @media (min-width: rem(400px)) {
+  @if $point == $largeHandsetName {
+    @media (min-width: rem($largeHandsetSize+0px)) {
       @content;
     }
   }
 
-  @if $point == 'small-handset-landscape' {
-    @media (min-width: rem(480px)) {
+  @if $point == $smallHandsetLandscapeName {
+    @media (min-width: rem($smallHandsetLandscapeSize+0px)) {
       @content;
     }
   }
 
-  @if $point == 'medium-handset-landscape' {
-    @media (min-width: rem(600px)) {
+  @if $point == $mediumHandsetLandscapeName {
+    @media (min-width: rem($mediumHandsetLandscapeSize+0px)) {
       @content;
     }
   }
 
-  @if $point == 'large-handset-landscape' {
-    @media (min-width: rem(720px)) {
+  @if $point == $largeHandsetLandscapeName {
+    @media (min-width: rem($largeHandsetLandscapeSize+0px)) {
       @content;
     }
   }
 
-  @if $point == 'large-tablet' {
-    @media (min-width: rem(840px)) {
+  @if $point == $largeTabletName {
+    @media (min-width: rem($largeTabletSize+0px)) {
       @content;
     }
   }
 
-  @if $point == 'small-tablet-landscape' {
-    @media (min-width: rem(960px)) {
+  @if $point == $smallTabletLandscapeName{
+    @media (min-width: rem($smallTabletLandscapeSize+0px)) {
       @content;
     }
   }
 
-  @if $point == 'large-tablet-landscape'{
-    @media (min-width: rem(1024px)) {
+  @if $point == $largeTabletLandscapeName{
+    @media (min-width: rem($largeTabletLandscapeSize+0px)) {
       @content;
     }
   }
 
-  @if $point == 'large-desktop' {
-    @media (min-width: rem(1280px)) {
+  @if $point == $largeDesktopName {
+    @media (min-width: rem($largeDesktopSize+0px)) {
       @content;
     }
   }
-
 }
+

@@ -1,0 +1,12 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
+.navigation {
+
+    &__menu-items {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        @extend %listStyleNone;
+    }
+}

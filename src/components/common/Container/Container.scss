@@ -1,0 +1,11 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
+.container {
+    @extend %container;
+
+    &--full-width {
+        max-width: none;
+    }
+
+}

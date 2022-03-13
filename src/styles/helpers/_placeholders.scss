@@ -5,6 +5,10 @@
     max-width: $maxWidth;
     padding: 0 rem(20px);
 }
+%section {
+    padding-top: rem(25px);
+    padding-bottom: rem(25px);
+}
 
 %defaultAnimation {
     transition: all $animationTime ease-in-out;
