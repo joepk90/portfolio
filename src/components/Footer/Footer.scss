@@ -1,0 +1,15 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
+.footer {
+    background-color: $black;
+
+    &__container {
+        @extend %container;
+    }
+
+    &__section {
+        @extend %section;
+    }
+
+}
