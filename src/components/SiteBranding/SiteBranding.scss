@@ -1,0 +1,25 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
+.site-branding {
+    
+    &__mobile {
+        display: block;
+        @include breakpoint($largeHandsetName) {
+            display: none;
+        }
+    }
+
+    &__desktop {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        @include breakpoint($largeHandsetName) {
+            display: flex;
+        }
+    }
+
+    .site-title {
+        margin-bottom: rem(7px);
+    }
+}
