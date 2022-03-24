@@ -1,0 +1,9 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
+.site-tagline {
+    font-weight: $fontWeightRegular;
+    font-size: $h4FontSize;
+    letter-spacing: rem(3.5px);
+    color: $textLightGrey;
+}
