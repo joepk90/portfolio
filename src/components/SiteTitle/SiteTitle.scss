@@ -1,0 +1,14 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
+.site-title {
+    font-family: $styledFont;
+    font-weight: $fontWeightBold;
+    font-size: $h2FontSize;
+    letter-spacing: rem(-3px);
+
+    @include breakpoint($largeHandsetName) {
+            letter-spacing: rem(-2px);
+    }
+
+}
