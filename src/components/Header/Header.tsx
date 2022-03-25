@@ -37,6 +37,8 @@ const Header = () => {
                 <DropdownNavigation menuItems={menuItems} isOpen={isNavOpen} />
             </div>
 
+            <div className="header__seperator"></div>
+
         </header>
     )
 }

@@ -3,7 +3,6 @@
 
 .header {
     width: 100%;
-    border-bottom: 1px solid $borderLightGrey;
 
     &__container {
         @extend %container;
@@ -37,5 +36,12 @@
         @include breakpoint($breakPointNavigationName) {
             display: none;
           }
+    }
+
+    &__seperator {
+        width: calc(100% - 25px);
+        max-width: 1200px;
+        margin: auto;
+        border-bottom: 1px solid $borderLightGrey;
     }
 }
