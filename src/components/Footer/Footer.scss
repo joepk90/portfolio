@@ -2,14 +2,45 @@
 @import '@styles/helpers/_helpers.scss';
 
 .footer {
-    background-color: $black;
+    width: 100%;
+    display: inline-block;
+    background-color: $backgroundPrimary;
+    color: $textSubtleWhite;
+    text-align: center;
 
-    &__container {
-        @extend %container;
+    @include breakpoint($largeHandsetLandscapeName) {
+        text-align: left;
     }
 
-    &__section {
-        @extend %section;
+    &__row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @include breakpoint($largeHandsetLandscapeName) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
 
+    &__column {
+        width: 100%;
+        margin: rem(25px) 0;
+        @include breakpoint($largeHandsetLandscapeName) {
+            margin: 0;
+            width: 45%;
+        }
+    }
+
+    &__content {
+        max-width: rem(350px);
+        margin: auto;
+        @include breakpoint($largeHandsetLandscapeName) {
+            margin: 0;
+        }
+    }
+
+    &__copyright {
+        font-size: $fontSizeSmall;
+        color: $textLightGrey;
+    }
 }
