@@ -2,6 +2,7 @@
 @import '@styles/helpers/_helpers.scss';
 
 .site-title {
+    color: $textPrimary;
     font-family: $styledFont;
     font-weight: $fontWeightBold;
     font-size: $h2FontSize;
@@ -9,6 +10,10 @@
 
     @include breakpoint($largeHandsetName) {
             letter-spacing: rem(-2px);
+    }
+
+    &--light {
+        color: $textSubtleWhite;
     }
 
 }

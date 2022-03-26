@@ -6,4 +6,6 @@ describe("SiteTitle", () => {
         render(<SiteTitle />)
         expect(screen.getByTestId('site-title')).toBeInTheDocument();
     });
+
+    // TODO setup style tests...
 });
