@@ -51,4 +51,7 @@ describe("Navigation", () => {
         let link = screen.getAllByRole('menuitem')[1] as HTMLAnchorElement;
         expect(link.href).toContain('/2');
     });
+
+    // TODO test component styles (variants)
+
 });

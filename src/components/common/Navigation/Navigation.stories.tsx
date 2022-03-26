@@ -7,13 +7,22 @@ import { menuItems } from '@src/config'
 export default {
     title: 'Molecules/Navigation',
     component: Navigation,
+    argTypes: {
+        variant: {
+            options: ['dark', 'light'],
+            control: { type: 'radio' },
+        }
+    }
 } as ComponentMeta<typeof Navigation>;
 
-const Template: Story<Props> = (args: any) => {
+const Template: Story<Props> = (args: Props) => {
     return (
         <Navigation {...args} menuItems={menuItems}></Navigation>
     );
 };
 
-export const Primary = Template.bind({});
-Primary.storyName = 'Navigation';
+export const Default = Template.bind({});
+Default.storyName = 'Navigation';
+Default.args = {
+    variant: 'dark'
+}
