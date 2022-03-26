@@ -6,4 +6,7 @@ describe("SiteLogo", () => {
         render(<SiteLogo />)
         expect(screen.getByTestId('site-logo')).toBeInTheDocument();
     });
+
+    // TODO setup style tests...
+
 });
