@@ -1,6 +1,7 @@
 export const siteAuthor = 'Joe Park-Kennaby';
 export const siteAuthorInitials = 'JPK';
 export const siteTagline = 'Front End Engineer'
+export const siteDescription = 'A NextJS website to showcase my personal projects, work experience and anything else of relevance.'
 export const siteURL = 'http://localhost:3000'
 
 export const SEO = {
@@ -9,7 +10,7 @@ export const SEO = {
         name: `${siteAuthor}`,
         summary: 'Software Engineer',
     },
-    description: 'A NextJS website to showcase my personal projects, work experience and anything else of relevance.',
+    description: siteDescription,
     canonical: siteURL,
 }
 
