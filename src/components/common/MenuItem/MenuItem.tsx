@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { generateBEMModifiersClassList } from '@utilities/utilities';
 import '@components/common/MenuItem/MenuItem.scss';
 
-type Variant = 'dropdown';
+type Variant = 'dropdown' | 'light' | 'dark';
 
 export type Props = {
     id: string,
