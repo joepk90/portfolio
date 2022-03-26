@@ -1,0 +1,121 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
+.section {
+
+    // PADDING
+
+    &--padding-sm {
+        padding: rem(10px) 0;
+    }
+
+    &--padding-md {
+        padding: rem(25px) 0;
+    }
+
+    &--padding-lg {
+        padding: rem(50px) 0;
+    }
+
+    &--padding-top-sm {
+        padding-top: rem(10px);
+    }
+
+    &--padding-top-md{
+        padding-top: rem(25px);
+    }
+
+    &--padding-top-lg {
+        padding-top: rem(50px);
+    }
+
+    &--padding-bottom-sm {
+        padding-bottom: rem(10px)
+    }
+
+    &--padding-bottom-md {
+        padding-bottom: rem(25px)
+    }
+
+    &--padding-bottom-lg {
+        padding-bottom: rem(50px)
+    }
+
+
+    // MARGIN
+
+    &--margin-sm {
+        margin: rem(10px) auto;
+    }
+
+    &--margin-md {
+        margin: rem(25px) auto;
+    }
+
+    &--margin-lg {
+        margin: rem(50px) auto;
+    }
+
+    &--margin-top-sm {
+        margin-top: rem(10px);
+    }
+
+    &--margin-top-md {
+        margin-top: rem(25px);
+    }
+
+    &--margin-top-lg {
+        margin-top: rem(50px);
+    }
+
+    &--margin-bottom-sm {
+        margin-bottom: rem(10px);
+    }
+
+    &--margin-bottom-md {
+        margin-bottom: rem(25px);
+    }
+
+    &--margin-bottom-lg {
+        margin-bottom: rem(50px);
+    }
+
+}
+
+
+// alternative solution - issue with rem calculations and variables
+// https://beautifytools.com/scss-compiler.php
+
+// $baseFontSize: 16px;
+// @function rem($px, $baseFontSize: $baseFontSize) {
+//     @return ($px / $baseFontSize) * 1rem;
+// }
+
+// $types: (
+//     "padding",
+//     "margin",
+// );
+
+// $sides: (
+//     "top": "-top",
+//     "both": "",
+//     "bottom": "-bottom",
+// );
+
+// $sizes: (
+//     "sm": "10",
+//     "md": "25",
+//     "lg": "50"
+// );
+
+// @each $type in $types {
+//     @each $sideKey, $sideValue in $sides {
+//         @each $sizeKey, $sizeValue in $sizes {
+//             .page-section--#{$type}-#{$sideKey}-#{$sizeKey} {
+
+//                 $sizeCalc: #{$sizeValue+px};
+//                 #{$type}#{$sideValue}: rem($sizeCalc); // <-- not working!
+//             }
+//         }
+//     }
+// }
