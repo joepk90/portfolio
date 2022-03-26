@@ -17,3 +17,8 @@ export const generateBEMModifiersClassList = (className: string, modifiers?: str
     return classList.join(" ");
 
 }
+
+export const appendString = (originalString: string, stringToAppend: string | undefined): string => {
+    if (!originalString || !stringToAppend || stringToAppend === '') return originalString;
+    return [originalString, stringToAppend].join(' ');
+}
