@@ -34,7 +34,10 @@
       ],
       "@utilities/*": [
         "src/utilities/*"
-      ]
+      ],
+      "@lib/*": [
+        "src/lib/*"
+      ],
     }
   },
   "include": [
