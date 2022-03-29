@@ -1,0 +1,8 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
+.seperator {
+    max-width: calc($maxWidth + 50px);
+    margin: auto;
+    border-bottom: 1px solid $borderLightGrey;
+}
