@@ -8,19 +8,23 @@ body {
 }
 
 h1 {
-    @extend %headingFont;
     @include h1FontSizes();
   }
   
   h2 {
-    @extend %headingFont;
     @include h2FontSizes();
   }
   
   h3 {
-    @extend %headingFont;
     @include h3FontSizes();
   }
+
+  h1, h2, h3 {
+    @extend %headingFont;
+    color: $textDarkGrey;
+    margin: 0.6em 0;
+  }
+
   
   h4 {
     font-size: $h4FontSize;
