@@ -57,3 +57,27 @@ h1 {
   .text-center {
     text-align: center;
   }
+
+  .h1-font-size {
+    @include h1FontSizes()
+  }
+
+  .h2-font-size {
+    @include h2FontSizes()
+  }
+
+  .h3-font-size {
+    @include h3FontSizes()
+  }
+
+  .h4-font-size {
+    font-size: $h4FontSize;
+  }
+
+  .h5-font-size {
+    font-size: $h5FontSize;
+  }
+
+  .h6-font-size {
+    font-size: $h6FontSize;
+  }
