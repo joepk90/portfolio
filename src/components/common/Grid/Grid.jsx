@@ -30,5 +30,5 @@ const styles = {
 };
 
 export const GridContainer = props => <ReactContainer {...props} styles={styles} className="grid-container" />;
-export const Row = props => <ReactRow {...props} styles={styles} />;
-export const Col = props => <ReactCol {...props} styles={styles} />;
+export const Row = props => <ReactRow {...props} styles={styles} className="row" />;
+export const Col = props => <ReactCol {...props} styles={styles} className="column" />;

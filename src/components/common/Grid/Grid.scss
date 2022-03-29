@@ -1,4 +1,12 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
 .grid-container {
     padding-left: 0 !important;
     padding-right: 0 !important;
+}
+
+.column {
+    margin-top: rem(15px) !important;
+    margin-bottom: rem(15px) !important;
 }
