@@ -36,3 +36,24 @@ export const menuItems = [
         path: "/projects",
     },
 ];
+
+// TODO: setup tags in Contentful
+export const tagsList = [
+    'React',
+    'Next',
+    'Gatsby',
+    'Storybook',
+    'Javascript',
+    'Typescript',
+    'Redux',
+    'TDD',
+    'PHP',
+    'OOB',
+    'HTML',
+    'SCSS',
+    'BEM',
+    'GIT',
+    'Wordpress',
+    'Express',
+    'Django'
+]
