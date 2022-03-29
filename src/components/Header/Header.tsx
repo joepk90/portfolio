@@ -2,9 +2,11 @@ import { useState, ReactElement } from 'react';
 import Navigation from '@src/components/common/Navigation/Navigation'
 import DropdownNavigation from '@src/components/common/DropdownNavigation/DropdownNavigation'
 import Hamburger from '@components/common/Hamburger/Hamburger';
+import Seperator from '@components/common/Seperator/Seperator';
 import SiteBranding from '@src/components/SiteBranding/SiteBranding';
 import { menuItems } from '@src/config';
 import '@components/Header/Header.scss'
+
 
 const Header = () => {
 
@@ -37,7 +39,7 @@ const Header = () => {
                 <DropdownNavigation menuItems={menuItems} isOpen={isNavOpen} />
             </div>
 
-            <div className="header__seperator"></div>
+            <Seperator />
 
         </header>
     )
