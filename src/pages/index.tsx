@@ -1,9 +1,9 @@
 import type { NextPage } from 'next';
 import { NextSeo } from 'next-seo';
-import ReactMarkdown from 'react-markdown';
 import { GridContainer, Row, Col } from '@components/common/Grid/Grid';
 import { getIndexStaticProps, IndexProps } from '@src/lib/hooks/index';
 import { ContentfulImageAlias as ContentfulImage } from '@components/common/ContentfulImage/ContentfulImage';
+import { ReactMarkdownAlias as ReactMarkdown } from '@components/common/ReactMarkdown/ReactMarkdown';
 import Section from '@components/common/Section/Section';
 import Tags from '@components/common/Tags/Tags';
 import Heading from '@components/common/Heading/Heading';
