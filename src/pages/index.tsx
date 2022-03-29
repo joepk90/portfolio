@@ -50,7 +50,7 @@ const Index: NextPage<IndexProps> = ({ pageContent, profileImage, profileBio }) 
         </Container>
       </Section>
 
-      <Section margin='lg'>
+      <Section margin='lg' paddingBottom='md'>
         <Container>
           <GridContainer>
             <Row>
