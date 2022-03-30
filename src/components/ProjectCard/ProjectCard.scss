@@ -1,0 +1,69 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
+.project-card {
+    padding-bottom: rem(25px);
+    margin-bottom: rem(50px);
+    background-color: $backgroundSubtleWhite;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    color: $textDarkGrey;
+    
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        background-color: $backgroundDarkGrey;
+        margin-bottom: rem(20px);
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        // border-bottom-right-radius: 15px;
+        // border-bottom-left-radius: 15px;
+        align-items: center;
+    }
+
+    &__title, &__date {
+        color: $textWhite;
+        
+    }
+
+    &__title {
+        max-width: 60%;
+        font-size: $h4FontSize;
+        font-family: $styledFont;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: rem(20px) 0
+    }
+
+    &__date {
+        text-transform: uppercase;
+        font-size: $fontSizeSmall;
+        font-weight: 700;
+    }
+
+    &__heading, &__url, &__type, &__repositories, &__description, &__technologies {
+        padding: 0 rem(20px);
+    }
+
+    &__type {
+        text-transform:capitalize;
+        margin-bottom: rem(20px);
+        display: block;
+    }
+
+    &__repositories {
+        margin-bottom: rem(20px);
+    }
+
+    &__repository {
+        margin: rem(5px);
+        font-size: $h6FontSize;
+    }
+
+    &__technologies {
+        margin-bottom: rem(20px);
+    }
+
+}
