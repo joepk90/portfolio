@@ -1,4 +1,4 @@
-import { EntryCollection, Entry } from 'contentful';
+import { EntryCollection, Metadata, TagLink } from 'contentful';
 import { ContentfulCollectionManager } from '@lib/contentful/ContentfulCollectionManager';
 import { contentfulClient } from '@lib/services/contentful';
 import { ContentfulEntryManager } from '@src/lib/contentful/ContentfulEntryManager';
@@ -10,15 +10,29 @@ type ItemFields = {
 
 type Item = {
     fields: ItemFields
+    metadata: Metadata
 }
 
-const itemFields = {
+const itemFields: ItemFields = {
     title: 'title',
     content: 'content'
 }
 
-const item = {
-    fields: itemFields
+const tagLink: TagLink = {
+    sys: {
+        type: 'Link',
+        linkType: 'Tag',
+        id: 'tag',
+    }
+}
+
+const metadata: Metadata = {
+    tags: [tagLink, tagLink],
+}
+
+const item: Item = {
+    fields: itemFields,
+    metadata: metadata
 }
 
 jest.mock('@lib/services/contentful.ts', () => ({
@@ -46,7 +60,19 @@ describe('Contentful Entry Manager', () => {
         expect(entry.getFields()).toEqual(itemFields)
     });
 
-    it('should return an entry object when the getFirstEntry method is called', async () => {
+    it('should return the value of the field when the getField method is called', async () => {
         expect(entry.getField('content')).toEqual('content')
+    });
+
+    it('should return the metadata object when the getMetadata method is called', async () => {
+        expect(entry.getMetadata()).toEqual(item.metadata)
+    });
+
+    it('should return the value of the tagLinks array when the getTagLinks method is called', async () => {
+        expect(entry.getTagLinks()).toEqual(item.metadata.tags)
+    });
+
+    it('should return the value of the tags array when the getTags method is called', async () => {
+        expect(entry.getTags().length).toBe(2)
     });
 });
