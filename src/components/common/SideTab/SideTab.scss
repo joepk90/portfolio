@@ -1,4 +1,50 @@
 @import '@styles/base/_base.scss';
 @import '@styles/helpers/_helpers.scss';
 
-.side-tab {}
+.side-tab {
+    position: fixed;
+    right: -300px;
+    top: 100px;
+    z-index: 1;
+
+    &--open {
+        right: 0
+    }
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__button {
+        position: absolute;
+        display: block;
+        transform: translate(-112px, 72.5px) rotate(-90deg);
+        text-transform: uppercase;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        width: rem(185px);
+        height: rem(40px);
+
+        &--active {
+            background-color: $backgroundGrey;
+        }
+    }
+
+    &__content {
+        background-color: $backgroundBlack;
+        display: block;
+        width: 300px;
+        max-width: 400px;
+        padding: rem(20px) rem(30px);
+        height: 185px;
+        color: $textSubtleWhite;
+        font-size: $h6FontSize;
+        line-height: rem(18px);
+    }
+
+    a {
+        @include linkColorLight();
+        font-weight: 700;
+    }
+
+}

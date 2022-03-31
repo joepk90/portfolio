@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import Button from '@components/common/Button/Button'
+import { generateBEMModifiersClassList } from "@src/lib/utilities/utilities"
+import Button from '@components/common/Button/Button';
+import "@components/common/SideTab/SideTab.scss";
 
 export type SideTabProps = {
     label: string
@@ -8,9 +10,9 @@ export type SideTabProps = {
 
 const SideTab = ({ label, children }: SideTabProps) => {
 
-    if (!children) return (<></>);
-
     const [isOpen, setIsOpen] = useState(false);
+
+    if (!children) return (<></>);
 
     const handleButtonClick = () => {
         setIsOpen(!isOpen)
@@ -20,10 +22,11 @@ const SideTab = ({ label, children }: SideTabProps) => {
 
         return (
             <Button
-                className='site-tab__button'
+                className='side-tab__button'
                 aria-expanded={isOpen}
                 aria-haspopup='true'
                 onClick={() => handleButtonClick()}
+                aria-pressed={isOpen}
             >{label}</Button>
         )
     }
@@ -36,10 +39,15 @@ const SideTab = ({ label, children }: SideTabProps) => {
         )
     }
 
+    const classModifiers = isOpen ? 'open' : '';
+    const className = generateBEMModifiersClassList('side-tab', [classModifiers])
+
     return (
-        <aside className='site-tab' role='complementary'>
-            {renderButton()}
-            {renderContent()}
+        <aside className={className} role='complementary'>
+            <div className='side-tab__wrapper'>
+                {renderButton()}
+                {renderContent()}
+            </div>
         </aside>
     )
 }
