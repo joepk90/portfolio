@@ -24,4 +24,9 @@ describe("Button component", () => {
         expect(screen.getByRole('button')).toHaveAttribute('aria-pressed');
     });
 
+    it('should render the buttons extra provided css classes', () => {
+        renderMockedElement({ className: 'test' });
+        expect(screen.getByRole('button')).toHaveClass('test');
+    });
+
 });

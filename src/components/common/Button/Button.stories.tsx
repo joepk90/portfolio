@@ -10,6 +10,9 @@ export default {
         children: {
             control: { type: 'text' },
         },
+        className: {
+            control: { type: 'text' },
+        },
         attributes: {
             control: { type: 'object' },
         }
