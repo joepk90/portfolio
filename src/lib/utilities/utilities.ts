@@ -11,6 +11,7 @@ export const generateBEMModifiersClassList = (className: string, modifiers?: str
     let classList = [className];
 
     modifiers.forEach(modifier => {
+        if (modifier === '') return;
         classList.push(`${className}--${modifier}`)
     });
 
