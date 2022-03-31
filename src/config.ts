@@ -1,6 +1,8 @@
 /**
  * Environment Variables
  */
+export const contentfulSpaceID: string = process.env.CONTENTFUL_SPACE_ID
+export const contentfulAccessToken: string = process.env.CONTENTFUL_ACCESS_TOKEN
 export const componentLibraryUrl: string = process.env.NEXT_PUBLIC_CHROMATIC_PROJECT_URL
 export const sourceCodeUrl: string = process.env.NEXT_PUBLIC_GITHUB_URL
 

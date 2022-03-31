@@ -1,8 +1,9 @@
 import { createClient, ContentfulClientApi, CreateClientParams } from 'contentful';
+import { contentfulAccessToken, contentfulSpaceID } from '@src/config';
 
 const clientKeys: CreateClientParams = {
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+    space: contentfulSpaceID,
+    accessToken: contentfulAccessToken
 };
 
 export const contentfulClient = createClient(clientKeys);
