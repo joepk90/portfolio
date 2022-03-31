@@ -7,6 +7,6 @@ export type ReactMarkdownProps = {
     className?: string
 }
 
-export const ReactMarkdownAlias = ({ children }: ReactMarkdownProps) => {
-    return <ReactMarkdown>{children}</ReactMarkdown>
+export const ReactMarkdownAlias = ({ children, className }: ReactMarkdownProps) => {
+    return <ReactMarkdown className={className}>{children}</ReactMarkdown>
 }
