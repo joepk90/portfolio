@@ -2,9 +2,9 @@ type ButtonProps = {
     children: string
 }
 
-const Button = (props: ButtonProps) => {
+const Button = ({ children, ...rest }: ButtonProps) => {
     return (
-        <button>button</button>
+        <button role='button' className='button' {...rest}>{children}</button>
     )
 }
 
