@@ -1,3 +1,13 @@
+/**
+ * Environment Variables
+ */
+export const componentLibraryUrl: string = process.env.NEXT_PUBLIC_CHROMATIC_PROJECT_URL
+export const sourceCodeUrl: string = process.env.NEXT_PUBLIC_GITHUB_URL
+
+
+/**
+* Site Settings
+*/
 export const siteAuthor = 'Joe Park-Kennaby';
 export const siteAuthorInitials = 'JPK';
 export const siteTagline = 'Front End Engineer'
