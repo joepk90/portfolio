@@ -54,6 +54,7 @@ export const tagsList = [
     'BEM',
     'GIT',
     'Wordpress',
-    'Express',
-    'Django'
+    // 'Express',
+    // 'Django',
+    // 'GCP'
 ]
