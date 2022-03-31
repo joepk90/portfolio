@@ -1,0 +1,15 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
+.button {
+    @include linkColorLight();
+    transition: background, $animationTime ease;
+    background-color: $backgroundBlack;
+    padding: rem(10px) rem(15px);
+    cursor: pointer;
+    border: none;
+
+    &:hover {
+        background-color: $backgroundGrey;
+    }
+}

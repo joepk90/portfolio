@@ -1,3 +1,5 @@
+import "@components/common/Button/Button.scss"
+
 export type ButtonProps = {
     children: string
 }
