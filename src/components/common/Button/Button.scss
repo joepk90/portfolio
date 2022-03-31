@@ -12,4 +12,8 @@
     &:hover {
         background-color: $backgroundGrey;
     }
+
+    &[aria-pressed="true"] {
+        background-color: $backgroundGrey;
+    }
 }
