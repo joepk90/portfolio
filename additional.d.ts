@@ -3,5 +3,7 @@ declare namespace NodeJS {
         CONTENTFUL_SPACE_ID: string
         CONTENTFUL_ACCESS_TOKEN: string
         SITE_URL: string
+        NEXT_PUBLIC_CHROMATIC_PROJECT_URL: string
+        NEXT_PUBLIC_GITHUB_URL: string
     }
 }
