@@ -15,6 +15,7 @@ export async function getProjectsStaticProps(): Promise<Props> {
 
     const projectResponse: EntryCollection<ProjectProps> = await contentfulClient.getEntries({
         content_type: 'project',
+        order: '-fields.date',
     });
 
     const projectList = new ContentfulCollectionManager(projectResponse)
