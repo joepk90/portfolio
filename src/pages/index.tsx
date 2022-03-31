@@ -59,7 +59,7 @@ const Index: NextPage<IndexProps> = ({ pageContent, profileImage, profileBio }) 
                 <ReactMarkdown>{pageContent}</ReactMarkdown>
               </Col>
               <Col sm={12} md={6} lg={6}>
-                <FlexWrapper flexDirection='column' alignItems='flex-end' justifyContent='center' height='100%'>
+                <FlexWrapper flexDirection='column' alignItems='flex-end' justifyContent='flex-end' height='100%'>
                   <Tags tags={tagsList} style={{ justifyContent: 'center' }} />
                 </FlexWrapper>
               </Col>
