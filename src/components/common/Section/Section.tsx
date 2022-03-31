@@ -1,4 +1,4 @@
-import { generateBEMModifiersClassList, appendString } from '@utilities/utilities';
+import { generateBEMModifiersClassList, appendString } from '@src/lib/utilities/utilities';
 import "@components/common/Section/Section.scss";
 
 export const sizeOptions = ["sm", "md", "lg"] as const;

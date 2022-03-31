@@ -1,4 +1,4 @@
-import { appendString } from '@utilities/utilities';
+import { appendString } from '@src/lib/utilities/utilities';
 
 export const headingLevels = [1, 2, 3, 4, 5, 6] as const;
 export type HeadingLevels = typeof headingLevels[number];

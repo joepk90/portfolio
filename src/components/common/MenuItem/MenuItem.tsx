@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { generateBEMModifiersClassList } from '@utilities/utilities';
+import { generateBEMModifiersClassList } from '@src/lib/utilities/utilities';
 import '@components/common/MenuItem/MenuItem.scss';
 
 type Variant = 'dropdown' | 'light' | 'dark';

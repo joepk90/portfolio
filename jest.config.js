@@ -17,7 +17,6 @@ const customJestConfig = {
         '^@components/(.*)$': '<rootDir>/src/components/$1',
         '^@pages/(.*)$': '<rootDir>/src/pages/$1',
         '^@styles/(.*)$': '<rootDir>/src/styles/$1',
-        '^@utilities/(.*)$': '<rootDir>/src/utilities/$1',
         '^@lib/(.*)$': '<rootDir>/src/lib/$1',
     },
     setupFilesAfterEnv: ['<rootDir>/jest.setup.js']

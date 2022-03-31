@@ -32,9 +32,6 @@
       "@styles/*": [
         "src/styles/*"
       ],
-      "@utilities/*": [
-        "src/utilities/*"
-      ],
       "@lib/*": [
         "src/lib/*"
       ],

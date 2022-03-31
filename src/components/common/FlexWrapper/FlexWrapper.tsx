@@ -1,5 +1,5 @@
 // import { useEffect } from 'react';
-import { appendString } from '@utilities/utilities';
+import { appendString } from '@src/lib/utilities/utilities';
 
 // https://betterprogramming.pub/make-a-flexbox-react-component-e96a038da7ec
 

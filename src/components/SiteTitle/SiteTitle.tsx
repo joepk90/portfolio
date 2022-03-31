@@ -1,5 +1,5 @@
 import { siteAuthor } from '@src/config';
-import { generateBEMModifiersClassList } from '@utilities/utilities';
+import { generateBEMModifiersClassList } from '@src/lib/utilities/utilities';
 import '@components/SiteTitle/SiteTitle.scss'
 
 export const variants = ['dark', 'light'] as const;

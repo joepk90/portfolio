@@ -1,6 +1,6 @@
 import React from 'react'
 import { siteAuthorInitials } from '@src/config';
-import { generateBEMModifiersClassList } from '@utilities/utilities';
+import { generateBEMModifiersClassList } from '@src/lib/utilities/utilities';
 import '@components/SiteLogo/SiteLogo.scss'
 
 export const variants = ['dark', 'light'] as const;

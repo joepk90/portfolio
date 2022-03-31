@@ -1,5 +1,5 @@
 import '@components/common/BrushStroke/BrushStroke.scss';
-import { appendString } from '@utilities/utilities';
+import { appendString } from '@src/lib/utilities/utilities';
 
 export type BrushStrokeProps = {
     className?: string
