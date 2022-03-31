@@ -1,6 +1,8 @@
+import React from 'react';
 import Header from '@components/Header/Header'
 import Footer from '@components/Footer/Footer'
-import React from 'react';
+import SideTab from '@components/common/SideTab/SideTab';
+import SideTabContent from '@components/SideTabContent/SideTabContent';
 
 type Props = {
     children: any;
@@ -8,11 +10,15 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
     return (
-        <React.Fragment>
+        <>
             <Header />
             <main>{children}</main>
             <Footer />
-        </React.Fragment>
+
+            <SideTab label='Project info'>
+                <SideTabContent />
+            </SideTab>
+        </>
     )
 }
 
