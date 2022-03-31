@@ -24,7 +24,7 @@ export abstract class ContentfulEntryManager<Fields> implements ContentfulEntryM
     }
 
     getField = (key: string): any => {
-        const fields: Fields = this.getFields();
+        const fields: any = this.getFields();
         return fields[key]; // TODO: Fix returned dynamic type issue
     }
 
