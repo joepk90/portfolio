@@ -1,3 +1,4 @@
+import { GetStaticPropsResult } from "next";
 import { ContentfulClientApi, Asset, EntryCollection } from 'contentful';
 import { contentfulClient } from '@src/lib/services/contentful';
 import { ContentfulCollectionManager } from '@src/lib/contentful/ContentfulCollectionManager';
@@ -10,11 +11,7 @@ export type IndexProps = {
     profileBio: string
 }
 
-type Props = {
-    props: IndexProps
-}
-
-export async function getIndexStaticProps(): Promise<Props> {
+export async function getIndexStaticProps(): Promise<GetStaticPropsResult<IndexProps>> {
 
     const pagesResponse: EntryCollection<Page> = await contentfulClient.getEntries({
         content_type: 'page',
@@ -40,6 +37,7 @@ export async function getIndexStaticProps(): Promise<Props> {
             profileBio: contentfulProfile.getBio(),
             profileImage: contentfulProfile.getImage(),
             pageContent: contentfulPage.getContent(),
-        }
+        },
+        revalidate: 300 // 5 minutes
     }
 }

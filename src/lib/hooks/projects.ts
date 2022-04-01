@@ -1,3 +1,4 @@
+import { GetStaticPropsResult } from "next";
 import { EntryCollection } from 'contentful';
 import { contentfulClient } from '@src/lib/services/contentful';
 import { ContentfulCollectionManager } from '@src/lib/contentful/ContentfulCollectionManager';
@@ -7,11 +8,7 @@ export type ProjectsProps = {
     projects: ProjectProps[]
 }
 
-type Props = {
-    props: ProjectsProps
-}
-
-export async function getProjectsStaticProps(): Promise<Props> {
+export async function getProjectsStaticProps(): Promise<GetStaticPropsResult<ProjectsProps>> {
 
     const projectResponse: EntryCollection<ProjectProps> = await contentfulClient.getEntries({
         content_type: 'project',
@@ -38,6 +35,7 @@ export async function getProjectsStaticProps(): Promise<Props> {
     return {
         props: {
             projects: projects
-        }
+        },
+        revalidate: 300 // 5 minutes
     }
 }

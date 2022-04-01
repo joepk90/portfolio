@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import { NextSeo } from 'next-seo';
+import { GetStaticProps } from 'next';
 import { getProjectsStaticProps, ProjectsProps } from '@src/lib/hooks/projects';
 import Section from '@components/common/Section/Section';
 import Container from '@src/components/common/Container/Container';
@@ -8,7 +9,7 @@ import Heading from '@components/common/Heading/Heading';
 import Project from '@src/components/ProjectCard/ProjectCard'
 import { SEO } from '@src/config';
 
-export const getStaticProps = async () => getProjectsStaticProps();
+export const getStaticProps: GetStaticProps = async () => getProjectsStaticProps();
 
 const Index: NextPage<ProjectsProps> = ({ projects }) => {
 

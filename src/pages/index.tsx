@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import { NextSeo } from 'next-seo';
+import { GetStaticProps } from 'next';
 import { GridContainer, Row, Col } from '@components/common/Grid/Grid';
 import { getIndexStaticProps, IndexProps } from '@src/lib/hooks/index';
 import { ContentfulImageAlias as ContentfulImage } from '@components/common/ContentfulImage/ContentfulImage';
@@ -13,7 +14,7 @@ import FlexWrapper from '@components/common/FlexWrapper/FlexWrapper';
 import BrushStrokeWrapper from '@components/common/BrushStrokeWrapper/BrushStrokeWrapper';
 import { SEO, tagsList } from '@src/config';
 
-export const getStaticProps = async () => getIndexStaticProps();
+export const getStaticProps: GetStaticProps = async () => getIndexStaticProps();
 
 const Index: NextPage<IndexProps> = ({ pageContent, profileImage, profileBio }) => {
 
