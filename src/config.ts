@@ -13,7 +13,7 @@ export const sourceCodeUrl: string = process.env.NEXT_PUBLIC_GITHUB_URL
 export const siteAuthor = 'Joe Park-Kennaby';
 export const siteAuthorInitials = 'JPK';
 export const siteTagline = 'Front End Engineer'
-export const siteDescription = 'A NextJS website to showcase my personal projects, work experience and anything else of relevance.'
+export const siteDescription = 'A personal website to showcase my previous experience, relevant skills and best work. This site itself is a portfolio piece, built with NextJS (React), Typescript, Storybook, TDD, SCSS, and Contentful.'
 export const siteURL = 'http://localhost:3000'
 
 export const SEO = {
