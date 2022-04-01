@@ -9,8 +9,8 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <DefaultSeo {...SEO} />
       <GlobalCSS />
-      <BrushStrokeSVGClipPath />
       <Component {...pageProps} />
+      <BrushStrokeSVGClipPath />
     </>
   )
 }
