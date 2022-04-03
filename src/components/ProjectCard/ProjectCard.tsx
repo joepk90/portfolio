@@ -42,7 +42,7 @@ const Project = ({ project }: ProjectCardComponentProps) => {
                     {repositories.map((repository, key) => {
                         return (
                             <li key={key}>
-                                <a href={repository}>{repository}</a>
+                                <a href={repository} target='_blank' rel='noopener noreferrer'>{repository}</a>
                             </li>
                         )
                     })}
@@ -90,7 +90,7 @@ const Project = ({ project }: ProjectCardComponentProps) => {
 
         return (
             <div className="project-card__url">
-                <strong>Project URL:</strong> <a href={url}>{url}</a>
+                <strong>Project URL:</strong> <a href={url} target='_blank' rel='noopener noreferrer'>{url}</a>
             </div>
         )
     }
