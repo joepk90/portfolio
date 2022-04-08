@@ -7,7 +7,10 @@ import Container from '@src/components/common/Container/Container';
 import Layout from '@components/Layout/Layout';
 import Heading from '@components/common/Heading/Heading';
 import Project from '@src/components/ProjectCard/ProjectCard'
-import { SEO } from '@src/config';
+import { getPageUrl } from '@lib/utilities/utilities';
+import { SEO, projectsURL } from '@src/config';
+
+const pageUrl = getPageUrl(projectsURL);
 
 export const getStaticProps: GetStaticProps = async () => getProjectsStaticProps();
 
@@ -17,6 +20,7 @@ const Index: NextPage<ProjectsProps> = ({ projects }) => {
         <Layout>
             <NextSeo
                 title={`${SEO.title} | Projects`}
+                canonical={pageUrl}
             />
 
             <Section margin='lg'>

@@ -11,7 +11,7 @@ export const siteURL: string = process.env.NEXT_PUBLIC_SITE_URL || 'http://local
 * Base URLS
 */
 export const indexURL: string = '/';
-export const projectsURL: string = '/projects';
+export const projectsURL: string = 'projects';
 
 
 /**
