@@ -1,3 +1,5 @@
+import { siteURL } from '@src/config';
+
 /**
  * 
  * @param className 
@@ -39,4 +41,13 @@ export const getEnvironmentVariable = (environmentVariable: string): string => {
     } else {
         return unvalidatedEnvironmentVariable;
     }
-}; 
+};
+
+
+export const getPageUrl = (slug: string): string => {
+
+    if (slug === '') return ''
+
+    return `${siteURL}/${slug}/`;
+
+}
