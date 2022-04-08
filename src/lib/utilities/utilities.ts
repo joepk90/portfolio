@@ -48,6 +48,6 @@ export const getPageUrl = (slug: string): string => {
 
     if (slug === '') return ''
 
-    return `${siteURL}/${slug}/`;
+    return `${siteURL}/${slug}`;
 
 }
