@@ -6,6 +6,7 @@ import { EntryCollection } from 'contentful';
 import { ContentfulPage, Page } from '@src/lib/contentful/ContentfulPage';
 import Section from '@components/common/Section/Section';
 import Layout from '@components/Layout/Layout';
+import { setGTMOptOutCookie } from '@src/lib/utilities/googleTagManager'
 
 type StaticPathsProps = {
     slug: string
@@ -63,7 +64,7 @@ export const getStaticProps = async (): Promise<GetStaticPropsResult<StaticProps
 const Index: NextPage<Page> = () => {
 
     useEffect(() => {
-
+        setGTMOptOutCookie();
     }, [])
 
     return (
