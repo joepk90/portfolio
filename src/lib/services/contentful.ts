@@ -1,9 +1,9 @@
 import { createClient, ContentfulClientApi, CreateClientParams } from 'contentful';
-import { contentfulAccessToken, contentfulSpaceID } from '@src/config';
+import { getContentfullSpaceID, getContentfullAccessToken } from "@lib/utilities/environmentVars"
 
 const clientKeys: CreateClientParams = {
-    space: contentfulSpaceID,
-    accessToken: contentfulAccessToken
+    space: getContentfullSpaceID(),
+    accessToken: getContentfullAccessToken()
 };
 
 export const contentfulClient = createClient(clientKeys);
