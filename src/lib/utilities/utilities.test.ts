@@ -1,4 +1,4 @@
-import { generateBEMModifiersClassList, appendString, getEnvironmentVariable } from "@src/lib/utilities/utilities"
+import { generateBEMModifiersClassList, appendString } from "@src/lib/utilities/utilities"
 
 // https://jestjs.io/docs/using-matchers
 describe("Utility Function: generateBEMModifiersClassList", () => {
@@ -47,16 +47,6 @@ describe("Utility Function: appendString", () => {
         let stringToAppend: any;
         const updateString = appendString(originalString, stringToAppend);
         expect(updateString).toMatch(`${originalString}`);
-    });
-
-});
-
-describe("Utility Function: getEnvironmentVariable", () => {
-
-    it('should return an appended string', () => {
-        process.env.test = 'test';
-        const testEnv = getEnvironmentVariable('test')
-        expect(testEnv).toMatch(process.env.test);
     });
 
 });
