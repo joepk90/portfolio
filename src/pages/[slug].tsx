@@ -61,6 +61,7 @@ export const getStaticProps = async (): Promise<GetStaticPropsResult<StaticProps
     }
 }
 
+// TODO setup google analytics tracking page SEO: nofollow / no sitemap page
 const Index: NextPage<Page> = () => {
 
     useEffect(() => {
