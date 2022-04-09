@@ -38,6 +38,10 @@ export const getSourceCodeUrl = (): string => {
     return checkEnvVarExists(process.env.NEXT_PUBLIC_GITHUB_URL);
 }
 
+export const getGoogleTagManagerID = (): string => {
+    return checkEnvVarExists(process.env.GOOGLE_TAG_MANAGER_ID);
+}
+
 export const getSiteUrl = (): string => {
 
     // note: this environment variable is defined in the next.config.js file making it available during the whole application lifecycle
