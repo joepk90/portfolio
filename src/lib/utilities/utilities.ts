@@ -26,23 +26,6 @@ export const appendString = (originalString: string, stringToAppend: string | un
     return [originalString, stringToAppend].join(' ');
 }
 
-/**
- * 
- * @param environmentVariable 
- * @returns 
- */
-export const getEnvironmentVariable = (environmentVariable: string): string => {
-    const unvalidatedEnvironmentVariable = process.env[environmentVariable];
-
-    if (!unvalidatedEnvironmentVariable) {
-        throw new Error(
-            `Couldn't find environment variable: ${environmentVariable}`
-        );
-    } else {
-        return unvalidatedEnvironmentVariable;
-    }
-};
-
 
 export const getPageUrl = (slug: string): string => {
 
