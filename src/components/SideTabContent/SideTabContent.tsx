@@ -1,5 +1,5 @@
 import Heading from '@components/common/Heading/Heading'
-import { componentLibraryUrl, sourceCodeUrl } from "@src/config"
+import { getComponentLibraryUrl, getSourceCodeUrl } from "@lib/utilities/environmentVars"
 
 type Props = {}
 
@@ -8,6 +8,9 @@ type Props = {}
  * TODO: setup content in Contentful (Site Settings)
  */
 const SideTabContent = (props: Props) => {
+
+    const componentLibraryUrl = getComponentLibraryUrl()
+    const sourceCodeUrl = getSourceCodeUrl();
 
     if (!componentLibraryUrl || !sourceCodeUrl) return (<></>);
 
