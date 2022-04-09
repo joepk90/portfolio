@@ -9,14 +9,15 @@
  * https://stackoverflow.com/questions/68115650/how-to-load-google-tag-manager-with-next-script-component-next-js-11
  */
 
-import { getGoogleTagManagerID } from '@lib/utilities/environmentVars'
+import { getGoogleTagManagerID, getNodeEnv } from '@lib/utilities/environmentVars';
 
 // GOOGLE_TAG_MANAGER_ID='GTM-XXXXXX'
 const googleTagManagerID = getGoogleTagManagerID();
+const nodeEnv = getNodeEnv();
 
 export const GoogleTagManagerScript = () => {
 
-    if (!googleTagManagerID) return (<></>)
+    if (!googleTagManagerID || nodeEnv !== 'production') return (<></>)
 
     return (
         <script
@@ -33,7 +34,7 @@ export const GoogleTagManagerScript = () => {
 
 export const GoogleTagManagerNoScript = () => {
 
-    if (!googleTagManagerID) return (<></>)
+    if (!googleTagManagerID || nodeEnv !== 'production') return (<></>)
 
     return (
         <noscript

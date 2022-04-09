@@ -22,6 +22,10 @@ export const checkEnvVarExists = (environmentVariable: string | undefined): stri
  * For example: process.env[dynamicVar]
  */
 
+export const getNodeEnv = (): string => {
+    return checkEnvVarExists(process.env.NODE_ENV);
+}
+
 export const getContentfullSpaceID = (): string => {
     return checkEnvVarExists(process.env.CONTENTFUL_SPACE_ID);
 }
