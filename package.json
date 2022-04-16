@@ -50,6 +50,8 @@
     "next-seo": "^5.1.0",
     "next-sitemap": "^2.5.17",
     "react-markdown": "^8.0.1",
+    "react-redux": "^7.2.8",
+    "redux": "^4.1.2",
     "sass": "^1.49.9",
     "storybook-addon-sass-postcss": "^0.1.0",
     "tsconfig-paths-webpack-plugin": "^3.5.2",
