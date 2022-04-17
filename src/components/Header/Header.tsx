@@ -5,12 +5,16 @@ import DropdownNavigation from '@src/components/common/DropdownNavigation/Dropdo
 import Hamburger from '@components/common/Hamburger/Hamburger';
 import Seperator from '@components/common/Seperator/Seperator';
 import SiteBranding from '@src/components/SiteBranding/SiteBranding';
+import { toggleTheme, ThemeState } from '@store/themeSlice';
+import { useDispatch, useSelector } from 'react-redux';
 import { menuItems, indexURL } from '@src/config';
 import '@components/Header/Header.scss'
 
 
-
 const Header = () => {
+
+    const dispatch = useDispatch();
+    const darkThemeEnabled = useSelector((state: ThemeState) => state.darkThemeEnabled)
 
     const [isNavOpen, setNavIsOpen] = useState(false);
 
@@ -20,6 +24,14 @@ const Header = () => {
 
     return (
         <header className="header">
+
+            <input
+                type="checkbox"
+                id="scales"
+                name="scales"
+                checked={darkThemeEnabled}
+                onChange={() => dispatch(toggleTheme())}
+            />
 
             <div className="header__container">
                 <div className="header__section">
@@ -40,6 +52,7 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
+
             </div>
 
             <div className={'header__navigation-mobile'}>

@@ -3,6 +3,8 @@ import { DefaultSeo } from 'next-seo';
 import { SEO } from '@src/config';
 import GlobalCSS from '@src/components/GlobalCSS/GlobalCSS';
 import { BrushStrokeSVGClipPath } from '@components/common/BrushStroke/BrushStroke';
+import { wrapper } from '@store/store'
+
 function MyApp({ Component, pageProps }: AppProps) {
 
   return (
@@ -15,4 +17,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   )
 }
 
-export default MyApp
+export default wrapper.withRedux(MyApp);
