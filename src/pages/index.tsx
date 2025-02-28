@@ -33,7 +33,11 @@ const Index: NextPage<IndexProps> = ({ pageContent, profileImage, profileBio }) 
                 <FlexWrapper justifyContent='center'>
                   <FlexWrapper maxWidth={325} >
                     <BrushStrokeWrapper>
-                      <ContentfulImage image={profileImage} />
+                      <ContentfulImage
+                        image={profileImage}
+                        width={325}
+                        height={325}
+                      />
                     </BrushStrokeWrapper>
                   </FlexWrapper>
                 </FlexWrapper>
