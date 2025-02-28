@@ -33,7 +33,7 @@ const Template: Story<BrushStrokeWrapperProps> = (args: BrushStrokeWrapperProps)
 // const image = () => 
 export const ImageDecoration = Template.bind({});
 ImageDecoration.args = {
-    children: <ContentfulImage image='http://via.placeholder.com/300.png' /> // TODO replace with nextjs Image
+    children: <ContentfulImage image='http://via.placeholder.com/300.png' width={300} height={300} /> // TODO replace with nextjs Image
 }
 
 export const ElementDecoration = Template.bind({});
