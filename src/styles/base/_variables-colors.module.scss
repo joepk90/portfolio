@@ -1,0 +1,88 @@
+/*
+    Whites, Greys, Blacks
+*/
+$white: #fff;
+// $whiteTint: #fdfdfd; // almost invisible on some screens
+$whiteSmoke: #f4f4f4;
+$zirconGrey: #e7e8e9;
+$silver: #c5c5c5;
+$nobelGrey: #999999;
+$dimGrey: #505050;
+$gondolaGrey: #353535;
+$neroGrey: #161616;
+$black: #000;
+
+/*
+    Colors
+*/
+$buttercup: #dd9425;
+$endeavour: #2d5c88;
+$curiousBlue: #428bca;
+
+/*
+    Primary Colors
+*/
+$colorPrimary: $neroGrey;
+$colorSecondary: $endeavour;
+
+/*
+    Text Colors
+*/
+$textWhite: $white;
+$textSubtleWhite: $zirconGrey;
+$textLightGrey: $silver;
+$textGrey: $dimGrey;
+$textDarkGrey: $neroGrey;
+$textBlack: $black;
+
+/*
+    Text Utility Colors
+*/
+$textPrimary: $colorPrimary;
+$textSecondary: $colorSecondary;
+$textBaseColor: $textGrey;
+
+/*
+    Background Shades
+*/
+$backgroundWhite: $white;
+$backgroundSubtleWhite: $whiteSmoke;
+$backgroundLightGrey: $zirconGrey;
+$backgroundGrey: $gondolaGrey;
+$backgroundDarkGrey: $neroGrey;
+$backgroundBlack: $black;
+$backgroundPrimary: $colorPrimary;
+
+
+/*
+    Border Colors
+*/
+$borderSubtleWhite: $whiteSmoke;
+$borderLightGrey: $zirconGrey;
+$borderGrey: $nobelGrey;
+$borderDarkGrey: $gondolaGrey;
+
+/*
+    Link Colors
+*/
+$linkColor: $textSecondary;
+$linkHover: $curiousBlue;
+$linkColorLight: $textSubtleWhite;
+$linkHoverLight: $textWhite;
+$linkColorDark: $textGrey;
+$linkHoverDark: $textDarkGrey;
+
+/*
+    Nav Colors
+*/
+$navBgColorDesktop: $backgroundWhite;
+$navBgColorMobile: $backgroundLightGrey;
+
+:export {
+    backgroundWhite: $backgroundWhite;
+    backgroundSubtleWhite: $backgroundSubtleWhite;
+    backgroundLightGrey: $backgroundLightGrey;
+    backgroundGrey: $backgroundGrey;
+    backgroundDarkGrey: $backgroundDarkGrey;
+    backgroundPrimary: $backgroundPrimary;
+}

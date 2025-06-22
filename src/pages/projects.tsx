@@ -10,9 +10,15 @@ import Project from '@src/components/ProjectCard/ProjectCard'
 import { getPageUrl } from '@lib/utilities/utilities';
 import { SEO, projectsURL } from '@src/config';
 
+import variables from '@styles/base/_variables-colors.module.scss'
+const { backgroundSubtleWhite, backgroundDarkGrey } = variables;
+
 const pageUrl = getPageUrl(projectsURL);
 
 export const getStaticProps: GetStaticProps = async () => getProjectsStaticProps();
+
+const getBackgroundColor = (key: number) =>
+    key % 2 === 0 ? backgroundSubtleWhite : backgroundDarkGrey;
 
 const Index: NextPage<ProjectsProps> = ({ projects }) => {
 
@@ -23,20 +29,18 @@ const Index: NextPage<ProjectsProps> = ({ projects }) => {
                 canonical={pageUrl}
             />
 
-            <Section margin='lg'>
-                <Container>
-                    <Heading className='page-title'>Projects</Heading>
-                </Container>
-            </Section>
+            {projects.map((project, key) => {
+                return (
+                    <Section padding='lg' styles={{backgroundColor: getBackgroundColor(key)}}>
+                        <Container>
+                            <Project key={key} project={project} />
+                        </Container>
+                    </Section>
+                    )
+                }
+            )}
 
-            <Section margin='lg' paddingBottom='md'>
-                <Container>
-                    {projects.map((project, key) => {
-                        return <Project key={key} project={project} />
-                    })}
-
-                </Container>
-            </Section>
+            
 
         </Layout>
     )

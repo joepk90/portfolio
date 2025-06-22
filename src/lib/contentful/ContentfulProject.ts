@@ -1,93 +1,103 @@
-import { ContentfulEntryManager } from '@src/lib/contentful/ContentfulEntryManager';
-import { Document } from '@contentful/rich-text-types';
+import { ContentfulEntryManager } from "@src/lib/contentful/ContentfulEntryManager";
+import { Document } from "@contentful/rich-text-types";
 
 export type ProjectProps = {
-    date: string
-    description: Document | string
-    repositories: string[]
-    slug: string
-    title: string
-    type: string
-    url: string
-    tags: string[]
-}
+  date: string;
+  description: Document | string;
+  repositories: string[];
+  slug: string;
+  title: string;
+  type: string;
+  url: string;
+  tags: string[];
+  image: string;
+};
 
 export interface ContentfulProjectInterface {
-    getDate(): string
-    getDescription(): Document | string
-    getRepositories(): string[]
-    getSlug(): string
-    getTitle(): string
-    getType(): string
-    getUrl(): string
+  getDate(): string;
+  getDescription(): Document | string;
+  getRepositories(): string[];
+  getSlug(): string;
+  getTitle(): string;
+  getType(): string;
+  getUrl(): string;
+  getImage(): string;
 }
 
-export class ContentfulProject extends ContentfulEntryManager<ProjectProps> implements ContentfulProjectInterface {
+export class ContentfulProject
+  extends ContentfulEntryManager<ProjectProps>
+  implements ContentfulProjectInterface
+{
+  getDate = (): string => {
+    const date: string = this.getField("date");
 
-    getDate = (): string => {
+    if (!date || typeof date !== "string") return "";
 
-        const date: string = this.getField('date');
+    const dateObject: Date = new Date(date);
+    const month: string = dateObject.toLocaleString("default", {
+      month: "long",
+    });
+    const year: string = dateObject.getFullYear().toString();
 
-        if (!date || typeof date !== 'string') return '';
+    return `${month} ${year}`;
+  };
 
-        const dateObject: Date = new Date(date);
-        const month: string = dateObject.toLocaleString('default', { month: 'long' })
-        const year: string = dateObject.getFullYear().toString();
+  getDescription = (): Document | string => {
+    const description: Document = this.getField("description");
 
-        return `${month} ${year}`;
-    }
+    if (!description || !description?.content) return "";
 
-    getDescription = (): Document | string => {
+    return description;
+  };
 
-        const description: Document = this.getField('description');
+  getRepositories = (): string[] => {
+    const repositories = this.getField("repositories");
 
-        if (!description || !description?.content) return '';
+    if (!repositories || repositories.length === 0) return [];
 
-        return description;
-    }
+    return repositories;
+  };
 
-    getRepositories = (): string[] => {
+  getSlug = (): string => {
+    const slug: string = this.getField("slug");
 
-        const repositories = this.getField('repositories');
+    if (!slug || typeof slug !== "string") return "";
 
-        if (!repositories || repositories.length === 0) return []
+    return this.getField("slug");
+  };
 
-        return repositories;
-    }
+  getTitle = (): string => {
+    const title: string = this.getField("title");
 
-    getSlug = (): string => {
+    if (!title || typeof title !== "string") return "";
 
-        const slug: string = this.getField('slug');
+    return this.getField("title");
+  };
 
-        if (!slug || typeof slug !== 'string') return '';
+  getType = (): string => {
+    const type: string = this.getField("type");
 
-        return this.getField('slug');
-    }
+    if (!type || typeof type !== "string") return "";
 
-    getTitle = (): string => {
+    return this.getField("type");
+  };
 
-        const title: string = this.getField('title');
+  getUrl = (): string => {
+    const url: string = this.getField("url");
 
-        if (!title || typeof title !== 'string') return '';
+    if (!url || typeof url !== "string") return "";
 
-        return this.getField('title');
-    }
+    return url;
+  };
 
-    getType = (): string => {
+  // TODO probably incorrect
+//   getImage = (): string => {
+//     const image: string = this.getField("image");
 
-        const type: string = this.getField('type');
+//     image.fields.
 
-        if (!type || typeof type !== 'string') return '';
+//     if (!image || typeof image !== "string") return "";
 
-        return this.getField('type');
-    }
-
-    getUrl = (): string => {
-
-        const url: string = this.getField('url');
-
-        if (!url || typeof url !== 'string') return '';
-
-        return url;
-    }
+//     return image;
+//   };
 }

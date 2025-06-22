@@ -16,9 +16,10 @@ type SpacingOptions = {
 export type Props = SpacingOptions & {
     children: any
     className?: string
+    styles?: any // TODO remove any
 }
 
-const Section = ({ children, className, ...spacingOptions }: Props) => {
+const Section = ({ children, className, styles, ...spacingOptions }: Props) => {
 
     const generateModifiers = () => {
 
@@ -58,7 +59,7 @@ const Section = ({ children, className, ...spacingOptions }: Props) => {
     classList = appendString(classList, className);
 
     return (
-        <section className={classList}>{children}</section>
+        <section className={classList} style={styles}>{children}</section>
     );
 }
 

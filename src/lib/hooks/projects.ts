@@ -18,6 +18,7 @@ export async function getProjectsStaticProps(): Promise<GetStaticPropsResult<Pro
     const projectList = new ContentfulCollectionManager(projectResponse)
 
     const projects = projectList.getItems().map((projectItem) => {
+        console.log(projectItem);
         const project = new ContentfulProject(projectItem)
 
         return {
@@ -28,7 +29,8 @@ export async function getProjectsStaticProps(): Promise<GetStaticPropsResult<Pro
             title: project.getTitle(),
             type: project.getType(),
             url: project.getUrl(),
-            tags: project.getTags()
+            tags: project.getTags(),
+            image: project.getImage(),
         }
     })
 
