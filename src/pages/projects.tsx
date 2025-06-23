@@ -4,7 +4,7 @@ import { GetStaticProps } from 'next';
 import { getProjectsStaticProps, ProjectsProps } from '@src/lib/hooks/projects';
 import Section from '@components/common/Section/Section';
 import Container from '@src/components/common/Container/Container';
-import Layout from '@components/Layout/Layout';
+import { Layout } from '@components/Layout/Layout';
 import Heading from '@components/common/Heading/Heading';
 import Project from '@src/components/ProjectCard/ProjectCard';
 import { getPageUrl } from '@lib/utilities/utilities';

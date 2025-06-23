@@ -1,1 +1,1 @@
-export * from './SideTabContent';
+export * from './ProjectCard';

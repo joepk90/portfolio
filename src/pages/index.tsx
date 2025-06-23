@@ -9,7 +9,7 @@ import Section from '@components/common/Section/Section';
 import Tags from '@components/common/Tags/Tags';
 import Heading from '@components/common/Heading/Heading';
 import Container from '@src/components/common/Container/Container';
-import Layout from '@components/Layout/Layout';
+import { Layout } from '@components/Layout/Layout';
 import FlexWrapper from '@components/common/FlexWrapper/FlexWrapper';
 import BrushStrokeWrapper from '@components/common/BrushStrokeWrapper/BrushStrokeWrapper';
 import { SEO, tagsList } from '@src/config';

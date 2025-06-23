@@ -4,7 +4,7 @@ import SiteTitle from '@components/SiteTitle/SiteTitle';
 import '@components/SiteBranding/SiteBranding.scss';
 
 // TODO setup mobile first media query logic (client or SSR?)
-const SiteBranding = () => {
+export const SiteBranding = () => {
   return (
     <div className="site-branding">
       <div className="site-branding__mobile">
@@ -17,5 +17,3 @@ const SiteBranding = () => {
     </div>
   );
 };
-
-export default SiteBranding;

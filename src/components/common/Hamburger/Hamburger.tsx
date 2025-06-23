@@ -2,10 +2,10 @@ import { useState } from 'react';
 import '@components/common/Hamburger/Hamburger.scss';
 
 type Props = {
-  onClick: Function;
+  onClick: () => void;
 };
 
-const Hamburger = ({ onClick }: Props) => {
+export const Hamburger = ({ onClick }: Props) => {
   const [isActive, setIsActive] = useState(false);
 
   const renderClassList = (): string => {
@@ -37,5 +37,3 @@ const Hamburger = ({ onClick }: Props) => {
     </button>
   );
 };
-
-export default Hamburger;

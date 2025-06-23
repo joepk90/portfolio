@@ -5,7 +5,7 @@ import { ContentfulCollectionManager } from '@src/lib/contentful/ContentfulColle
 import { EntryCollection } from 'contentful';
 import { ContentfulPage, Page } from '@src/lib/contentful/ContentfulPage';
 import Section from '@components/common/Section/Section';
-import Layout from '@components/Layout/Layout';
+import { Layout } from '@components/Layout/Layout';
 import { setGTMOptOutCookie } from '@src/lib/utilities/googleTagManager';
 
 type StaticPathsProps = {
@@ -16,7 +16,7 @@ type StaticPathsParams = {
   params: StaticPathsProps;
 };
 
-type StaticProps = {};
+type StaticProps = Record<string, never>;
 
 /**
  * Slug Page:

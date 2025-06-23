@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentMeta } from '@storybook/react';
-import SiteBranding from '@components/SiteBranding/SiteBranding';
+import { SiteBranding } from '@components/SiteBranding/SiteBranding';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

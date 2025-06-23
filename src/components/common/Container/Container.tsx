@@ -3,8 +3,8 @@ import { generateBEMModifiersClassList, appendString } from '@src/lib/utilities/
 import '@components/common/Container/Container.scss';
 
 export type Props = {
-  fullWidth?: Boolean;
-  noWrap?: Boolean;
+  fullWidth?: boolean;
+  noWrap?: boolean;
   className?: string;
 };
 

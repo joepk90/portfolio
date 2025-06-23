@@ -9,7 +9,7 @@ import { siteURL } from '@src/config';
 export const generateBEMModifiersClassList = (className: string, modifiers?: string[]): string => {
   if (!modifiers || modifiers.length === 0) return className;
 
-  let classList = [className];
+  const classList = [className];
 
   modifiers.forEach((modifier) => {
     if (modifier === '') return;
