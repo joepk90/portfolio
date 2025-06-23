@@ -1,25 +1,23 @@
-
-   
 %container {
-    margin: 0 auto;
-    max-width: $maxWidth;
-    padding: 0 rem(20px);
+  margin: 0 auto;
+  max-width: $maxWidth;
+  padding: 0 rem(20px);
 }
 %section {
-    padding-top: rem(25px);
-    padding-bottom: rem(25px);
+  padding-top: rem(25px);
+  padding-bottom: rem(25px);
 }
 
 %defaultAnimation {
-    transition: all $animationTime ease-in-out;
+  transition: all $animationTime ease-in-out;
 }
 
 %disabledStyles {
-    &:disabled {
-        cursor: default;
-        background-color: $backgroundGrey;
-        &:hover {
-            background-color: $backgroundGrey;
-        }
+  &:disabled {
+    cursor: default;
+    background-color: $backgroundGrey;
+    &:hover {
+      background-color: $backgroundGrey;
     }
+  }
 }

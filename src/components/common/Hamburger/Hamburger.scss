@@ -1,13 +1,13 @@
 // @import 'hamburgers';
 @import '@styles/base/_base.scss';
 @import '@styles/helpers/_helpers.scss';
-@import "HamburgerSettings"; // overrides the hamburgers settings included in the parent theme
-@import "hamburgers/_sass/hamburgers/hamburgers.scss";
+@import 'HamburgerSettings'; // overrides the hamburgers settings included in the parent theme
+@import 'hamburgers/_sass/hamburgers/hamburgers.scss';
 
 .hamburger {
-    padding-bottom: 4px;
+  padding-bottom: 4px;
 
-    // @include breakpoint($breakPointTablet) {
-    //     display: none;
-    // }
+  // @include breakpoint($breakPointTablet) {
+  //     display: none;
+  // }
 }

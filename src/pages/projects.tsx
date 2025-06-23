@@ -6,7 +6,7 @@ import Section from '@components/common/Section/Section';
 import Container from '@src/components/common/Container/Container';
 import Layout from '@components/Layout/Layout';
 import Heading from '@components/common/Heading/Heading';
-import Project from '@src/components/ProjectCard/ProjectCard'
+import Project from '@src/components/ProjectCard/ProjectCard';
 import { getPageUrl } from '@lib/utilities/utilities';
 import { SEO, projectsURL } from '@src/config';
 
@@ -15,31 +15,25 @@ const pageUrl = getPageUrl(projectsURL);
 export const getStaticProps: GetStaticProps = async () => getProjectsStaticProps();
 
 const Index: NextPage<ProjectsProps> = ({ projects }) => {
+  return (
+    <Layout>
+      <NextSeo title={`${SEO.title} | Projects`} canonical={pageUrl} />
 
-    return (
-        <Layout>
-            <NextSeo
-                title={`${SEO.title} | Projects`}
-                canonical={pageUrl}
-            />
+      <Section margin="lg">
+        <Container>
+          <Heading className="page-title">Projects</Heading>
+        </Container>
+      </Section>
 
-            <Section margin='lg'>
-                <Container>
-                    <Heading className='page-title'>Projects</Heading>
-                </Container>
-            </Section>
+      <Section margin="lg" paddingBottom="md">
+        <Container>
+          {projects.map((project, key) => {
+            return <Project key={key} project={project} />;
+          })}
+        </Container>
+      </Section>
+    </Layout>
+  );
+};
 
-            <Section margin='lg' paddingBottom='md'>
-                <Container>
-                    {projects.map((project, key) => {
-                        return <Project key={key} project={project} />
-                    })}
-
-                </Container>
-            </Section>
-
-        </Layout>
-    )
-}
-
-export default Index
+export default Index;

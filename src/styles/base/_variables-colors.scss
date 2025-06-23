@@ -53,7 +53,6 @@ $backgroundDarkGrey: $neroGrey;
 $backgroundBlack: $black;
 $backgroundPrimary: $colorPrimary;
 
-
 /*
     Border Colors
 */
@@ -77,3 +76,12 @@ $linkHoverDark: $textDarkGrey;
 */
 $navBgColorDesktop: $backgroundWhite;
 $navBgColorMobile: $backgroundLightGrey;
+
+:export {
+  backgroundWhite: $backgroundWhite;
+  backgroundSubtleWhite: $backgroundSubtleWhite;
+  backgroundLightGrey: $backgroundLightGrey;
+  backgroundGrey: $backgroundGrey;
+  backgroundDarkGrey: $backgroundDarkGrey;
+  backgroundPrimary: $backgroundPrimary;
+}

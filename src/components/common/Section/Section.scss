@@ -2,86 +2,82 @@
 @import '@styles/helpers/_helpers.scss';
 
 .section {
+  // PADDING
 
-    // PADDING
+  &--padding-sm {
+    padding: rem(10px) 0;
+  }
 
-    &--padding-sm {
-        padding: rem(10px) 0;
-    }
+  &--padding-md {
+    padding: rem(25px) 0;
+  }
 
-    &--padding-md {
-        padding: rem(25px) 0;
-    }
+  &--padding-lg {
+    padding: rem(50px) 0;
+  }
 
-    &--padding-lg {
-        padding: rem(50px) 0;
-    }
+  &--padding-top-sm {
+    padding-top: rem(10px);
+  }
 
-    &--padding-top-sm {
-        padding-top: rem(10px);
-    }
+  &--padding-top-md {
+    padding-top: rem(25px);
+  }
 
-    &--padding-top-md{
-        padding-top: rem(25px);
-    }
+  &--padding-top-lg {
+    padding-top: rem(50px);
+  }
 
-    &--padding-top-lg {
-        padding-top: rem(50px);
-    }
+  &--padding-bottom-sm {
+    padding-bottom: rem(10px);
+  }
 
-    &--padding-bottom-sm {
-        padding-bottom: rem(10px)
-    }
+  &--padding-bottom-md {
+    padding-bottom: rem(25px);
+  }
 
-    &--padding-bottom-md {
-        padding-bottom: rem(25px)
-    }
+  &--padding-bottom-lg {
+    padding-bottom: rem(50px);
+  }
 
-    &--padding-bottom-lg {
-        padding-bottom: rem(50px)
-    }
+  // MARGIN
 
+  &--margin-sm {
+    margin: rem(10px) auto;
+  }
 
-    // MARGIN
+  &--margin-md {
+    margin: rem(25px) auto;
+  }
 
-    &--margin-sm {
-        margin: rem(10px) auto;
-    }
+  &--margin-lg {
+    margin: rem(50px) auto;
+  }
 
-    &--margin-md {
-        margin: rem(25px) auto;
-    }
+  &--margin-top-sm {
+    margin-top: rem(10px);
+  }
 
-    &--margin-lg {
-        margin: rem(50px) auto;
-    }
+  &--margin-top-md {
+    margin-top: rem(25px);
+  }
 
-    &--margin-top-sm {
-        margin-top: rem(10px);
-    }
+  &--margin-top-lg {
+    margin-top: rem(50px);
+  }
 
-    &--margin-top-md {
-        margin-top: rem(25px);
-    }
+  &--margin-bottom-sm {
+    margin-bottom: rem(10px);
+  }
 
-    &--margin-top-lg {
-        margin-top: rem(50px);
-    }
+  &--margin-bottom-md {
+    margin-bottom: rem(25px);
+  }
 
-    &--margin-bottom-sm {
-        margin-bottom: rem(10px);
-    }
-
-    &--margin-bottom-md {
-        margin-bottom: rem(25px);
-    }
-
-    &--margin-bottom-lg {
-        margin-bottom: rem(50px);
-    }
-
+  &--margin-bottom-lg {
+    margin-bottom: rem(50px);
+  }
 }
-
 
 // alternative solution - issue with rem calculations and variables
 // https://beautifytools.com/scss-compiler.php

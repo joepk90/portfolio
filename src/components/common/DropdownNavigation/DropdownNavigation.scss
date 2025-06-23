@@ -2,18 +2,17 @@
 @import '@styles/helpers/_helpers.scss';
 
 .dropdown-navigation {
-    overflow: hidden;
-    height: 0;
+  overflow: hidden;
+  height: 0;
 
-    &.is-open {
-        height: auto;
-    }
+  &.is-open {
+    height: auto;
+  }
 
-    &__menu-items {
-        @extend %listStyleNone;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        
-    }
+  &__menu-items {
+    @extend %listStyleNone;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }

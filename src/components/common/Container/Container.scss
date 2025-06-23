@@ -2,14 +2,13 @@
 @import '@styles/helpers/_helpers.scss';
 
 .container {
-    @extend %container;
+  @extend %container;
 
-    &--no-wrap {
-        padding: 0;
-    }
+  &--no-wrap {
+    padding: 0;
+  }
 
-    &--full-width {
-        max-width: none;
-    }
-
+  &--full-width {
+    max-width: none;
+  }
 }

@@ -1,10 +1,9 @@
-import type { AppProps } from 'next/app'
+import type { AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
 import { SEO } from '@src/config';
 import GlobalCSS from '@src/components/GlobalCSS/GlobalCSS';
 import { BrushStrokeSVGClipPath } from '@components/common/BrushStroke/BrushStroke';
 function MyApp({ Component, pageProps }: AppProps) {
-
   return (
     <>
       <DefaultSeo {...SEO} />
@@ -12,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
       <BrushStrokeSVGClipPath />
     </>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

@@ -1,3 +1,3 @@
 @function rem($px, $baseFontSize: $baseFontSize) {
-    @return ($px / $baseFontSize) * 1rem;
+  @return ($px / $baseFontSize) * 1rem;
 }
