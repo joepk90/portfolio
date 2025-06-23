@@ -1,6 +1,6 @@
 import { generateBEMModifiersClassList, appendString } from '@src/lib/utilities/utilities';
 import '@components/common/Section/Section.scss';
-import { CSSProperties } from 'react';
+import { CSSProperties, FC, PropsWithChildren } from 'react';
 
 export const sizeOptions = ['sm', 'md', 'lg'] as const;
 type SizeOptions = (typeof sizeOptions)[number];
@@ -15,12 +15,16 @@ type SpacingOptions = {
 };
 
 export type SectionProps = SpacingOptions & {
-  children: any;
   className?: string;
   styles?: CSSProperties;
 };
 
-const Section = ({ children, className, styles, ...spacingOptions }: SectionProps) => {
+const Section: FC<PropsWithChildren<SectionProps>> = ({
+  children,
+  className,
+  styles,
+  ...spacingOptions
+}) => {
   const generateModifiers = () => {
     const classList = [];
 

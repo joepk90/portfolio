@@ -1,3 +1,4 @@
+import { PropsWithChildren } from 'react';
 import { Story, ComponentMeta } from '@storybook/react';
 import Section, { SectionProps, sizeOptions } from '@components/common/Section/Section';
 
@@ -28,7 +29,9 @@ export default {
   },
 } as ComponentMeta<typeof Section>;
 
-const Template: Story<SectionProps> = (args: SectionProps) => {
+const Template: Story<PropsWithChildren<SectionProps>> = (
+  args: PropsWithChildren<SectionProps>,
+) => {
   return <Section {...args}></Section>;
 };
 
