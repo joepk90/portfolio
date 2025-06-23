@@ -1,3 +1,4 @@
+import { PropsWithChildren } from 'react';
 import { Story, ComponentMeta } from '@storybook/react';
 import Container, { Props } from '@components/common/Container/Container';
 
@@ -13,7 +14,7 @@ export default {
   },
 } as ComponentMeta<typeof Container>;
 
-const Template: Story<Props> = (args: Props) => {
+const Template: Story<PropsWithChildren<Props>> = (args: Props) => {
   return <Container {...args}></Container>;
 };
 

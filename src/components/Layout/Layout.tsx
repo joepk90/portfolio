@@ -1,14 +1,10 @@
-import React from 'react';
+import React, { PropsWithChildren, FC } from 'react';
 import Header from '@components/Header/Header';
 import Footer from '@components/Footer/Footer';
 import SideTab from '@components/common/SideTab/SideTab';
 import SideTabContent from '@components/SideTabContent/SideTabContent';
 
-type Props = {
-  children: any;
-};
-
-const Layout = ({ children }: Props) => {
+const Layout: FC<PropsWithChildren<{}>> = ({ children }) => {
   return (
     <>
       <Header />
