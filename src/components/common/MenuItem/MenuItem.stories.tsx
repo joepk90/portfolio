@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story, ComponentMeta } from '@storybook/react';
-import MenuItem, { Props } from '@components/common/MenuItem/MenuItem'; // TODO setup aliases in storybook..
+import MenuItem, { MenuItemProps } from '@components/common/MenuItem/MenuItem'; // TODO setup aliases in storybook..
 
 export default {
   title: 'Atoms/MenuItem',
@@ -22,7 +22,7 @@ export default {
   },
 } as ComponentMeta<typeof MenuItem>;
 
-const Template: Story<Props> = (args: any) => {
+const Template: Story<MenuItemProps> = (args: any) => {
   return (
     <ul style={{ listStyle: 'none', padding: 0 }}>
       <MenuItem {...args}></MenuItem>

@@ -1,8 +1,8 @@
 import '@components/common/Seperator/Seperator.scss';
 
-export type Props = {};
+export type SeperatorProps = {};
 
-const Seperator = (props: Props) => {
+const Seperator = (props: SeperatorProps) => {
   return <div className="seperator"></div>;
 };
 

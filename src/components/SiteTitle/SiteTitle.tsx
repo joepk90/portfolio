@@ -3,13 +3,13 @@ import { generateBEMModifiersClassList } from '@src/lib/utilities/utilities';
 import '@components/SiteTitle/SiteTitle.scss';
 
 export const variants = ['dark', 'light'] as const;
-export type Variant = (typeof variants)[number];
+export type SiteTitleVariant = (typeof variants)[number];
 
-export type Props = {
-  variant?: Variant;
+export type SiteTitleProps = {
+  variant?: SiteTitleVariant;
 };
 
-const SiteTitle = ({ variant = 'dark' }: Props) => {
+const SiteTitle = ({ variant = 'dark' }: SiteTitleProps) => {
   const classList = generateBEMModifiersClassList('site-title', [variant]);
 
   return (

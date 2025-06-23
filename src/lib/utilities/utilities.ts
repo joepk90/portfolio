@@ -32,3 +32,5 @@ export const getPageUrl = (slug: string): string => {
 
   return `${siteURL}/${slug}`;
 };
+
+export const themeVariants = ['dark', 'light'] as const;

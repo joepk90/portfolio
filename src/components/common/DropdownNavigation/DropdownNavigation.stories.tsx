@@ -1,7 +1,7 @@
 import React from 'react';
 import { Story, ComponentMeta } from '@storybook/react';
 import DropdownNavigation, {
-  Props,
+  DropdownNavigationProps,
 } from '@src/components/common/DropdownNavigation/DropdownNavigation'; // TODO setup aliases in storybook..
 import { menuItems } from '@src/config';
 
@@ -17,7 +17,7 @@ export default {
   },
 } as ComponentMeta<typeof DropdownNavigation>;
 
-const Template: Story<Props> = (args: any) => {
+const Template: Story<DropdownNavigationProps> = (args: any) => {
   return (
     <DropdownNavigation {...args} menuItems={menuItems} variant="dropdown"></DropdownNavigation>
   );

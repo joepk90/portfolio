@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story, ComponentMeta } from '@storybook/react';
-import Heading, { Props, headingLevels } from '@components/common/Heading/Heading';
+import Heading, { HeadingProps, headingLevels } from '@components/common/Heading/Heading';
 
 export default {
   title: 'Atoms/Heading',
@@ -20,7 +20,7 @@ export default {
   },
 } as ComponentMeta<typeof Heading>;
 
-const Template: Story<Props> = (args: Props) => {
+const Template: Story<HeadingProps> = (args: HeadingProps) => {
   return <Heading {...args}></Heading>;
 };
 

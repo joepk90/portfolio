@@ -1,5 +1,5 @@
 import { Story, ComponentMeta } from '@storybook/react';
-import Section, { Props, sizeOptions } from '@components/common/Section/Section';
+import Section, { SectionProps, sizeOptions } from '@components/common/Section/Section';
 
 // TODO add option to reset control state
 // https://github.com/storybookjs/storybook/issues/11487
@@ -28,7 +28,7 @@ export default {
   },
 } as ComponentMeta<typeof Section>;
 
-const Template: Story<Props> = (args: Props) => {
+const Template: Story<SectionProps> = (args: SectionProps) => {
   return <Section {...args}></Section>;
 };
 

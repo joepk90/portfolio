@@ -1,13 +1,11 @@
 import Heading from '@components/common/Heading/Heading';
 import { getComponentLibraryUrl, getSourceCodeUrl } from '@lib/utilities/environmentVars';
 
-type Props = {};
-
 /**
  * component not built for reuse: no tests or story setup
  * TODO: setup content in Contentful (Site Settings)
  */
-const SideTabContent = (props: Props) => {
+const SideTabContent = () => {
   const componentLibraryUrl = getComponentLibraryUrl();
   const sourceCodeUrl = getSourceCodeUrl();
 
