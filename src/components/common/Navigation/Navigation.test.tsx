@@ -27,25 +27,25 @@ describe('Navigation', () => {
 
   it('should render the first menu item text content', () => {
     renderMockedElement();
-    let link = screen.getAllByRole('menuitem')[0] as HTMLAnchorElement;
+    const link = screen.getAllByRole('menuitem')[0] as HTMLAnchorElement;
     expect(link.textContent).toContain('1');
   });
 
   it('should render the first menu item href attribute', () => {
     renderMockedElement();
-    let link = screen.getAllByRole('menuitem')[0] as HTMLAnchorElement;
+    const link = screen.getAllByRole('menuitem')[0] as HTMLAnchorElement;
     expect(link.href).toContain('/1');
   });
 
   it('should render the second menu item text content', () => {
     renderMockedElement();
-    let link = screen.getAllByRole('menuitem')[1] as HTMLAnchorElement;
+    const link = screen.getAllByRole('menuitem')[1] as HTMLAnchorElement;
     expect(link.textContent).toContain('2');
   });
 
   it('should render the second menu item href attribute', () => {
     renderMockedElement();
-    let link = screen.getAllByRole('menuitem')[1] as HTMLAnchorElement;
+    const link = screen.getAllByRole('menuitem')[1] as HTMLAnchorElement;
     expect(link.href).toContain('/2');
   });
 

@@ -1,7 +1,7 @@
-import MenuItem, { Props as MenuItemProps } from '@components/common/MenuItem/MenuItem';
+import MenuItem, { MenuItemProps } from '@components/common/MenuItem/MenuItem';
 import '@components/common/DropdownNavigation/DropdownNavigation.scss';
 
-export type Props = {
+export type DropdownNavigationProps = {
   menuItems: MenuItemProps[];
   isOpen?: boolean;
 };
@@ -10,7 +10,7 @@ export type Props = {
 // - animate dropdown
 // - make dropdown an overlay (currently pushes content down -> CLS)
 // - test dropdown open/close logic
-const DropdownNavigation = ({ menuItems, isOpen = false }: Props) => {
+const DropdownNavigation = ({ menuItems, isOpen = false }: DropdownNavigationProps) => {
   const isOpenClass = isOpen === true ? 'is-open' : '';
 
   return (

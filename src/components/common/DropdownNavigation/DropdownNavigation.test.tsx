@@ -15,7 +15,7 @@ const menuItems = [
   },
 ];
 
-const renderMockedElement = (isOpen: boolean = false) => {
+const renderMockedElement = (isOpen = false) => {
   return render(<DropdownNavigation menuItems={menuItems} isOpen={isOpen} />);
 };
 
@@ -51,25 +51,25 @@ describe('DropdownNavigation MenuItems', () => {
 
   it('should render the first menu item text content', () => {
     renderMockedElement(true);
-    let link = screen.getAllByRole('menuitem')[0] as HTMLAnchorElement;
+    const link = screen.getAllByRole('menuitem')[0] as HTMLAnchorElement;
     expect(link.textContent).toContain('1');
   });
 
   it('should render the first menu item href attribute', () => {
     renderMockedElement(true);
-    let link = screen.getAllByRole('menuitem')[0] as HTMLAnchorElement;
+    const link = screen.getAllByRole('menuitem')[0] as HTMLAnchorElement;
     expect(link.href).toContain('/1');
   });
 
   it('should render the second menu item text content', () => {
     renderMockedElement(true);
-    let link = screen.getAllByRole('menuitem')[1] as HTMLAnchorElement;
+    const link = screen.getAllByRole('menuitem')[1] as HTMLAnchorElement;
     expect(link.textContent).toContain('2');
   });
 
   it('should render the second menu item href attribute', () => {
     renderMockedElement(true);
-    let link = screen.getAllByRole('menuitem')[1] as HTMLAnchorElement;
+    const link = screen.getAllByRole('menuitem')[1] as HTMLAnchorElement;
     expect(link.href).toContain('/2');
   });
 });

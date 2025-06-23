@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import SiteTagline from '@components/SiteTagline/SiteTagline';
+import { SiteTagline } from '@components/SiteTagline/SiteTagline';
 
 describe('SiteTagline', () => {
   it('should render the site tag line text', () => {

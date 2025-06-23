@@ -5,14 +5,14 @@ import '@components/common/MenuItem/MenuItem.scss';
 
 type Variant = 'dropdown' | 'light' | 'dark';
 
-export type Props = {
+export type MenuItemProps = {
   id: string;
   label: string;
   path: string;
   variant?: Variant;
 };
 
-const MenuItem = ({ path, label, variant }: Props) => {
+const MenuItem = ({ path, label, variant }: MenuItemProps) => {
   const classModifiers = variant ? [variant] : [];
 
   const classList = generateBEMModifiersClassList('menu-item', classModifiers);

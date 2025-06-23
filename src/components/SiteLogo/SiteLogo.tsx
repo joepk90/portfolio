@@ -1,16 +1,15 @@
 import React from 'react';
 import { siteAuthorInitials } from '@src/config';
-import { generateBEMModifiersClassList } from '@src/lib/utilities/utilities';
+import { generateBEMModifiersClassList, themeVariants } from '@src/lib/utilities/utilities';
 import '@components/SiteLogo/SiteLogo.scss';
 
-export const variants = ['dark', 'light'] as const;
-export type Variant = (typeof variants)[number];
+export type Variant = (typeof themeVariants)[number];
 
-export type Props = {
+export type SiteLogoProps = {
   variant?: Variant;
 };
 
-const SiteLogo = ({ variant = 'dark' }: Props) => {
+const SiteLogo = ({ variant = 'dark' }: SiteLogoProps) => {
   const classList = generateBEMModifiersClassList('site-logo', [variant]);
 
   return (

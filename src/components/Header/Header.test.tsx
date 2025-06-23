@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import Header from '@components/Header/Header';
+import { Header } from '@components/Header';
 
 const renderMockedElement = () => {
   return render(<Header />);

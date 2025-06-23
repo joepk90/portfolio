@@ -2,16 +2,16 @@ import Link from 'next/link';
 import { useState, ReactElement } from 'react';
 import Navigation from '@src/components/common/Navigation/Navigation';
 import DropdownNavigation from '@src/components/common/DropdownNavigation/DropdownNavigation';
-import Hamburger from '@components/common/Hamburger/Hamburger';
+import { Hamburger } from '@components/common/Hamburger/Hamburger';
 import Seperator from '@components/common/Seperator/Seperator';
-import SiteBranding from '@src/components/SiteBranding/SiteBranding';
+import { SiteBranding } from '@src/components/SiteBranding/SiteBranding';
 import { menuItems, indexURL } from '@src/config';
 import '@components/Header/Header.scss';
 
-const Header = () => {
+export const Header = () => {
   const [isNavOpen, setNavIsOpen] = useState(false);
 
-  const handleHamburgerClick = (event: React.MouseEvent<HTMLButtonElement>): void => {
+  const handleHamburgerClick = (): void => {
     setNavIsOpen(!isNavOpen);
   };
 
@@ -45,5 +45,3 @@ const Header = () => {
     </header>
   );
 };
-
-export default Header;

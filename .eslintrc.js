@@ -44,6 +44,7 @@ module.exports = {
         alphabetize: { order: 'asc', caseInsensitive: true },
       },
     ],
+    'import/named': 'off',
 
     // Optional: tighten rules here if desired
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],

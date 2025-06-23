@@ -5,7 +5,7 @@ import SiteTitle from '@components/SiteTitle/SiteTitle';
 import { menuItems, siteDescription } from '@src/config';
 import '@components/Footer/Footer.scss';
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer className="footer">
       <Section margin="lg">

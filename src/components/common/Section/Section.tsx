@@ -13,12 +13,12 @@ type SpacingOptions = {
   marginBottom?: SizeOptions;
 };
 
-export type Props = SpacingOptions & {
+export type SectionProps = SpacingOptions & {
   children: any;
   className?: string;
 };
 
-const Section = ({ children, className, ...spacingOptions }: Props) => {
+const Section = ({ children, className, ...spacingOptions }: SectionProps) => {
   const generateModifiers = () => {
     const classList = [];
 

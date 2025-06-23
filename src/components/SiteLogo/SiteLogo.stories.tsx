@@ -1,5 +1,6 @@
 import { Story, ComponentMeta } from '@storybook/react';
-import SiteLogo, { variants, Props } from '@components/SiteLogo/SiteLogo';
+import { themeVariants } from '@src/lib/utilities/utilities';
+import SiteLogo, { SiteLogoProps } from '@components/SiteLogo/SiteLogo';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -9,13 +10,13 @@ export default {
     variant: {
       control: {
         type: 'radio',
-        options: variants,
+        options: themeVariants,
       },
     },
   },
 } as ComponentMeta<typeof SiteLogo>;
 
-export const Primary: Story<Props> = (args: Props) => <SiteLogo {...args} />;
+export const Primary: Story<SiteLogoProps> = (args: SiteLogoProps) => <SiteLogo {...args} />;
 
 Primary.storyName = 'SiteLogo';
 Primary.args = {

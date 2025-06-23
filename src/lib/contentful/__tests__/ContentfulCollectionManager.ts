@@ -1,4 +1,5 @@
 import { EntryCollection } from 'contentful';
+
 import {
   ContentfulCollectionManager,
   ContentfulCollectionManagerInterface,
@@ -21,7 +22,7 @@ jest.mock('@lib/services/contentful.ts', () => ({
   },
 }));
 
-type T = {};
+type T = Record<string, never>;
 
 let pages: ContentfulCollectionManagerInterface<T>;
 
