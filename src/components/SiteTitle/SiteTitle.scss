@@ -2,18 +2,17 @@
 @import '@styles/helpers/_helpers.scss';
 
 .site-title {
-    color: $textPrimary;
-    font-family: $styledFont;
-    font-weight: $fontWeightBold;
-    font-size: $h2FontSize;
-    letter-spacing: rem(-3px);
+  color: $textPrimary;
+  font-family: $styledFont;
+  font-weight: $fontWeightBold;
+  font-size: $h2FontSize;
+  letter-spacing: rem(-3px);
 
-    @include breakpoint($largeHandsetName) {
-            letter-spacing: rem(-2px);
-    }
+  @include breakpoint($largeHandsetName) {
+    letter-spacing: rem(-2px);
+  }
 
-    &--light {
-        color: $textSubtleWhite;
-    }
-
+  &--light {
+    color: $textSubtleWhite;
+  }
 }

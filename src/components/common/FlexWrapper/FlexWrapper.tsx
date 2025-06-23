@@ -7,7 +7,7 @@ type Display = 'flex' | 'inline-flex';
 type FlexDirection = 'row' | 'column';
 
 type justifyContent =
-  'flex-start'
+  | 'flex-start'
   | 'flex-end'
   | 'center'
   | 'space-between'
@@ -15,10 +15,7 @@ type justifyContent =
   | 'initial'
   | 'inherit';
 
-type FlexWrap =
-  'wrap'
-  | 'nowrap'
-  | 'wrap-reverse';
+type FlexWrap = 'wrap' | 'nowrap' | 'wrap-reverse';
 
 type AlignItems =
   | 'stretch'
@@ -27,45 +24,39 @@ type AlignItems =
   | 'flex-end'
   | 'baseline'
   | 'initial'
-  | 'inherit'
-
+  | 'inherit';
 
 type StyleOptions = {
-  display?: Display
-  flexDirection?: FlexDirection,
-  justifyContent?: justifyContent
-  flexWrap?: FlexWrap,
-  alignItems?: AlignItems
-  flexGrow?: number,
-  flexShrink?: number,
-  maxWidth?: number | string,
-  height?: string,
-}
+  display?: Display;
+  flexDirection?: FlexDirection;
+  justifyContent?: justifyContent;
+  flexWrap?: FlexWrap;
+  alignItems?: AlignItems;
+  flexGrow?: number;
+  flexShrink?: number;
+  maxWidth?: number | string;
+  height?: string;
+};
 
 type FlexWrapperProps = StyleOptions & {
-  children: any,
-  className?: string,
+  children: any;
+  className?: string;
   // styles: Style
   // smallStyles: Style
   // mediumStyles: Style
   // largeStyles: Style
-}
+};
 
 export const FlexWrapper = (props: FlexWrapperProps) => {
-
   // TODO: setup breakpoint options
   // const [style: , setStyle] = useState(style);
   // useEffect(() => {
-  //   // Switch Statement:  
+  //   // Switch Statement:
   //   //  if wi window is large then the small breakpoint, set the smallStyles
   //   setStyle(smallStyles)
   // }[style, smallStyles, mediumStyles, largeStyles])
 
-  const {
-    className,
-    display,
-    ...rest
-  } = props;
+  const { className, display, ...rest } = props;
 
   const classList = appendString('flex-wrapper', className);
 
@@ -74,12 +65,12 @@ export const FlexWrapper = (props: FlexWrapperProps) => {
       className={classList}
       style={{
         display: display || 'flex',
-        ...rest
+        ...rest,
       }}
     >
       {props.children}
     </div>
-  )
-}
+  );
+};
 
 export default FlexWrapper;

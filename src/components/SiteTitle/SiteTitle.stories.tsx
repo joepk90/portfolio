@@ -3,19 +3,19 @@ import SiteTitle, { variants, Props } from '@components/SiteTitle/SiteTitle';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-    title: 'Atoms/SiteTitle',
-    component: SiteTitle,
-    variant: {
-        control: {
-            type: 'radio',
-            options: variants
-        }
+  title: 'Atoms/SiteTitle',
+  component: SiteTitle,
+  variant: {
+    control: {
+      type: 'radio',
+      options: variants,
     },
+  },
 } as ComponentMeta<typeof SiteTitle>;
 
-export const Primary: Story<Props> = (args: Props) => <SiteTitle {...args} />
+export const Primary: Story<Props> = (args: Props) => <SiteTitle {...args} />;
 
 Primary.storyName = 'SiteTitle';
 Primary.args = {
-    variant: 'dark'
-}
+  variant: 'dark',
+};

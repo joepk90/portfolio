@@ -1,48 +1,45 @@
 @import '@styles/base/_base.scss';
 @import '@styles/helpers/_helpers.scss';
 
-
 .menu-item {
+  $this: &;
 
-    $this: &;
+  transition: background-color $animationTime ease-in-out;
+  background-color: transparent;
 
-    transition: background-color $animationTime ease-in-out;
-    background-color: transparent;
+  &--dropdown {
+    background-color: $backgroundDarkGrey;
 
-    &--dropdown {
-        background-color: $backgroundDarkGrey;
-
-        &:hover {
-            background-color: $backgroundGrey;
-        }
-
-        #{$this}__link {
-            @extend %container;
-            padding-top: rem(15px);
-            padding-bottom: rem(15px);
-            width: 100%;
-            @include linkColorLight();
-        }
+    &:hover {
+      background-color: $backgroundGrey;
     }
 
-    &__link {
-        padding-right: rem(25px);
-        max-width: 100%;
-        width: 100%;
-        display: block;
-        font-size: h6FontSize;
-        font-family: $styledFont;
-        
-        @include breakpoint($breakPointNavigationName) {
-            @include navigationLinkColor();
-        }    
+    #{$this}__link {
+      @extend %container;
+      padding-top: rem(15px);
+      padding-bottom: rem(15px);
+      width: 100%;
+      @include linkColorLight();
     }
+  }
 
-    &--light {
+  &__link {
+    padding-right: rem(25px);
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    font-size: h6FontSize;
+    font-family: $styledFont;
 
-        #{$this}__link {
-            width: 100%;
-            @include linkColorLight();
-        }
+    @include breakpoint($breakPointNavigationName) {
+      @include navigationLinkColor();
     }
+  }
+
+  &--light {
+    #{$this}__link {
+      width: 100%;
+      @include linkColorLight();
+    }
+  }
 }

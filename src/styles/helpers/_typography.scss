@@ -1,65 +1,65 @@
 %baseFont {
-    font-family: $baseFont;
-    font-weight: $fontWeightRegular;
+  font-family: $baseFont;
+  font-weight: $fontWeightRegular;
+}
+
+%headingFont {
+  font-family: $headingFont;
+  font-weight: $fontWeightRegular;
+  line-height: 1.2;
+}
+
+%listStyleNone {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@mixin linkColor {
+  color: $linkColor;
+  &:hover {
+    color: $linkHover;
   }
-  
-  %headingFont {
-    font-family: $headingFont;
-    font-weight: $fontWeightRegular;
-    line-height: 1.2;
+}
+
+@mixin linkColorLight {
+  color: $linkColorLight;
+  &:hover {
+    color: $linkHoverLight;
   }
-  
-  %listStyleNone {
-    list-style: none;
-    margin: 0 auto;
-    padding: 0;
+}
+
+@mixin linkColorDark {
+  color: $linkColorDark;
+  &:hover {
+    color: $linkHoverDark;
   }
-  
-  @mixin linkColor {
-    color: $linkColor;
-    &:hover {
-      color: $linkHover;
-    }
+}
+
+@mixin navigationLinkColor {
+  color: $textDarkGrey;
+  &:hover {
+    color: $textSecondary;
   }
-  
-  @mixin linkColorLight {
-    color: $linkColorLight;
-    &:hover {
-      color: $linkHoverLight;
-    }
+}
+
+@mixin h1FontSizes() {
+  font-size: $h1MobileFontSize;
+  @include breakpoint($breakPointTablet) {
+    font-size: $h1FontSize;
   }
-    
-  @mixin linkColorDark {
-    color: $linkColorDark;
-    &:hover {
-        color: $linkHoverDark;
-    }
+}
+
+@mixin h2FontSizes() {
+  font-size: $h2MobileFontSize;
+  @include breakpoint($breakPointTablet) {
+    font-size: $h2FontSize;
   }
-  
-  @mixin navigationLinkColor {
-      color: $textDarkGrey;
-      &:hover {
-          color: $textSecondary;
-      }
-    }
-    
-  @mixin h1FontSizes() {
-    font-size: $h1MobileFontSize;
-    @include breakpoint($breakPointTablet) {
-      font-size: $h1FontSize;
-    }
+}
+
+@mixin h3FontSizes() {
+  font-size: $h3MobileFontSize;
+  @include breakpoint($breakPointTablet) {
+    font-size: $h3FontSize;
   }
-    
-  @mixin h2FontSizes() {
-    font-size: $h2MobileFontSize;
-    @include breakpoint($breakPointTablet) {
-      font-size: $h2FontSize;
-    }
-  }
-    
-  @mixin h3FontSizes() {
-    font-size: $h3MobileFontSize;
-    @include breakpoint($breakPointTablet) {
-      font-size: $h3FontSize;
-    }
-  }
+}

@@ -17,64 +17,58 @@ import { SEO, tagsList } from '@src/config';
 export const getStaticProps: GetStaticProps = async () => getIndexStaticProps();
 
 const Index: NextPage<IndexProps> = ({ pageContent, profileImage, profileBio }) => {
-
   return (
     <Layout>
-      <NextSeo
-        title={`${SEO.title} | Home`}
-      />
+      <NextSeo title={`${SEO.title} | Home`} />
 
-      <Section margin='lg'>
+      <Section margin="lg">
         <Container>
           <GridContainer>
             <Row>
-
               <Col sm={12} md={6} xl={5}>
-                <FlexWrapper justifyContent='center'>
-                  <FlexWrapper maxWidth={325} >
+                <FlexWrapper justifyContent="center">
+                  <FlexWrapper maxWidth={325}>
                     <BrushStrokeWrapper>
-                      <ContentfulImage
-                        image={profileImage}
-                        width={325}
-                        height={325}
-                      />
+                      <ContentfulImage image={profileImage} width={325} height={325} />
                     </BrushStrokeWrapper>
                   </FlexWrapper>
                 </FlexWrapper>
               </Col>
 
               <Col sm={12} md={6} xl={5}>
-                <FlexWrapper flexDirection='column' justifyContent='center' height='100%'>
+                <FlexWrapper flexDirection="column" justifyContent="center" height="100%">
                   <Heading style={{ fontSize: '54px', marginBottom: '0.2em' }}>Hi there!</Heading>
                   <ReactMarkdown className="h5-font-size">{profileBio}</ReactMarkdown>
                 </FlexWrapper>
               </Col>
-
             </Row>
           </GridContainer>
         </Container>
       </Section>
 
-      <Section margin='lg' paddingBottom='md'>
+      <Section margin="lg" paddingBottom="md">
         <Container>
           <GridContainer>
             <Row>
-
               <Col sm={12} md={6} lg={6}>
                 <ReactMarkdown>{pageContent}</ReactMarkdown>
               </Col>
               <Col sm={12} md={6} lg={6}>
-                <FlexWrapper flexDirection='column' alignItems='flex-end' justifyContent='flex-end' height='100%'>
+                <FlexWrapper
+                  flexDirection="column"
+                  alignItems="flex-end"
+                  justifyContent="flex-end"
+                  height="100%"
+                >
                   <Tags tags={tagsList} style={{ justifyContent: 'center' }} />
                 </FlexWrapper>
               </Col>
-
-            </Row></GridContainer>
+            </Row>
+          </GridContainer>
         </Container>
       </Section>
-
     </Layout>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;

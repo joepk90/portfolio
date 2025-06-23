@@ -1,4 +1,3 @@
-
 /*
     Breakpoint Variables
 */
@@ -39,9 +38,9 @@ $breakPointNavigationName: $largeHandsetLandscapeName;
 $breakPointNavigationSize: $largeHandsetLandscapeSize;
 
 :export {
-    breakPointNavigationSize: $breakPointNavigationSize;
-    mediumHandsetSize: $mediumHandsetSize;
-    mediumHandsetLandscapeSize: $mediumHandsetLandscapeSize;
-    largeHandsetLandscapeSize: $largeHandsetLandscapeSize;
-    largeTabletSize: $largeTabletSize;
+  breakPointNavigationSize: $breakPointNavigationSize;
+  mediumHandsetSize: $mediumHandsetSize;
+  mediumHandsetLandscapeSize: $mediumHandsetLandscapeSize;
+  largeHandsetLandscapeSize: $largeHandsetLandscapeSize;
+  largeTabletSize: $largeTabletSize;
 }

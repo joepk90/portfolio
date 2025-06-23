@@ -1,13 +1,12 @@
-
 .brush-stroke {
-    clip-path: url(#brush-stroke-clip-path);
-    background: white;
-    display: block;
-    width: 100%;
-    height: 100px;
+  clip-path: url(#brush-stroke-clip-path);
+  background: white;
+  display: block;
+  width: 100%;
+  height: 100px;
 }
 
 .brush-stroke-svg {
-    position: absolute;
-    pointer-events: none;
+  position: absolute;
+  pointer-events: none;
 }

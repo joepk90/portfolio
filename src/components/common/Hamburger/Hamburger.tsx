@@ -1,46 +1,41 @@
 import { useState } from 'react';
-import "@components/common/Hamburger/Hamburger.scss";
-
+import '@components/common/Hamburger/Hamburger.scss';
 
 type Props = {
-    onClick: Function
-}
+  onClick: Function;
+};
 
 const Hamburger = ({ onClick }: Props) => {
+  const [isActive, setIsActive] = useState(false);
 
-    const [isActive, setIsActive] = useState(false);
+  const renderClassList = (): string => {
+    let classList = 'hamburger hamburger--spin';
 
-    const renderClassList = (): string => {
-
-        let classList = "hamburger hamburger--spin";
-
-        if (isActive === true) {
-            classList = classList + " is-active";
-        }
-
-        return classList;
+    if (isActive === true) {
+      classList = classList + ' is-active';
     }
 
-    const handleClick = (): void => {
+    return classList;
+  };
 
-        setIsActive(!isActive);
+  const handleClick = (): void => {
+    setIsActive(!isActive);
 
-        onClick();
+    onClick();
+  };
 
-    }
-
-    return (
-        <button
-            className={renderClassList()}
-            type="button"
-            onClick={() => handleClick()}
-            data-testid="hamburger"
-        >
-            <span className="hamburger-box">
-                <span className="hamburger-inner"></span>
-            </span>
-        </button>
-    );
-}
+  return (
+    <button
+      className={renderClassList()}
+      type="button"
+      onClick={() => handleClick()}
+      data-testid="hamburger"
+    >
+      <span className="hamburger-box">
+        <span className="hamburger-inner"></span>
+      </span>
+    </button>
+  );
+};
 
 export default Hamburger;

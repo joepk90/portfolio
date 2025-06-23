@@ -1,65 +1,60 @@
 import { generateBEMModifiersClassList, appendString } from '@src/lib/utilities/utilities';
-import "@components/common/Section/Section.scss";
+import '@components/common/Section/Section.scss';
 
-export const sizeOptions = ["sm", "md", "lg"] as const;
-type SizeOptions = typeof sizeOptions[number];
+export const sizeOptions = ['sm', 'md', 'lg'] as const;
+type SizeOptions = (typeof sizeOptions)[number];
 
 type SpacingOptions = {
-    padding?: SizeOptions
-    paddingTop?: SizeOptions
-    paddingBottom?: SizeOptions
-    margin?: SizeOptions
-    marginTop?: SizeOptions
-    marginBottom?: SizeOptions
-}
+  padding?: SizeOptions;
+  paddingTop?: SizeOptions;
+  paddingBottom?: SizeOptions;
+  margin?: SizeOptions;
+  marginTop?: SizeOptions;
+  marginBottom?: SizeOptions;
+};
 
 export type Props = SpacingOptions & {
-    children: any
-    className?: string
-}
+  children: any;
+  className?: string;
+};
 
 const Section = ({ children, className, ...spacingOptions }: Props) => {
+  const generateModifiers = () => {
+    const classList = [];
 
-    const generateModifiers = () => {
-
-        const classList = [];
-
-        for (const option in spacingOptions) {
-
-            switch (option) {
-                case 'padding':
-                    classList.push(`padding-${spacingOptions[option]}`);
-                    break;
-                case 'paddingTop':
-                    classList.push(`padding-top-${spacingOptions[option]}`);
-                    break;
-                case 'paddingBottom':
-                    classList.push(`padding-bottom-${spacingOptions[option]}`);
-                    break;
-                case 'margin':
-                    classList.push(`margin-${spacingOptions[option]}`);
-                    break;
-                case 'marginTop':
-                    classList.push(`margin-top-${spacingOptions[option]}`);
-                    break;
-                case 'marginBottom':
-                    classList.push(`margin-bottom-${spacingOptions[option]}`);
-                    break;
-            }
-        }
-
-        return classList;
+    for (const option in spacingOptions) {
+      switch (option) {
+        case 'padding':
+          classList.push(`padding-${spacingOptions[option]}`);
+          break;
+        case 'paddingTop':
+          classList.push(`padding-top-${spacingOptions[option]}`);
+          break;
+        case 'paddingBottom':
+          classList.push(`padding-bottom-${spacingOptions[option]}`);
+          break;
+        case 'margin':
+          classList.push(`margin-${spacingOptions[option]}`);
+          break;
+        case 'marginTop':
+          classList.push(`margin-top-${spacingOptions[option]}`);
+          break;
+        case 'marginBottom':
+          classList.push(`margin-bottom-${spacingOptions[option]}`);
+          break;
+      }
     }
 
-    const modifiers = generateModifiers();
+    return classList;
+  };
 
-    let classList: string = generateBEMModifiersClassList('section', modifiers);
+  const modifiers = generateModifiers();
 
-    classList = appendString(classList, className);
+  let classList: string = generateBEMModifiersClassList('section', modifiers);
 
-    return (
-        <section className={classList}>{children}</section>
-    );
-}
+  classList = appendString(classList, className);
+
+  return <section className={classList}>{children}</section>;
+};
 
 export default Section;

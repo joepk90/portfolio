@@ -1,11 +1,8 @@
 import 'normalize.css';
 import '@styles/style.scss';
 
-
 const GlobalCSS = () => {
-    return (
-        <></>
-    )
-}
+  return <></>;
+};
 
 export default GlobalCSS;

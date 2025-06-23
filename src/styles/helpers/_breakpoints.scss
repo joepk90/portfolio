@@ -38,13 +38,13 @@
     }
   }
 
-  @if $point == $smallTabletLandscapeName{
+  @if $point == $smallTabletLandscapeName {
     @media (min-width: rem($smallTabletLandscapeSize+0px)) {
       @content;
     }
   }
 
-  @if $point == $largeTabletLandscapeName{
+  @if $point == $largeTabletLandscapeName {
     @media (min-width: rem($largeTabletLandscapeSize+0px)) {
       @content;
     }
@@ -56,4 +56,3 @@
     }
   }
 }
-

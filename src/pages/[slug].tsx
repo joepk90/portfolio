@@ -1,22 +1,22 @@
 import { useEffect } from 'react';
-import { NextPage, GetStaticPropsResult, GetStaticPathsResult } from "next";
+import { NextPage, GetStaticPropsResult, GetStaticPathsResult } from 'next';
 import { contentfulClient } from '@src/lib/services/contentful';
 import { ContentfulCollectionManager } from '@src/lib/contentful/ContentfulCollectionManager';
 import { EntryCollection } from 'contentful';
 import { ContentfulPage, Page } from '@src/lib/contentful/ContentfulPage';
 import Section from '@components/common/Section/Section';
 import Layout from '@components/Layout/Layout';
-import { setGTMOptOutCookie } from '@src/lib/utilities/googleTagManager'
+import { setGTMOptOutCookie } from '@src/lib/utilities/googleTagManager';
 
 type StaticPathsProps = {
-    slug: string
-}
+  slug: string;
+};
 
 type StaticPathsParams = {
-    params: StaticPathsProps
-}
+  params: StaticPathsProps;
+};
 
-type StaticProps = {}
+type StaticProps = {};
 
 /**
  * Slug Page:
@@ -26,55 +26,51 @@ type StaticProps = {}
  */
 
 export const getStaticPaths = async (): Promise<GetStaticPathsResult<StaticPathsProps>> => {
+  const pagesResponse: EntryCollection<Page> = await contentfulClient.getEntries({
+    content_type: 'page',
+  });
 
-    const pagesResponse: EntryCollection<Page> = await contentfulClient.getEntries({
-        content_type: 'page',
-    });
+  const pages = new ContentfulCollectionManager(pagesResponse);
 
-    const pages = new ContentfulCollectionManager(pagesResponse)
+  const pageItems = pages.getItems();
 
-    const pageItems = pages.getItems()
+  const paths: StaticPathsParams[] = [];
+  pageItems.forEach((pageItem) => {
+    const contentfulPage = new ContentfulPage(pageItem);
+    const pageId = contentfulPage.getId();
 
-    const paths: StaticPathsParams[] = [];
-    pageItems.forEach(pageItem => {
-        const contentfulPage = new ContentfulPage(pageItem);
-        const pageId = contentfulPage.getId()
+    if (pageId !== 'google-analytics-tracking') {
+      return;
+    }
 
-        if (pageId !== 'google-analytics-tracking') {
-            return;
-        }
+    paths.push({ params: { slug: pageId } });
+  });
 
-        paths.push({ params: { slug: pageId } });
-    })
-
-    return {
-        paths: paths,
-        fallback: false // no fallback, use 404
-    };
-}
+  return {
+    paths: paths,
+    fallback: false, // no fallback, use 404
+  };
+};
 
 export const getStaticProps = async (): Promise<GetStaticPropsResult<StaticProps>> => {
-
-    return {
-        props: {},
-        revalidate: 300 // 5 minutes
-    }
-}
+  return {
+    props: {},
+    revalidate: 300, // 5 minutes
+  };
+};
 
 const Index: NextPage<Page> = () => {
+  useEffect(() => {
+    setGTMOptOutCookie();
+  }, []);
 
-    useEffect(() => {
-        setGTMOptOutCookie();
-    }, [])
-
-    return (
-        <Layout>
-            <Section>
-                <h1>Google Analytics Page</h1>
-            </Section>
-        </Layout>
-    )
-
-}
+  return (
+    <Layout>
+      <Section>
+        <h1>Google Analytics Page</h1>
+      </Section>
+    </Layout>
+  );
+};
 
 export default Index;

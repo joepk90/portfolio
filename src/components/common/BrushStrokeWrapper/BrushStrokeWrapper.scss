@@ -1,20 +1,21 @@
 .brush-stroke-wrapper {
-    position: relative;
-    overflow: hidden;
-    
-    &__top, &__bottom {
-        position: absolute;
-        z-index: 1;
-        transform: scale(1.5);
-    }
+  position: relative;
+  overflow: hidden;
 
-    &__top {
-        top: -76px;
-        transform: rotate(0deg) rotateX(235deg) scale(1.5);
-    }
+  &__top,
+  &__bottom {
+    position: absolute;
+    z-index: 1;
+    transform: scale(1.5);
+  }
 
-    &__bottom {
-        bottom: -79px;
-        transform: rotate(1deg) rotateX(54deg) scale(1.5);
-    }
+  &__top {
+    top: -76px;
+    transform: rotate(0deg) rotateX(235deg) scale(1.5);
+  }
+
+  &__bottom {
+    bottom: -79px;
+    transform: rotate(1deg) rotateX(54deg) scale(1.5);
+  }
 }
