@@ -5,7 +5,7 @@ import { getComponentLibraryUrl, getSourceCodeUrl } from '@lib/utilities/environ
  * component not built for reuse: no tests or story setup
  * TODO: setup content in Contentful (Site Settings)
  */
-const SideTabContent = () => {
+export const SideTabContent = () => {
   const componentLibraryUrl = getComponentLibraryUrl();
   const sourceCodeUrl = getSourceCodeUrl();
 
