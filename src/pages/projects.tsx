@@ -10,6 +10,12 @@ import Project from '@src/components/ProjectCard/ProjectCard';
 import { getPageUrl } from '@lib/utilities/utilities';
 import { SEO, projectsURL } from '@src/config';
 
+import variables from '@styles/base/_variables-colors.module.scss';
+const { backgroundSubtleWhite, backgroundDarkGrey } = variables;
+
+const getBackgroundColor = (key: number) =>
+  key % 2 === 0 ? backgroundSubtleWhite : backgroundDarkGrey;
+
 const pageUrl = getPageUrl(projectsURL);
 
 export const getStaticProps: GetStaticProps = async () => getProjectsStaticProps();
@@ -19,19 +25,15 @@ const Index: NextPage<ProjectsProps> = ({ projects }) => {
     <Layout>
       <NextSeo title={`${SEO.title} | Projects`} canonical={pageUrl} />
 
-      <Section margin="lg">
-        <Container>
-          <Heading className="page-title">Projects</Heading>
-        </Container>
-      </Section>
-
-      <Section margin="lg" paddingBottom="md">
-        <Container>
-          {projects.map((project, key) => {
-            return <Project key={key} project={project} />;
-          })}
-        </Container>
-      </Section>
+      {projects.map((project, key) => {
+        return (
+          <Section key={key} padding="lg" styles={{ backgroundColor: getBackgroundColor(key) }}>
+            <Container>
+              <Project key={key} project={project} />
+            </Container>
+          </Section>
+        );
+      })}
     </Layout>
   );
 };
