@@ -1,14 +1,16 @@
+import { FC } from 'react';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { ProjectProps } from '@src/lib/contentful/ContentfulProject';
 import Tags from '@components/common/Tags/Tags';
+import { ContentfulImageAlias } from '@components/common';
 import '@components/ProjectCard/ProjectCard.scss';
 
 export type ProjectCardComponentProps = {
   project: ProjectProps;
 };
 
-const Project = ({ project }: ProjectCardComponentProps) => {
-  const { date, description, repositories, slug, title, type, url, tags } = project;
+const Project: FC<ProjectCardComponentProps> = ({ project }) => {
+  const { date, description, repositories, slug, title, type, url, tags, image } = project;
 
   const renderDate = () => {
     if (!date) return '';
@@ -100,6 +102,16 @@ const Project = ({ project }: ProjectCardComponentProps) => {
     );
   };
 
+  const renderImage = () => {
+    if (!image) return;
+
+    return (
+      <div className="project-card__image">
+        <ContentfulImageAlias image={image} width={200} height={200} />
+      </div>
+    );
+  };
+
   return (
     <div className="project-card">
       <div className="project-card__heading">
@@ -111,6 +123,7 @@ const Project = ({ project }: ProjectCardComponentProps) => {
       {renderTags()}
       {renderRepositories()}
       {renderDescription()}
+      {renderImage()}
     </div>
   );
 };

@@ -23,5 +23,6 @@ Default.args = {
     type: 'Personal',
     url: 'https://www.example.com',
     tags: ['Typescript', 'React'],
+    image: null, // TODO add example image
   },
 };
