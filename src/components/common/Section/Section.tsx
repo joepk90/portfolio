@@ -1,6 +1,7 @@
 import { generateBEMModifiersClassList, appendString } from '@src/lib/utilities/utilities';
 import '@components/common/Section/Section.scss';
 import { CSSProperties, FC, PropsWithChildren } from 'react';
+import { BackgroundVariant, backgroundVariantOptions } from '@lib/utilities';
 
 export const sizeOptions = ['sm', 'md', 'lg'] as const;
 type SizeOptions = (typeof sizeOptions)[number];
@@ -15,6 +16,7 @@ type SpacingOptions = {
 };
 
 export type SectionProps = SpacingOptions & {
+  backgroundVariant?: BackgroundVariant;
   className?: string;
   styles?: CSSProperties;
 };
@@ -22,9 +24,24 @@ export type SectionProps = SpacingOptions & {
 const Section: FC<PropsWithChildren<SectionProps>> = ({
   children,
   className,
+  backgroundVariant,
   styles,
   ...spacingOptions
 }) => {
+  const getBackgroundStyle = () => {
+    if (!backgroundVariant) {
+      return {};
+    }
+
+    const backgroundColor = backgroundVariantOptions[backgroundVariant];
+
+    if (typeof !backgroundColor === 'string') {
+      return {};
+    }
+
+    return { backgroundColor };
+  };
+
   const generateModifiers = () => {
     const classList = [];
 
@@ -61,7 +78,7 @@ const Section: FC<PropsWithChildren<SectionProps>> = ({
   classList = appendString(classList, className);
 
   return (
-    <section className={classList} style={styles}>
+    <section className={classList} style={{ ...getBackgroundStyle(), ...styles }}>
       {children}
     </section>
   );

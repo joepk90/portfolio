@@ -10,11 +10,10 @@ import Project from '@src/components/ProjectCard/ProjectCard';
 import { getPageUrl } from '@lib/utilities/utilities';
 import { SEO, projectsURL } from '@src/config';
 
-import variables from '@styles/base/_variables-colors.module.scss';
-const { backgroundSubtleWhite, backgroundDarkGrey } = variables;
+import { BackgroundVariant } from '@src/lib/utilities/colors';
 
-const getBackgroundColor = (key: number) =>
-  key % 2 === 0 ? backgroundSubtleWhite : backgroundDarkGrey;
+const getBackgroundVariant = (key: number) =>
+  key % 2 === 0 ? BackgroundVariant.LightGrey : BackgroundVariant.DarkGrey;
 
 const pageUrl = getPageUrl(projectsURL);
 
@@ -27,7 +26,7 @@ const Index: NextPage<ProjectsProps> = ({ projects }) => {
 
       {projects.map((project, key) => {
         return (
-          <Section key={key} padding="lg" styles={{ backgroundColor: getBackgroundColor(key) }}>
+          <Section key={key} padding="lg" backgroundVariant={getBackgroundVariant(key)}>
             <Container>
               <Project key={key} project={project} />
             </Container>
