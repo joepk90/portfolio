@@ -28,6 +28,7 @@ export async function getProjectsStaticProps(): Promise<GetStaticPropsResult<Pro
       type: project.getType(),
       url: project.getUrl(),
       tags: project.getTags(),
+      image: project.getImage(),
     };
   });
 

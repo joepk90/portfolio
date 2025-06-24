@@ -1,5 +1,6 @@
 import { ContentfulEntryManager } from '@src/lib/contentful/ContentfulEntryManager';
 import { Document } from '@contentful/rich-text-types';
+import { Asset } from 'contentful';
 
 export type ProjectProps = {
   date: string;
@@ -10,6 +11,7 @@ export type ProjectProps = {
   type: string;
   url: string;
   tags: string[];
+  image: Asset | null;
 };
 
 export interface ContentfulProjectInterface {
@@ -84,5 +86,13 @@ export class ContentfulProject
     if (!url || typeof url !== 'string') return '';
 
     return url;
+  };
+
+  getImage = (): Asset | null => {
+    const image = this.getField('image');
+
+    if (!image) return null;
+
+    return image;
   };
 }
