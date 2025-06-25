@@ -2,7 +2,7 @@
 @import '@styles/helpers/_helpers.scss';
 
 .tags {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   @extend %listStyleNone;
 }
