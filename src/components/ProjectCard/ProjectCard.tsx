@@ -10,13 +10,7 @@ export type ProjectCardComponentProps = {
 };
 
 const Project: FC<ProjectCardComponentProps> = ({ project }) => {
-  const { date, description, repositories, slug, title, type, url, tags, image } = project;
-
-  const renderDate = () => {
-    if (!date) return '';
-
-    return <div className="project-card__date">{date}</div>;
-  };
+  const { date, description, repositories, title, type, url, tags, image } = project;
 
   const renderRepositories = () => {
     if (!repositories || repositories.length === 0) return '';
@@ -39,13 +33,13 @@ const Project: FC<ProjectCardComponentProps> = ({ project }) => {
     );
   };
 
-  const renderSlug = () => {
-    if (!slug) return '';
+  const renderSpecs = () => {
+    if (!type) return '';
 
     return (
-      <a className="project-card__slug" title={title} href={slug}>
-        {slug}
-      </a>
+      <span className="project-card__spec">
+        {type} | {date}
+      </span>
     );
   };
 
@@ -55,38 +49,15 @@ const Project: FC<ProjectCardComponentProps> = ({ project }) => {
     return <h2 className="project-card__title">{title}</h2>;
   };
 
-  const renderType = () => {
-    if (!type) return '';
-
-    return (
-      <span className="project-card__type">
-        <strong>Project Type:</strong> {type}
-      </span>
-    );
-  };
-
-  const renderUrl = () => {
-    if (!url) return '';
-
-    return (
-      <div className="project-card__url">
-        <strong>Project URL:</strong>{' '}
-        <a href={url} target="_blank" rel="noopener noreferrer">
-          {url}
-        </a>
-      </div>
-    );
-  };
-
   const renderDescription = () => {
     if (!description || typeof description === 'string') return '';
 
-    return (
-      <div className="project-card__description">
-        <strong>Project Description: </strong>
-        {documentToReactComponents(description)}
-      </div>
-    );
+    const text = documentToReactComponents(description);
+
+    const placeHolderText =
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
+
+    return <div className="project-card__description">{placeHolderText}</div>;
   };
 
   const renderTags = () => {
@@ -94,7 +65,6 @@ const Project: FC<ProjectCardComponentProps> = ({ project }) => {
 
     return (
       <div className="project-card__technologies">
-        <strong>Technologies:</strong>
         <div className="project-card__tags">
           <Tags tags={tags} />
         </div>
@@ -105,25 +75,35 @@ const Project: FC<ProjectCardComponentProps> = ({ project }) => {
   const renderImage = () => {
     if (!image) return;
 
+    const contentfulImage = <ContentfulImageAlias image={image} width={400} height={300} />;
+
+    // TODO create a more elegant Link component?
+    // https://gist.github.com/joepk90/d91114aebb01a1143d722492568c3b80
+
     return (
       <div className="project-card__image">
-        <ContentfulImageAlias image={image} width={200} height={200} />
+        {url ? (
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            {contentfulImage}
+          </a>
+        ) : (
+          contentfulImage
+        )}
       </div>
     );
   };
 
   return (
     <div className="project-card">
-      <div className="project-card__heading">
-        {renderTitle()}
-        {renderDate()}
+      <div className="project-card__wrapper">
+        <div className="project-card__details">
+          {renderTitle()}
+          {renderSpecs()}
+          {renderDescription()}
+          {renderTags()}
+        </div>
+        <div className="project-card__thumbnail">{renderImage()}</div>
       </div>
-      {renderUrl()}
-      {renderType()}
-      {renderTags()}
-      {renderRepositories()}
-      {renderDescription()}
-      {renderImage()}
     </div>
   );
 };

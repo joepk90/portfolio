@@ -2,72 +2,51 @@
 @import '@styles/helpers/_helpers.scss';
 
 .project-card {
-  padding-bottom: rem(25px);
-  margin-bottom: rem(50px);
-  background-color: $backgroundSubtleWhite;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  color: $textDarkGrey;
+  padding: rem(100px) 0;
 
-  &__heading {
+  &__wrapper {
     display: flex;
-    justify-content: space-between;
-    background-color: $backgroundDarkGrey;
-    margin-bottom: rem(20px);
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    // border-bottom-right-radius: 15px;
-    // border-bottom-left-radius: 15px;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
   }
 
-  &__title,
-  &__date {
-    color: $textWhite;
+  &__details {
+    width: 50%;
+    text-align: right;
+  }
+
+  &__thumbnail {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__image {
+    border: solid 25px $white;
+    border-radius: 10px;
+    box-shadow: 0 5px 32px 0 rgba(31, 38, 135, 0.15);
   }
 
   &__title {
-    max-width: 60%;
-    font-size: $h4FontSize;
+    font-size: $h1FontSize;
     font-family: $styledFont;
     font-weight: 700;
-    text-transform: uppercase;
     margin: rem(20px) 0;
+    text-align: right;
   }
 
-  &__date {
+  &__description {
+    font-size: $h3FontSize;
+  }
+
+  &__spec {
     text-transform: uppercase;
-    font-size: $fontSizeSmall;
+    font-size: $h6FontSize;
     font-weight: 700;
   }
 
-  &__heading,
-  &__url,
-  &__type,
-  &__repositories,
-  &__description,
   &__technologies {
-    padding: 0 rem(20px);
-  }
-
-  &__type {
-    text-transform: capitalize;
-    margin-bottom: rem(20px);
-    display: block;
-  }
-
-  &__repositories {
-    margin-bottom: rem(20px);
-  }
-
-  &__repository {
-    margin: rem(5px);
-    font-size: $h6FontSize;
-  }
-
-  &__technologies {
-    margin-bottom: rem(20px);
+    padding: rem(20px) 0;
   }
 }
