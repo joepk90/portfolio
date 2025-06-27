@@ -5,4 +5,12 @@
   display: inline-flex;
   flex-wrap: wrap;
   @extend %listStyleNone;
+
+  &--align-left {
+    justify-content: flex-start;
+  }
+
+  &--align-right {
+    justify-content: flex-end;
+  }
 }
