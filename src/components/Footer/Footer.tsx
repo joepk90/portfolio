@@ -1,5 +1,5 @@
 import Navigation from '@src/components/common/Navigation/Navigation';
-import Section from '@src/components/common/Section/Section';
+import { Section } from '@components/common';
 import Container from '@src/components/common/Container/Container';
 import SiteTitle from '@components/SiteTitle/SiteTitle';
 import { menuItems, siteDescription } from '@src/config';

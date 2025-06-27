@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
 import { Story, ComponentMeta } from '@storybook/react';
-import Section, { SectionProps, sizeOptions } from '@components/common/Section/Section';
+import { Section, SectionProps, sizeOptions } from '@components/common/Section/Section';
 
 // TODO add option to reset control state
 // https://github.com/storybookjs/storybook/issues/11487

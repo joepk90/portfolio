@@ -21,7 +21,7 @@ export type SectionProps = SpacingOptions & {
   styles?: CSSProperties;
 };
 
-const Section: FC<PropsWithChildren<SectionProps>> = ({
+export const Section: FC<PropsWithChildren<SectionProps>> = ({
   children,
   className,
   backgroundVariant,
@@ -83,5 +83,3 @@ const Section: FC<PropsWithChildren<SectionProps>> = ({
     </section>
   );
 };
-
-export default Section;

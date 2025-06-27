@@ -4,7 +4,7 @@ import { contentfulClient } from '@src/lib/services/contentful';
 import { ContentfulCollectionManager } from '@src/lib/contentful/ContentfulCollectionManager';
 import { EntryCollection } from 'contentful';
 import { ContentfulPage, Page } from '@src/lib/contentful/ContentfulPage';
-import Section from '@components/common/Section/Section';
+import { Section } from '@components/common';
 import { Layout } from '@components/Layout/Layout';
 import { setGTMOptOutCookie } from '@src/lib/utilities/googleTagManager';
 
