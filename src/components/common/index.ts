@@ -12,3 +12,4 @@ export * from './Heading';
 export * from './MenuItem';
 export * from './Tags';
 export * from './Section';
+export * from './DiagonalSeperator';

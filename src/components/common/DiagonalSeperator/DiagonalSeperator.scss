@@ -1,0 +1,26 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
+$diagonal-seperator-height: 25px;
+
+// full width right angled triange
+.diagonal-seperator {
+  border-style: solid;
+  border-left-width: 100vw;
+  border-bottom-width: $diagonal-seperator-height;
+  border-color: transparent transparent transparent transparent;
+
+  &--reversed {
+    border-left-width: 0;
+    border-right-width: 100vw;
+    border-top-width: $diagonal-seperator-height;
+  }
+
+  &--bg-light-grey {
+    border-bottom-color: $backgroundSubtleWhite;
+  }
+
+  &--bg-dark-grey {
+    border-bottom-color: $backgroundDarkGrey;
+  }
+}
