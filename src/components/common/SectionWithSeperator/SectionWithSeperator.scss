@@ -1,0 +1,11 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
+.section-with-seperator {
+  position: relative;
+
+  &__seperator {
+    position: absolute;
+    bottom: 0;
+  }
+}
