@@ -7,21 +7,41 @@ $projectCard: project-card;
   padding: rem(100px) 0;
 
   &__wrapper {
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
+    gap: rem(20px); // TODO review: only works in modern browsers
+
+    @include breakpoint($smallTabletLandscapeName) {
+      flex-direction: row;
+    }
   }
 
   &__details {
-    width: 50%;
-    text-align: right;
+    max-width: 50vw;
+    text-align: center;
+    @include breakpoint($smallTabletLandscapeName) {
+      text-align: right;
+      width: 50%;
+    }
+  }
+
+  &__feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include breakpoint($smallTabletLandscapeName) {
+      flex-direction: row;
+      width: 50%;
+    }
   }
 
   &__thumbnail {
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
+    display: inline-flex;
   }
 
   &__image {
@@ -35,7 +55,10 @@ $projectCard: project-card;
     font-family: $styledFont;
     font-weight: 700;
     margin: rem(20px) 0;
-    text-align: right;
+    text-align: center;
+    @include breakpoint($smallTabletLandscapeName) {
+      text-align: right;
+    }
   }
 
   &__description {
@@ -56,13 +79,18 @@ $projectCard: project-card;
   &--reverse {
     .#{$projectCard} {
       &__wrapper {
-        flex-direction: row-reverse;
+        flex-direction: column-reverse;
+        @include breakpoint($smallTabletLandscapeName) {
+          flex-direction: row-reverse;
+        }
       }
       &__title,
       &__details {
-        text-align: left;
+        @include breakpoint($smallTabletLandscapeName) {
+          text-align: left;
+        }
       }
-      &__thumbnail {
+      &__feature {
         justify-content: flex-start;
       }
     }

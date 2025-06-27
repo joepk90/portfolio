@@ -3,8 +3,14 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { ProjectProps } from '@src/lib/contentful/ContentfulProject';
 import { Tags, TagsAlignmentVariant } from '@components/common/Tags/Tags';
 import { ContentfulImageAlias } from '@components/common';
+import {
+  generateBEMModifiersClassList,
+  ThemeVariant,
+  smallTabletLandscapeBreakpoint,
+} from '@src/lib/utilities';
+import { useMediaQuery } from 'react-responsive';
+
 import '@components/ProjectCard/ProjectCard.scss';
-import { generateBEMModifiersClassList, ThemeVariant } from '@src/lib/utilities';
 
 export type ProjectCardComponentProps = {
   project: ProjectProps;
@@ -18,6 +24,10 @@ const Project: FC<ProjectCardComponentProps> = ({
   reverse = false,
 }) => {
   const { date, description, repositories, title, type, url, tags, image } = project;
+
+  const isSmallTabletLandscape = useMediaQuery({
+    query: smallTabletLandscapeBreakpoint,
+  });
 
   const renderRepositories = () => {
     if (!repositories || repositories.length === 0) return '';
@@ -67,15 +77,25 @@ const Project: FC<ProjectCardComponentProps> = ({
     return <div className="project-card__description">{placeHolderText}</div>;
   };
 
+  const getTagsAlignment = () => {
+    if (!isSmallTabletLandscape) {
+      return TagsAlignmentVariant.Center;
+    }
+
+    if (reverse === false) {
+      return TagsAlignmentVariant.Right;
+    }
+
+    return TagsAlignmentVariant.Left;
+  };
+
   const renderTags = () => {
     if (!tags || tags.length === 0) return '';
-
-    const alignment = reverse === false ? TagsAlignmentVariant.Right : TagsAlignmentVariant.Left;
 
     return (
       <div className="project-card__technologies">
         <div className="project-card__tags">
-          <Tags tags={tags} align={alignment} variant={variant} />
+          <Tags tags={tags} align={getTagsAlignment()} variant={variant} />
         </div>
       </div>
     );
@@ -113,12 +133,15 @@ const Project: FC<ProjectCardComponentProps> = ({
     <div className={className}>
       <div className="project-card__wrapper">
         <div className="project-card__details">
-          {renderTitle()}
+          {isSmallTabletLandscape && renderTitle()}
           {renderSpecs()}
           {renderDescription()}
           {renderTags()}
         </div>
-        <div className="project-card__thumbnail">{renderImage()}</div>
+        <div className="project-card__feature">
+          {!isSmallTabletLandscape && renderTitle()}
+          <div className="project-card__thumbnail">{renderImage()}</div>
+        </div>
       </div>
     </div>
   );
