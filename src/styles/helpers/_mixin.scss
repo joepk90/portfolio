@@ -2,6 +2,13 @@
   @return ($px / $baseFontSize) * 1rem;
 }
 
-@function boxShadow($color) {
-  @return 0 8px 32px 0 $color;
+@function boxShadow($color, $opacity) {
+  @return 0 8px 32px 0 rgba($color, $opacity);
+}
+
+@mixin boxShadowHover($color) {
+  box-shadow: boxShadow($color, 0.2);
+  &:hover {
+    box-shadow: boxShadow($color, 0.4);
+  }
 }

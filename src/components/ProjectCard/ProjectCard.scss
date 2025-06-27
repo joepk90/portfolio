@@ -48,11 +48,7 @@ $projectCard: project-card;
     border: solid 25px $white;
     border-radius: 10px;
     @extend %defaultAnimation;
-
-    box-shadow: 0 8px 32px 0 rgba($backgroundGrey, 0.2);
-    &:hover {
-      box-shadow: 0 8px 32px 0 rgba($backgroundGrey, 0.4);
-    }
+    @include boxShadowHover($backgroundGrey);
   }
 
   &__title {
@@ -115,10 +111,7 @@ $projectCard: project-card;
       }
 
       &__image {
-        box-shadow: 0 8px 32px 0 rgba($backgroundLightGrey, 0.2);
-        &:hover {
-          box-shadow: 0 8px 32px 0 rgba($backgroundLightGrey, 0.4);
-        }
+        @include boxShadowHover($backgroundSubtleWhite);
       }
     }
   }
