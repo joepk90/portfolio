@@ -53,6 +53,21 @@ $projectCard: project-card;
     padding: rem(20px) 0;
   }
 
+  &--reverse {
+    .#{$projectCard} {
+      &__wrapper {
+        flex-direction: row-reverse;
+      }
+      &__title,
+      &__details {
+        text-align: left;
+      }
+      &__thumbnail {
+        justify-content: flex-start;
+      }
+    }
+  }
+
   &--dark {
     .#{$projectCard} {
       &__title {

@@ -9,9 +9,14 @@ import { generateBEMModifiersClassList, ThemeVariant } from '@src/lib/utilities'
 export type ProjectCardComponentProps = {
   project: ProjectProps;
   variant?: ThemeVariant;
+  reverse?: boolean;
 };
 
-const Project: FC<ProjectCardComponentProps> = ({ project, variant = ThemeVariant.Light }) => {
+const Project: FC<ProjectCardComponentProps> = ({
+  project,
+  variant = ThemeVariant.Light,
+  reverse = false,
+}) => {
   const { date, description, repositories, title, type, url, tags, image } = project;
 
   const renderRepositories = () => {
@@ -65,10 +70,12 @@ const Project: FC<ProjectCardComponentProps> = ({ project, variant = ThemeVarian
   const renderTags = () => {
     if (!tags || tags.length === 0) return '';
 
+    const alignment = reverse === false ? TagsAlignmentVariant.Right : TagsAlignmentVariant.Left;
+
     return (
       <div className="project-card__technologies">
         <div className="project-card__tags">
-          <Tags tags={tags} align={TagsAlignmentVariant.Right} variant={variant} />
+          <Tags tags={tags} align={alignment} variant={variant} />
         </div>
       </div>
     );
@@ -95,7 +102,12 @@ const Project: FC<ProjectCardComponentProps> = ({ project, variant = ThemeVarian
     );
   };
 
-  const className = generateBEMModifiersClassList('project-card', [variant]);
+  const modifers = [variant as string];
+  if (reverse) {
+    modifers.push('reverse');
+  }
+
+  const className = generateBEMModifiersClassList('project-card', modifers);
 
   return (
     <div className={className}>

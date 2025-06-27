@@ -9,7 +9,8 @@ import { SectionWithSeperator } from '@components/common';
 import { getPageUrl, ThemeVariant } from '@lib/utilities/utilities';
 import { SEO, projectsURL } from '@src/config';
 
-const getSectionVariant = (key: number) => (key % 2 === 0 ? ThemeVariant.Light : ThemeVariant.Dark);
+const isEven = (key: number) => key % 2 === 0;
+const getSectionVariant = (key: number) => (isEven(key) ? ThemeVariant.Light : ThemeVariant.Dark);
 
 const pageUrl = getPageUrl(projectsURL);
 
@@ -22,6 +23,8 @@ const Index: NextPage<ProjectsProps> = ({ projects }) => {
       <NextSeo title={`${SEO.title} | Projects`} canonical={pageUrl} />
 
       {projects.map((project, key) => {
+        // reverseRowDirection means the image will be on the left, and the content on the right .
+        const reverseRowDirection = !isEven(key);
         const variant = getSectionVariant(key);
         return (
           <SectionWithSeperator
@@ -31,7 +34,12 @@ const Index: NextPage<ProjectsProps> = ({ projects }) => {
             disableDivider={key === projectsArrayLength}
           >
             <Container>
-              <Project key={key} project={project} variant={variant} />
+              <Project
+                key={key}
+                project={project}
+                variant={variant}
+                reverse={reverseRowDirection}
+              />
             </Container>
           </SectionWithSeperator>
         );
