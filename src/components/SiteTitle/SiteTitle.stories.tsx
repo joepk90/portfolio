@@ -1,5 +1,5 @@
 import { ComponentMeta, Story } from '@storybook/react';
-import { themeVariants } from '@src/lib/utilities/utilities';
+import { ThemeVariant } from '@src/lib/utilities/utilities';
 import SiteTitle, { SiteTitleProps } from '@components/SiteTitle/SiteTitle';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -9,7 +9,7 @@ export default {
   variant: {
     control: {
       type: 'radio',
-      options: themeVariants,
+      options: ThemeVariant,
     },
   },
 } as ComponentMeta<typeof SiteTitle>;
@@ -18,5 +18,5 @@ export const Primary: Story<SiteTitleProps> = (args: SiteTitleProps) => <SiteTit
 
 Primary.storyName = 'SiteTitle';
 Primary.args = {
-  variant: 'dark',
+  variant: ThemeVariant.Dark,
 };

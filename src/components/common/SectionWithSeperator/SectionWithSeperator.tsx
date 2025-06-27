@@ -1,31 +1,26 @@
 import { FC, PropsWithChildren } from 'react';
 
 import { Section, SectionProps, DiagonalSeperator } from '@components/common';
-import { BackgroundVariant } from '@src/lib/utilities';
+import { BackgroundVariant, ThemeVariant } from '@src/lib/utilities';
 import styles from '@components/common/SectionWithSeperator/SectionWithSeperator.module.scss';
 import '@components/common/SectionWithSeperator/SectionWithSeperator.scss';
 
 const { sectionWithSeperator } = styles;
 const componentClassName = sectionWithSeperator;
 
-export enum SectionWithSeperatorVariant {
-  Dark = 'dark',
-  Light = 'light',
-}
-
 export type SectionWithSeperatorProps = Omit<SectionProps, 'backgroundVariant'> & {
-  variant: SectionWithSeperatorVariant;
+  variant: ThemeVariant;
   disableDivider?: boolean;
 };
 
 export const backgroundVariantMap = {
-  [SectionWithSeperatorVariant.Light]: BackgroundVariant.LightGrey,
-  [SectionWithSeperatorVariant.Dark]: BackgroundVariant.DarkGrey,
+  [ThemeVariant.Light]: BackgroundVariant.LightGrey,
+  [ThemeVariant.Dark]: BackgroundVariant.DarkGrey,
 };
 
 export const SeperatorVariantMap = {
-  [SectionWithSeperatorVariant.Light]: BackgroundVariant.DarkGrey,
-  [SectionWithSeperatorVariant.Dark]: BackgroundVariant.LightGrey,
+  [ThemeVariant.Light]: BackgroundVariant.DarkGrey,
+  [ThemeVariant.Dark]: BackgroundVariant.LightGrey,
 };
 
 export const SectionWithSeperator: FC<PropsWithChildren<SectionWithSeperatorProps>> = ({
@@ -44,7 +39,7 @@ export const SectionWithSeperator: FC<PropsWithChildren<SectionWithSeperatorProp
       {disableDivider === false && (
         <DiagonalSeperator
           backgroundVariant={SeperatorVariantMap[variant]}
-          reverse={variant === SectionWithSeperatorVariant.Light}
+          reverse={variant === ThemeVariant.Light}
           className={`${componentClassName}__seperator`}
         />
       )}

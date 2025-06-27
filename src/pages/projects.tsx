@@ -5,12 +5,11 @@ import { getProjectsStaticProps, ProjectsProps } from '@src/lib/hooks/projects';
 import Container from '@src/components/common/Container/Container';
 import { Layout } from '@components/Layout/Layout';
 import Project from '@src/components/ProjectCard/ProjectCard';
-import { SectionWithSeperator, SectionWithSeperatorVariant } from '@components/common';
-import { getPageUrl } from '@lib/utilities/utilities';
+import { SectionWithSeperator } from '@components/common';
+import { getPageUrl, ThemeVariant } from '@lib/utilities/utilities';
 import { SEO, projectsURL } from '@src/config';
 
-const getSectionVariant = (key: number) =>
-  key % 2 === 0 ? SectionWithSeperatorVariant.Light : SectionWithSeperatorVariant.Dark;
+const getSectionVariant = (key: number) => (key % 2 === 0 ? ThemeVariant.Light : ThemeVariant.Dark);
 
 const pageUrl = getPageUrl(projectsURL);
 
