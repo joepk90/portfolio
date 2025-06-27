@@ -5,13 +5,9 @@ import '@components/common/Tags/Tags.scss';
 
 export enum TagsAlignmentVariant {
   Left = 'left',
+  Center = 'center',
   Right = 'right',
 }
-
-export const TagsAlignmentMap = {
-  [TagsAlignmentVariant.Left]: 'left',
-  [TagsAlignmentVariant.Right]: 'right',
-};
 
 export type TagsProps = {
   tags: string[];
