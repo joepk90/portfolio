@@ -13,6 +13,7 @@ import { Layout } from '@components/Layout/Layout';
 import FlexWrapper from '@components/common/FlexWrapper/FlexWrapper';
 import BrushStrokeWrapper from '@components/common/BrushStrokeWrapper/BrushStrokeWrapper';
 import { SEO, tagsList } from '@src/config';
+import { ThemeVariant } from '@src/lib/utilities';
 
 export const getStaticProps: GetStaticProps = async () => getIndexStaticProps();
 
@@ -60,7 +61,11 @@ const Index: NextPage<IndexProps> = ({ pageContent, profileImage, profileBio }) 
                   justifyContent="flex-end"
                   height="100%"
                 >
-                  <Tags tags={tagsList} style={{ justifyContent: 'center' }} />
+                  <Tags
+                    tags={tagsList}
+                    style={{ justifyContent: 'center' }}
+                    variant={ThemeVariant.Dark}
+                  />
                 </FlexWrapper>
               </Col>
             </Row>

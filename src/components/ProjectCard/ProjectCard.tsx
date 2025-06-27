@@ -20,6 +20,11 @@ export type ProjectCardComponentProps = {
   reverse?: boolean;
 };
 
+export const tagsVariantMap = {
+  [ThemeVariant.Light]: ThemeVariant.Dark,
+  [ThemeVariant.Dark]: ThemeVariant.Light,
+};
+
 const Project: FC<ProjectCardComponentProps> = ({
   project,
   variant = ThemeVariant.Light,
@@ -104,7 +109,7 @@ const Project: FC<ProjectCardComponentProps> = ({
     return (
       <div className="project-card__technologies">
         <div className="project-card__tags">
-          <Tags tags={tags} align={getTagsAlignment()} variant={variant} />
+          <Tags tags={tags} align={getTagsAlignment()} variant={tagsVariantMap[variant]} />
         </div>
       </div>
     );
