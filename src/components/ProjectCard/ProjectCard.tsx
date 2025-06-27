@@ -12,6 +12,8 @@ import { useMediaQuery } from 'react-responsive';
 
 import '@components/ProjectCard/ProjectCard.scss';
 
+const tagsLimit = 5;
+
 export type ProjectCardComponentProps = {
   project: ProjectProps;
   variant?: ThemeVariant;
@@ -89,8 +91,15 @@ const Project: FC<ProjectCardComponentProps> = ({
     return TagsAlignmentVariant.Left;
   };
 
+  const getLimitedTagsArray = (tags: string[]) => {
+    return tags.slice(0, tagsLimit);
+  };
+
   const renderTags = () => {
     if (!tags || tags.length === 0) return '';
+
+    // limit tags?
+    const limitedTagsArray = getLimitedTagsArray(tags);
 
     return (
       <div className="project-card__technologies">
