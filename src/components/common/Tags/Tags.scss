@@ -4,6 +4,7 @@
 .tags {
   display: inline-flex;
   flex-wrap: wrap;
+  gap: rem(10px); // TODO review: only works in modern browsers
   @extend %listStyleNone;
 
   &--align-left {
