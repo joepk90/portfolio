@@ -104,21 +104,22 @@ const Project: FC<ProjectCardComponentProps> = ({
   const renderImage = () => {
     if (!image) return;
 
+    const className = 'project-card__image';
     const contentfulImage = <ContentfulImageAlias image={image} width={400} height={300} />;
 
     // TODO create a more elegant Link component?
     // https://gist.github.com/joepk90/d91114aebb01a1143d722492568c3b80
 
     return (
-      <div className="project-card__image">
+      <>
         {url ? (
-          <a href={url} target="_blank" rel="noopener noreferrer">
+          <a href={url} className={className} target="_blank" rel="noopener noreferrer">
             {contentfulImage}
           </a>
         ) : (
-          contentfulImage
+          <div className={className}>{contentfulImage}</div>
         )}
-      </div>
+      </>
     );
   };
 
