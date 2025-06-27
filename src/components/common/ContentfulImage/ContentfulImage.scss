@@ -1,0 +1,11 @@
+// nextjs seems to have a common problem where image has too much height - the background shows
+// https://github.com/vercel/next.js/issues/18915#issuecomment-1005128405
+// https://github.com/vercel/next.js/issues/21914
+
+// height hack
+.contentful-image {
+  height: 100%;
+  > span {
+    height: 100% !important;
+  }
+}
