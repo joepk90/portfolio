@@ -4,12 +4,14 @@ import { ProjectProps } from '@src/lib/contentful/ContentfulProject';
 import { Tags, TagsAlignmentVariant } from '@components/common/Tags/Tags';
 import { ContentfulImageAlias } from '@components/common';
 import '@components/ProjectCard/ProjectCard.scss';
+import { generateBEMModifiersClassList, ThemeVariant } from '@src/lib/utilities';
 
 export type ProjectCardComponentProps = {
   project: ProjectProps;
+  variant?: ThemeVariant;
 };
 
-const Project: FC<ProjectCardComponentProps> = ({ project }) => {
+const Project: FC<ProjectCardComponentProps> = ({ project, variant = ThemeVariant.Light }) => {
   const { date, description, repositories, title, type, url, tags, image } = project;
 
   const renderRepositories = () => {
@@ -66,7 +68,7 @@ const Project: FC<ProjectCardComponentProps> = ({ project }) => {
     return (
       <div className="project-card__technologies">
         <div className="project-card__tags">
-          <Tags tags={tags} align={TagsAlignmentVariant.Right} />
+          <Tags tags={tags} align={TagsAlignmentVariant.Right} variant={variant} />
         </div>
       </div>
     );
@@ -93,8 +95,10 @@ const Project: FC<ProjectCardComponentProps> = ({ project }) => {
     );
   };
 
+  const className = generateBEMModifiersClassList('project-card', [variant]);
+
   return (
-    <div className="project-card">
+    <div className={className}>
       <div className="project-card__wrapper">
         <div className="project-card__details">
           {renderTitle()}

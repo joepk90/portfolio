@@ -1,7 +1,9 @@
 @import '@styles/base/_base.scss';
 @import '@styles/helpers/_helpers.scss';
 
-.project-card {
+$projectCard: project-card;
+
+.#{$projectCard} {
   padding: rem(100px) 0;
 
   &__wrapper {
@@ -37,16 +39,32 @@
   }
 
   &__description {
-    font-size: $h3FontSize;
+    font-size: $h4FontSize;
   }
 
   &__spec {
     text-transform: uppercase;
     font-size: $h6FontSize;
     font-weight: 700;
+    color: $textDarkGrey;
   }
 
   &__technologies {
     padding: rem(20px) 0;
+  }
+
+  &--dark {
+    .#{$projectCard} {
+      &__title {
+        color: $textWhite;
+      }
+      &__description {
+        color: $textLightGrey;
+      }
+
+      &__spec {
+        color: $textSubtleWhite;
+      }
+    }
   }
 }
