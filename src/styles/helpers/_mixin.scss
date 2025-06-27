@@ -1,3 +1,7 @@
 @function rem($px, $baseFontSize: $baseFontSize) {
   @return ($px / $baseFontSize) * 1rem;
 }
+
+@function boxShadow($color) {
+  @return 0 8px 32px 0 $color;
+}
