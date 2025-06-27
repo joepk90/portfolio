@@ -22,15 +22,16 @@ const Index: NextPage<ProjectsProps> = ({ projects }) => {
       <NextSeo title={`${SEO.title} | Projects`} canonical={pageUrl} />
 
       {projects.map((project, key) => {
+        const variant = getSectionVariant(key);
         return (
           <SectionWithSeperator
             key={key}
             padding="lg"
-            variant={getSectionVariant(key)}
+            variant={variant}
             disableDivider={key === projectsArrayLength}
           >
             <Container>
-              <Project key={key} project={project} />
+              <Project key={key} project={project} variant={variant} />
             </Container>
           </SectionWithSeperator>
         );
