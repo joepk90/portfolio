@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { ProjectProps } from '@src/lib/contentful/ContentfulProject';
-import Tags from '@components/common/Tags/Tags';
+import { Tags, TagsAlignmentVariant } from '@components/common/Tags/Tags';
 import { ContentfulImageAlias } from '@components/common';
 import '@components/ProjectCard/ProjectCard.scss';
 
@@ -66,7 +66,7 @@ const Project: FC<ProjectCardComponentProps> = ({ project }) => {
     return (
       <div className="project-card__technologies">
         <div className="project-card__tags">
-          <Tags tags={tags} />
+          <Tags tags={tags} align={TagsAlignmentVariant.Right} />
         </div>
       </div>
     );
