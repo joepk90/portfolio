@@ -38,9 +38,12 @@ $breakPointNavigationName: $largeHandsetLandscapeName;
 $breakPointNavigationSize: $largeHandsetLandscapeSize;
 
 :export {
-  breakPointNavigationSize: $breakPointNavigationSize;
+  navigationSize: $breakPointNavigationSize;
   mediumHandsetSize: $mediumHandsetSize;
   mediumHandsetLandscapeSize: $mediumHandsetLandscapeSize;
   largeHandsetLandscapeSize: $largeHandsetLandscapeSize;
   largeTabletSize: $largeTabletSize;
+  smallTabletLandscapeSize: $smallTabletLandscapeSize;
+  largeTabletLandscapeSize: $largeTabletLandscapeSize;
+  largeDesktopSize: $largeDesktopSize;
 }
