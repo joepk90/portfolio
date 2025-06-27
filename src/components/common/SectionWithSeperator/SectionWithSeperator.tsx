@@ -2,9 +2,11 @@ import { FC, PropsWithChildren } from 'react';
 
 import { Section, SectionProps, DiagonalSeperator } from '@components/common';
 import { BackgroundVariant } from '@src/lib/utilities';
+import styles from '@components/common/SectionWithSeperator/SectionWithSeperator.module.scss';
 import '@components/common/SectionWithSeperator/SectionWithSeperator.scss';
 
-const componentClassName = 'section-with-seperator';
+const { sectionWithSeperator } = styles;
+const componentClassName = sectionWithSeperator;
 
 export enum SectionWithSeperatorVariant {
   Dark = 'dark',

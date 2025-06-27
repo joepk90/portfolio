@@ -1,7 +1,8 @@
 @import '@styles/base/_base.scss';
 @import '@styles/helpers/_helpers.scss';
+@import '@components/common/SectionWithSeperator/SectionWithSeperator.module.scss';
 
-.section-with-seperator {
+.#{$sectionWithSeperator} {
   position: relative;
 
   &__seperator {
