@@ -20,4 +20,9 @@
   &:last-child {
     margin-right: 0;
   }
+
+  &--dark {
+    background-color: $backgroundSubtleWhite;
+    color: $textBlack;
+  }
 }

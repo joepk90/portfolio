@@ -11,6 +11,7 @@ export * from './Hamburger';
 export * from './Heading';
 export * from './MenuItem';
 export * from './Tags';
+export * from './Tag';
 export * from './Section';
 export * from './DiagonalSeperator';
 export * from './SectionWithSeperator';
