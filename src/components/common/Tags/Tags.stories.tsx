@@ -1,5 +1,5 @@
 import { ComponentMeta, Story } from '@storybook/react';
-import Tags, { TagsProps } from '@components/common/Tags/Tags';
+import { Tags, TagsProps, TagsAlignmentVariant } from '@components/common';
 
 const tagList = ['React', 'Next', 'Javascript', 'PHP', 'HTML'];
 
@@ -9,6 +9,18 @@ export default {
   component: Tags,
 } as ComponentMeta<typeof Tags>;
 
-export const Primary: Story<TagsProps> = () => <Tags tags={tagList} />;
+export const Template: Story<TagsProps> = () => <Tags tags={tagList} />;
 
-Primary.storyName = 'Tags';
+Template.storyName = 'Tags';
+
+export const Left = Template.bind({});
+Left.storyName = 'Left';
+Left.args = {
+  align: TagsAlignmentVariant.Left,
+};
+
+export const Right = Template.bind({});
+Right.storyName = 'Right';
+Right.args = {
+  align: TagsAlignmentVariant.Right,
+};
