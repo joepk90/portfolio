@@ -16,11 +16,27 @@ $diagonal-seperator-height: 25px;
     border-top-width: $diagonal-seperator-height;
   }
 
-  &--bg-light-grey {
+  &--bg-white {
+    border-bottom-color: $backgroundWhite;
+  }
+
+  &--bg-subtle-white {
     border-bottom-color: $backgroundSubtleWhite;
+  }
+
+  &--bg-light-grey {
+    border-bottom-color: $backgroundLightGrey;
+  }
+
+  &--bg-grey {
+    border-bottom-color: $backgroundGrey;
   }
 
   &--bg-dark-grey {
     border-bottom-color: $backgroundDarkGrey;
+  }
+
+  &--bg-black {
+    border-bottom-color: $backgroundBlack;
   }
 }

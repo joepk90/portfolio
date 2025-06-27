@@ -14,13 +14,13 @@ export type SectionWithSeperatorProps = Omit<SectionProps, 'backgroundVariant'> 
 };
 
 export const backgroundVariantMap = {
-  [ThemeVariant.Light]: BackgroundVariant.LightGrey,
+  [ThemeVariant.Light]: BackgroundVariant.SubtleWhite,
   [ThemeVariant.Dark]: BackgroundVariant.DarkGrey,
 };
 
 export const SeperatorVariantMap = {
   [ThemeVariant.Light]: BackgroundVariant.DarkGrey,
-  [ThemeVariant.Dark]: BackgroundVariant.LightGrey,
+  [ThemeVariant.Dark]: BackgroundVariant.SubtleWhite,
 };
 
 export const SectionWithSeperator: FC<PropsWithChildren<SectionWithSeperatorProps>> = ({
