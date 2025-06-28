@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { ProjectProps } from '@src/lib/contentful/ContentfulProject';
 import { Tags, TagsAlignmentVariant } from '@components/common/Tags/Tags';
@@ -30,11 +30,17 @@ const Project: FC<ProjectCardComponentProps> = ({
   variant = ThemeVariant.Light,
   reverse = false,
 }) => {
+  const [hasMounted, setHasMounted] = useState(false);
   const { date, summary, title, type, url, tags, image } = project;
 
   const isSmallTabletLandscape = useMediaQuery({
     query: smallTabletLandscapeBreakpoint,
   });
+
+  // used to rerender components reliant on media query changes
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   /**
    * Descripiong and Repositories
@@ -95,7 +101,7 @@ const Project: FC<ProjectCardComponentProps> = ({
   };
 
   const getTagsAlignment = () => {
-    if (!isSmallTabletLandscape) {
+    if (!isSmallTabletLandscape || !hasMounted) {
       return TagsAlignmentVariant.Center;
     }
 
