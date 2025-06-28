@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { ProjectProps } from '@src/lib/contentful/ContentfulProject';
 import { Tags, TagsAlignmentVariant } from '@components/common/Tags/Tags';
@@ -11,6 +11,7 @@ import {
 import { useMediaQuery } from 'react-responsive';
 
 import '@components/ProjectCard/ProjectCard.scss';
+import { useIsClient } from '@src/hooks';
 
 const tagsLimit = 5;
 
@@ -30,17 +31,12 @@ const Project: FC<ProjectCardComponentProps> = ({
   variant = ThemeVariant.Light,
   reverse = false,
 }) => {
-  const [hasMounted, setHasMounted] = useState(false);
   const { date, summary, title, type, url, tags, image } = project;
 
+  const isClient = useIsClient();
   const isSmallTabletLandscape = useMediaQuery({
     query: smallTabletLandscapeBreakpoint,
   });
-
-  // used to rerender components reliant on media query changes
-  useEffect(() => {
-    setHasMounted(true);
-  }, []);
 
   /**
    * Descripiong and Repositories
@@ -101,7 +97,7 @@ const Project: FC<ProjectCardComponentProps> = ({
   };
 
   const getTagsAlignment = () => {
-    if (!isSmallTabletLandscape || !hasMounted) {
+    if (!isSmallTabletLandscape || !isClient) {
       return TagsAlignmentVariant.Center;
     }
 
