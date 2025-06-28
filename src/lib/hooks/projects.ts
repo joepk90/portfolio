@@ -22,6 +22,7 @@ export async function getProjectsStaticProps(): Promise<GetStaticPropsResult<Pro
     return {
       date: project.getDate(),
       description: project.getDescription(),
+      summary: project.getSummary(),
       repositories: project.getRepositories(),
       slug: project.getSlug(),
       title: project.getTitle(),

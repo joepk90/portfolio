@@ -30,7 +30,7 @@ const Project: FC<ProjectCardComponentProps> = ({
   variant = ThemeVariant.Light,
   reverse = false,
 }) => {
-  const { date, description, repositories, title, type, url, tags, image } = project;
+  const { date, summary, description, repositories, title, type, url, tags, image } = project;
 
   const isSmallTabletLandscape = useMediaQuery({
     query: smallTabletLandscapeBreakpoint,
@@ -82,6 +82,12 @@ const Project: FC<ProjectCardComponentProps> = ({
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 
     return <div className="project-card__description">{placeHolderText}</div>;
+  };
+
+  const renderSummary = () => {
+    if (!summary) return '';
+
+    return <div className="project-card__summary">{summary}</div>;
   };
 
   const getTagsAlignment = () => {
@@ -150,7 +156,7 @@ const Project: FC<ProjectCardComponentProps> = ({
         <div className="project-card__details">
           {isSmallTabletLandscape && renderTitle()}
           {renderSpecs()}
-          {renderDescription()}
+          {renderSummary()}
           {renderTags()}
         </div>
         <div className="project-card__feature">

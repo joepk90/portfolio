@@ -62,7 +62,7 @@ $projectCard: project-card;
     }
   }
 
-  &__description {
+  &__summary {
     font-size: $h4FontSize;
   }
 
@@ -102,7 +102,7 @@ $projectCard: project-card;
       &__title {
         color: $textWhite;
       }
-      &__description {
+      &__summary {
         color: $textLightGrey;
       }
 

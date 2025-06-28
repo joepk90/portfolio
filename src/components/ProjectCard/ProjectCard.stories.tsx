@@ -13,6 +13,7 @@ const Template: Story<ProjectCardComponentProps> = (args: ProjectCardComponentPr
 
 const project = {
   date: 'March 2022',
+  summary: 'The Suumary!',
   description: 'The Description!',
   repositories: ['https://www.example.com'],
   slug: 'project-slug',

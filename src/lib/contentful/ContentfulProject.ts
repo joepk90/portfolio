@@ -5,6 +5,7 @@ import { Asset } from 'contentful';
 export type ProjectProps = {
   date: string;
   description: Document | string;
+  summary: string;
   repositories: string[];
   slug: string;
   title: string;
@@ -16,6 +17,7 @@ export type ProjectProps = {
 
 export interface ContentfulProjectInterface {
   getDate(): string;
+  getSummary(): string;
   getDescription(): Document | string;
   getRepositories(): string[];
   getSlug(): string;
@@ -94,5 +96,13 @@ export class ContentfulProject
     if (!image) return null;
 
     return image;
+  };
+
+  getSummary = (): string => {
+    const summary = this.getField('summary');
+
+    if (!summary) return '';
+
+    return summary;
   };
 }
