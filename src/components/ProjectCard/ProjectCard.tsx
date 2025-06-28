@@ -30,32 +30,47 @@ const Project: FC<ProjectCardComponentProps> = ({
   variant = ThemeVariant.Light,
   reverse = false,
 }) => {
-  const { date, summary, description, repositories, title, type, url, tags, image } = project;
+  const { date, summary, title, type, url, tags, image } = project;
 
   const isSmallTabletLandscape = useMediaQuery({
     query: smallTabletLandscapeBreakpoint,
   });
 
-  const renderRepositories = () => {
-    if (!repositories || repositories.length === 0) return '';
+  /**
+   * Descripiong and Repositories
+   * This code is left in as it will be used for the Project page in the future.
+   */
+  // const renderDescription = () => {
+  //   if (!description || typeof description === 'string') return '';
 
-    return (
-      <div className="project-card__repositories">
-        <strong>Repositories:</strong>
-        <ul className="project-card__repository">
-          {repositories.map((repository, key) => {
-            return (
-              <li key={key}>
-                <a href={repository} target="_blank" rel="noopener noreferrer">
-                  {repository}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    );
-  };
+  //   const text = documentToReactComponents(description);
+
+  //   const placeHolderText =
+  //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
+
+  //   return <div className="project-card__description">{placeHolderText}</div>;
+  // };
+
+  // const renderRepositories = () => {
+  //   if (!repositories || repositories.length === 0) return '';
+
+  //   return (
+  //     <div className="project-card__repositories">
+  //       <strong>Repositories:</strong>
+  //       <ul className="project-card__repository">
+  //         {repositories.map((repository, key) => {
+  //           return (
+  //             <li key={key}>
+  //               <a href={repository} target="_blank" rel="noopener noreferrer">
+  //                 {repository}
+  //               </a>
+  //             </li>
+  //           );
+  //         })}
+  //       </ul>
+  //     </div>
+  //   );
+  // };
 
   const renderSpecs = () => {
     if (!type) return '';
@@ -71,17 +86,6 @@ const Project: FC<ProjectCardComponentProps> = ({
     if (!title) return '';
 
     return <h2 className="project-card__title">{title}</h2>;
-  };
-
-  const renderDescription = () => {
-    if (!description || typeof description === 'string') return '';
-
-    const text = documentToReactComponents(description);
-
-    const placeHolderText =
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
-
-    return <div className="project-card__description">{placeHolderText}</div>;
   };
 
   const renderSummary = () => {
