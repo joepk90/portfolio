@@ -1,5 +1,6 @@
 @import '@styles/base/_base.scss';
 @import '@styles/helpers/_helpers.scss';
+@import '@components/common/Tags/Tags.module.scss';
 
 $projectCard: project-card;
 
@@ -77,6 +78,22 @@ $projectCard: project-card;
     padding: rem(20px) 0;
   }
 
+  .#{$tagsClassName} {
+    justify-content: center;
+    @include breakpoint($smallTabletLandscapeName) {
+      justify-content: flex-end;
+    }
+  }
+
+  /**
+*
+* Modifiers
+* 
+* - modifiers must be at the end so that sub classes within the modifer classes take priority
+* - for example, if the base tagsClassName styles was defined after the modifers, these styles 
+* - would override the styles set in the modifers., 
+*/
+
   &--reverse {
     .#{$projectCard} {
       &__wrapper {
@@ -92,6 +109,11 @@ $projectCard: project-card;
         }
       }
       &__feature {
+        justify-content: flex-start;
+      }
+    }
+    .#{$tagsClassName} {
+      @include breakpoint($smallTabletLandscapeName) {
         justify-content: flex-start;
       }
     }

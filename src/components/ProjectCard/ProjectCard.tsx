@@ -11,7 +11,6 @@ import {
 import { useMediaQuery } from 'react-responsive';
 
 import '@components/ProjectCard/ProjectCard.scss';
-import { useIsClient } from '@src/hooks';
 
 const tagsLimit = 5;
 
@@ -33,7 +32,6 @@ const Project: FC<ProjectCardComponentProps> = ({
 }) => {
   const { date, summary, title, type, url, tags, image } = project;
 
-  const isClient = useIsClient();
   const isSmallTabletLandscape = useMediaQuery({
     query: smallTabletLandscapeBreakpoint,
   });
@@ -96,18 +94,6 @@ const Project: FC<ProjectCardComponentProps> = ({
     return <div className="project-card__summary">{summary}</div>;
   };
 
-  const getTagsAlignment = () => {
-    if (!isSmallTabletLandscape || !isClient) {
-      return TagsAlignmentVariant.Center;
-    }
-
-    if (reverse === false) {
-      return TagsAlignmentVariant.Right;
-    }
-
-    return TagsAlignmentVariant.Left;
-  };
-
   const getLimitedTagsArray = (tags: string[]) => {
     return tags.slice(0, tagsLimit);
   };
@@ -121,7 +107,7 @@ const Project: FC<ProjectCardComponentProps> = ({
     return (
       <div className="project-card__technologies">
         <div className="project-card__tags">
-          <Tags tags={tags} align={getTagsAlignment()} variant={tagsVariantMap[variant]} />
+          <Tags tags={tags} variant={tagsVariantMap[variant]} />
         </div>
       </div>
     );

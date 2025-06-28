@@ -3,6 +3,9 @@ import { Tag } from '@components/common';
 import { generateBEMModifiersClassList, ThemeVariant } from '@src/lib/utilities';
 import '@components/common/Tags/Tags.scss';
 
+import tagsStyles from '@components/common/Tags/Tags.module.scss';
+const { tagsClassName } = tagsStyles;
+
 export enum TagsAlignmentVariant {
   Left = 'left',
   Center = 'center',
@@ -22,14 +25,13 @@ const renderTags = (tags: string[], variant: ThemeVariant) => {
   });
 };
 
-export const Tags: FC<TagsProps> = ({
-  tags,
-  style,
-  align = TagsAlignmentVariant.Left,
-  variant = ThemeVariant.Dark,
-}) => {
-  const alignModifier = `align-${align}`;
-  const className = generateBEMModifiersClassList('tags', [alignModifier]);
+export const Tags: FC<TagsProps> = ({ tags, style, align, variant = ThemeVariant.Dark }) => {
+  const modiferArray = [];
+  if (align) {
+    modiferArray.push(`align-${align}`);
+  }
+
+  const className = generateBEMModifiersClassList(tagsClassName, modiferArray);
 
   return (
     <ul role="list" className={className} style={{ ...style }}>
