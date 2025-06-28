@@ -13,6 +13,7 @@ const project: ProjectProps = {
   url: 'url',
   tags: ['tag-test-string-1', 'tag-test-string-2'],
   image: null, // TODO add test?
+  repositoryLinks: [],
 };
 
 const renderMockedElement = () => {

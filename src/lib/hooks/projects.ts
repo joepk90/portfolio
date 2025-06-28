@@ -30,6 +30,7 @@ export async function getProjectsStaticProps(): Promise<GetStaticPropsResult<Pro
       url: project.getUrl(),
       tags: project.getTags(),
       image: project.getImage(),
+      repositoryLinks: project.getRepositoryLinks(),
     };
   });
 

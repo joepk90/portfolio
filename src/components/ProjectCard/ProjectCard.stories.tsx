@@ -22,6 +22,7 @@ const project = {
   url: 'https://www.example.com',
   tags: ['Typescript', 'React'],
   image: null, // TODO add example image
+  repositoryLinks: [],
 };
 
 Template.storyName = 'ProjectCard';
