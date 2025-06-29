@@ -1,0 +1,14 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
+.icon-with-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: rem(20px);
+
+  &__icon {
+    display: flex;
+    align-items: baseline;
+  }
+}
