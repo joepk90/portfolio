@@ -85,6 +85,31 @@ $projectCard: project-card;
     }
   }
 
+  &__repositories {
+    @extend %listStyleNone;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    @include breakpoint($smallTabletLandscapeName) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__repository-list-item {
+    font-size: $fontSizeSmall;
+    text-transform: uppercase;
+    &:not(:last-child) {
+      &::after {
+        padding: 0 rem(10px);
+        content: '|';
+      }
+    }
+  }
+  &__repository-link {
+    @include linkColorDark();
+  }
+
   /**
 *
 * Modifiers
@@ -111,6 +136,11 @@ $projectCard: project-card;
       &__feature {
         justify-content: flex-start;
       }
+      &__repositories {
+        @include breakpoint($smallTabletLandscapeName) {
+          justify-content: flex-start;
+        }
+      }
     }
     .#{$tagsClassName} {
       @include breakpoint($smallTabletLandscapeName) {
@@ -131,9 +161,11 @@ $projectCard: project-card;
       &__spec {
         color: $textSubtleWhite;
       }
-
       &__image {
         @include boxShadowHover($backgroundSubtleWhite);
+      }
+      &__repository-link {
+        @include linkColorLight();
       }
     }
   }

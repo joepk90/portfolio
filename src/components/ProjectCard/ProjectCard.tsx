@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { ProjectProps } from '@src/lib/contentful/ContentfulProject';
 import { Tags, TagsAlignmentVariant } from '@components/common/Tags/Tags';
-import { ContentfulImageAlias } from '@components/common';
+import { ContentfulImageAlias, ContentfulLink } from '@components/common';
 import {
   generateBEMModifiersClassList,
   ThemeVariant,
@@ -30,7 +30,7 @@ const Project: FC<ProjectCardComponentProps> = ({
   variant = ThemeVariant.Light,
   reverse = false,
 }) => {
-  const { date, summary, title, type, url, tags, image } = project;
+  const { date, summary, title, type, url, tags, image, repositoryLinks } = project;
 
   const isSmallTabletLandscape = useMediaQuery({
     query: smallTabletLandscapeBreakpoint,
@@ -51,26 +51,25 @@ const Project: FC<ProjectCardComponentProps> = ({
   //   return <div className="project-card__description">{placeHolderText}</div>;
   // };
 
-  // const renderRepositories = () => {
-  //   if (!repositories || repositories.length === 0) return '';
+  const renderRepositoryLinks = () => {
+    if (!repositoryLinks || repositoryLinks.length === 0) return '';
 
-  //   return (
-  //     <div className="project-card__repositories">
-  //       <strong>Repositories:</strong>
-  //       <ul className="project-card__repository">
-  //         {repositories.map((repository, key) => {
-  //           return (
-  //             <li key={key}>
-  //               <a href={repository} target="_blank" rel="noopener noreferrer">
-  //                 {repository}
-  //               </a>
-  //             </li>
-  //           );
-  //         })}
-  //       </ul>
-  //     </div>
-  //   );
-  // };
+    return (
+      <ul className="project-card__repositories">
+        {repositoryLinks.map((repositoryLink, key) => {
+          return (
+            <li className="project-card__repository-list-item" key={key}>
+              <ContentfulLink
+                {...repositoryLink}
+                className="project-card__repository-link"
+                target="_blank"
+              />
+            </li>
+          );
+        })}
+      </ul>
+    );
+  };
 
   const renderSpecs = () => {
     if (!type) return '';
@@ -150,6 +149,7 @@ const Project: FC<ProjectCardComponentProps> = ({
           {renderSpecs()}
           {renderSummary()}
           {renderTags()}
+          {renderRepositoryLinks()}
         </div>
         <div className="project-card__feature">
           {!isSmallTabletLandscape && renderTitle()}
