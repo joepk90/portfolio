@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { ProjectProps } from '@src/lib/contentful/ContentfulProject';
-import { Tags, TagsAlignmentVariant } from '@components/common/Tags/Tags';
+import { Tags } from '@components/common/Tags/Tags';
 import { ContentfulImageAlias, ContentfulLink } from '@components/common';
 import {
   generateBEMModifiersClassList,
