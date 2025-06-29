@@ -5,7 +5,7 @@ import { GridContainer, Row, Col } from '@components/common/Grid/Grid';
 import { getIndexStaticProps, IndexProps } from '@src/lib/hooks/index';
 import { ContentfulImageAlias as ContentfulImage } from '@components/common/ContentfulImage/ContentfulImage';
 import { ReactMarkdownAlias as ReactMarkdown } from '@components/common/ReactMarkdown/ReactMarkdown';
-import Section from '@components/common/Section/Section';
+import { Section } from '@components/common';
 import Tags from '@components/common/Tags/Tags';
 import Heading from '@components/common/Heading/Heading';
 import Container from '@src/components/common/Container/Container';
@@ -13,6 +13,7 @@ import { Layout } from '@components/Layout/Layout';
 import FlexWrapper from '@components/common/FlexWrapper/FlexWrapper';
 import BrushStrokeWrapper from '@components/common/BrushStrokeWrapper/BrushStrokeWrapper';
 import { SEO, tagsList } from '@src/config';
+import { ThemeVariant } from '@src/lib/utilities';
 
 export const getStaticProps: GetStaticProps = async () => getIndexStaticProps();
 
@@ -60,7 +61,11 @@ const Index: NextPage<IndexProps> = ({ pageContent, profileImage, profileBio }) 
                   justifyContent="flex-end"
                   height="100%"
                 >
-                  <Tags tags={tagsList} style={{ justifyContent: 'center' }} />
+                  <Tags
+                    tags={tagsList}
+                    style={{ justifyContent: 'center' }}
+                    variant={ThemeVariant.Dark}
+                  />
                 </FlexWrapper>
               </Col>
             </Row>

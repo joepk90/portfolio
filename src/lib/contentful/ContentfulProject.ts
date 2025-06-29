@@ -1,25 +1,32 @@
 import { ContentfulEntryManager } from '@src/lib/contentful/ContentfulEntryManager';
 import { Document } from '@contentful/rich-text-types';
+import { Asset, Entry } from 'contentful';
+import { ContentfulLink } from '@lib/contentful';
 
 export type ProjectProps = {
   date: string;
   description: Document | string;
+  summary: string;
   repositories: string[];
   slug: string;
   title: string;
   type: string;
   url: string;
   tags: string[];
+  image: Asset | null;
+  repositoryLinks: ContentfulLink[];
 };
 
 export interface ContentfulProjectInterface {
   getDate(): string;
+  getSummary(): string;
   getDescription(): Document | string;
   getRepositories(): string[];
   getSlug(): string;
   getTitle(): string;
   getType(): string;
   getUrl(): string;
+  getRepositoryLinks(): ContentfulLink[];
 }
 
 export class ContentfulProject
@@ -84,5 +91,38 @@ export class ContentfulProject
     if (!url || typeof url !== 'string') return '';
 
     return url;
+  };
+
+  getImage = (): Asset | null => {
+    const image = this.getField('image');
+
+    if (!image) return null;
+
+    return image;
+  };
+
+  getSummary = (): string => {
+    const summary = this.getField('summary');
+
+    if (!summary) return '';
+
+    return summary;
+  };
+
+  getRepositoryLinks = (): ContentfulLink[] => {
+    const repositoryLinks = this.getField('repositoryLinks');
+
+    if (!repositoryLinks) {
+      return [];
+    }
+
+    return repositoryLinks.map((repositoryLink: Entry<ContentfulLink>) => {
+      const { title, url, text } = repositoryLink.fields;
+      return {
+        title,
+        url,
+        text,
+      };
+    });
   };
 }

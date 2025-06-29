@@ -11,17 +11,44 @@ const Template: Story<ProjectCardComponentProps> = (args: ProjectCardComponentPr
   return <ProjectCard {...args}></ProjectCard>;
 };
 
-export const Default = Template.bind({});
-Default.storyName = 'ProjectCard';
-Default.args = {
-  project: {
-    date: 'March 2022',
-    description: 'The Description!',
-    repositories: ['https://www.example.com'],
-    slug: 'project-slug',
-    title: 'The Project Title',
-    type: 'Personal',
-    url: 'https://www.example.com',
-    tags: ['Typescript', 'React'],
-  },
+const project = {
+  date: 'March 2022',
+  summary: 'The Suumary!',
+  description: 'The Description!',
+  repositories: ['https://www.example.com'],
+  slug: 'project-slug',
+  title: 'The Project Title',
+  type: 'Personal',
+  url: 'https://www.example.com',
+  tags: ['Typescript', 'React'],
+  image: null, // TODO add example image
+  repositoryLinks: [],
+};
+
+Template.storyName = 'ProjectCard';
+
+export const Light = Template.bind({});
+Light.storyName = 'Light';
+Light.args = {
+  project,
+};
+
+export const Dark = Template.bind({});
+Dark.storyName = 'Dark';
+Dark.args = {
+  project,
+};
+
+export const LightReversed = Template.bind({});
+LightReversed.storyName = 'Light Reversed';
+LightReversed.args = {
+  project,
+  reverse: true,
+};
+
+export const DarkReversed = Template.bind({});
+DarkReversed.storyName = 'Dark Reversed';
+DarkReversed.args = {
+  project,
+  reverse: true,
 };

@@ -1,8 +1,9 @@
 import Navigation from '@src/components/common/Navigation/Navigation';
-import Section from '@src/components/common/Section/Section';
+import { Section } from '@components/common';
 import Container from '@src/components/common/Container/Container';
 import SiteTitle from '@components/SiteTitle/SiteTitle';
 import { menuItems, siteDescription } from '@src/config';
+import { ThemeVariant } from '@src/lib/utilities';
 import '@components/Footer/Footer.scss';
 
 export const Footer = () => {
@@ -13,7 +14,7 @@ export const Footer = () => {
           <div className="footer__row">
             <div className="footer__column">
               <p>
-                <SiteTitle variant="light" />
+                <SiteTitle variant={ThemeVariant.Light} />
               </p>
               <p className="footer__content">{siteDescription}</p>
             </div>

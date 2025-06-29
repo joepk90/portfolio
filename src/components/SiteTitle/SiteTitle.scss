@@ -5,7 +5,7 @@
   color: $textPrimary;
   font-family: $styledFont;
   font-weight: $fontWeightBold;
-  font-size: $h2FontSize;
+  font-size: rem(35px);
   letter-spacing: rem(-3px);
 
   @include breakpoint($largeHandsetName) {

@@ -2,36 +2,48 @@ import type { NextPage } from 'next';
 import { NextSeo } from 'next-seo';
 import { GetStaticProps } from 'next';
 import { getProjectsStaticProps, ProjectsProps } from '@src/lib/hooks/projects';
-import Section from '@components/common/Section/Section';
 import Container from '@src/components/common/Container/Container';
 import { Layout } from '@components/Layout/Layout';
-import Heading from '@components/common/Heading/Heading';
 import Project from '@src/components/ProjectCard/ProjectCard';
-import { getPageUrl } from '@lib/utilities/utilities';
+import { SectionWithSeperator } from '@components/common';
+import { getPageUrl, ThemeVariant } from '@lib/utilities/utilities';
 import { SEO, projectsURL } from '@src/config';
+
+const isEven = (key: number) => key % 2 === 0;
+const getSectionVariant = (key: number) => (isEven(key) ? ThemeVariant.Light : ThemeVariant.Dark);
 
 const pageUrl = getPageUrl(projectsURL);
 
 export const getStaticProps: GetStaticProps = async () => getProjectsStaticProps();
 
 const Index: NextPage<ProjectsProps> = ({ projects }) => {
+  const projectsArrayLength = projects.length - 1;
   return (
     <Layout>
       <NextSeo title={`${SEO.title} | Projects`} canonical={pageUrl} />
 
-      <Section margin="lg">
-        <Container>
-          <Heading className="page-title">Projects</Heading>
-        </Container>
-      </Section>
-
-      <Section margin="lg" paddingBottom="md">
-        <Container>
-          {projects.map((project, key) => {
-            return <Project key={key} project={project} />;
-          })}
-        </Container>
-      </Section>
+      {projects.map((project, key) => {
+        // reverseRowDirection means the image will be on the left, and the content on the right .
+        const reverseRowDirection = !isEven(key);
+        const variant = getSectionVariant(key);
+        return (
+          <SectionWithSeperator
+            key={key}
+            padding="lg"
+            variant={variant}
+            disableDivider={key === projectsArrayLength}
+          >
+            <Container>
+              <Project
+                key={key}
+                project={project}
+                variant={variant}
+                reverse={reverseRowDirection}
+              />
+            </Container>
+          </SectionWithSeperator>
+        );
+      })}
     </Layout>
   );
 };

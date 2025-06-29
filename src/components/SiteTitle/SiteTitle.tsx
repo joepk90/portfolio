@@ -1,15 +1,12 @@
 import { siteAuthor } from '@src/config';
-import { generateBEMModifiersClassList } from '@src/lib/utilities/utilities';
+import { generateBEMModifiersClassList, ThemeVariant } from '@src/lib/utilities/utilities';
 import '@components/SiteTitle/SiteTitle.scss';
 
-export const variants = ['dark', 'light'] as const;
-export type SiteTitleVariant = (typeof variants)[number];
-
 export type SiteTitleProps = {
-  variant?: SiteTitleVariant;
+  variant?: ThemeVariant;
 };
 
-const SiteTitle = ({ variant = 'dark' }: SiteTitleProps) => {
+const SiteTitle = ({ variant = ThemeVariant.Dark }: SiteTitleProps) => {
   const classList = generateBEMModifiersClassList('site-title', [variant]);
 
   return (

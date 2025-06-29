@@ -1,0 +1,13 @@
+/**
+* SCSS Module Class Name export
+*
+* Not essential, but left in as example code
+* - variable name is reused in the components normal scss file + it is imported into the component.
+* - could remove this setup if it causes confusion
+**/
+
+$sectionWithSeperator: section-with-seperator;
+
+:export {
+  sectionWithSeperator: $sectionWithSeperator;
+}

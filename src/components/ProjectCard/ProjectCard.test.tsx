@@ -4,6 +4,7 @@ import { ProjectProps } from '@src/lib/contentful/ContentfulProject';
 
 const project: ProjectProps = {
   date: 'March 2022',
+  summary: 'summary text',
   description: 'description text',
   repositories: ['repo-test-string-1', 'repo-test-string-2'],
   slug: 'slug',
@@ -11,6 +12,8 @@ const project: ProjectProps = {
   type: 'type',
   url: 'url',
   tags: ['tag-test-string-1', 'tag-test-string-2'],
+  image: null, // TODO add test?
+  repositoryLinks: [],
 };
 
 const renderMockedElement = () => {

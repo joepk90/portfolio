@@ -1,8 +1,22 @@
 @import '@styles/base/_base.scss';
 @import '@styles/helpers/_helpers.scss';
+@import '@components/common/Tags/Tags.module.scss';
 
-.tags {
-  display: flex;
+.#{$tagsClassName} {
+  display: inline-flex;
   flex-wrap: wrap;
+  gap: rem(10px); // TODO review: only works in modern browsers
   @extend %listStyleNone;
+
+  &--align-left {
+    justify-content: flex-start;
+  }
+
+  &--align-right {
+    justify-content: flex-end;
+  }
+
+  &--align-center {
+    justify-content: center;
+  }
 }

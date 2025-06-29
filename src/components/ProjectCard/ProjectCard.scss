@@ -1,73 +1,172 @@
 @import '@styles/base/_base.scss';
 @import '@styles/helpers/_helpers.scss';
+@import '@components/common/Tags/Tags.module.scss';
 
-.project-card {
-  padding-bottom: rem(25px);
-  margin-bottom: rem(50px);
-  background-color: $backgroundSubtleWhite;
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  color: $textDarkGrey;
+$projectCard: project-card;
 
-  &__heading {
+.#{$projectCard} {
+  padding: rem(125px) 0;
+
+  &__wrapper {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    background-color: $backgroundDarkGrey;
-    margin-bottom: rem(20px);
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    // border-bottom-right-radius: 15px;
-    // border-bottom-left-radius: 15px;
+    flex-direction: column-reverse;
+    justify-content: center;
     align-items: center;
+    gap: rem(20px); // TODO review: only works in modern browsers
+
+    @include breakpoint($smallTabletLandscapeName) {
+      flex-direction: row;
+    }
   }
 
-  &__title,
-  &__date {
-    color: $textWhite;
+  &__details {
+    max-width: 50vw;
+    text-align: center;
+    @include breakpoint($smallTabletLandscapeName) {
+      text-align: right;
+      width: 50%;
+    }
+  }
+
+  &__feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include breakpoint($smallTabletLandscapeName) {
+      flex-direction: row;
+      width: 50%;
+    }
+  }
+
+  &__thumbnail {
+    display: inline-flex;
+  }
+
+  &__image {
+    border: solid 25px $white;
+    border-radius: 10px;
+    @extend %defaultAnimation;
+    @include boxShadowHover($backgroundGrey);
   }
 
   &__title {
-    max-width: 60%;
-    font-size: $h4FontSize;
+    font-size: $h1FontSize;
     font-family: $styledFont;
     font-weight: 700;
-    text-transform: uppercase;
     margin: rem(20px) 0;
+    text-align: center;
+    @include breakpoint($smallTabletLandscapeName) {
+      text-align: right;
+    }
   }
 
-  &__date {
+  &__summary {
+    font-size: $h4FontSize;
+  }
+
+  &__spec {
     text-transform: uppercase;
-    font-size: $fontSizeSmall;
+    font-size: $h6FontSize;
     font-weight: 700;
+    color: $textDarkGrey;
   }
 
-  &__heading,
-  &__url,
-  &__type,
-  &__repositories,
-  &__description,
   &__technologies {
-    padding: 0 rem(20px);
+    padding: rem(20px) 0;
   }
 
-  &__type {
-    text-transform: capitalize;
-    margin-bottom: rem(20px);
-    display: block;
+  .#{$tagsClassName} {
+    justify-content: center;
+    @include breakpoint($smallTabletLandscapeName) {
+      justify-content: flex-end;
+    }
   }
 
   &__repositories {
-    margin-bottom: rem(20px);
+    @extend %listStyleNone;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    @include breakpoint($smallTabletLandscapeName) {
+      justify-content: flex-end;
+    }
   }
 
-  &__repository {
-    margin: rem(5px);
-    font-size: $h6FontSize;
+  &__repository-list-item {
+    font-size: $fontSizeSmall;
+    text-transform: uppercase;
+    &:not(:last-child) {
+      &::after {
+        padding: 0 rem(10px);
+        content: '|';
+      }
+    }
+  }
+  &__repository-link {
+    @include linkColorDark();
   }
 
-  &__technologies {
-    margin-bottom: rem(20px);
+  /**
+*
+* Modifiers
+* 
+* - modifiers must be at the end so that sub classes within the modifer classes take priority
+* - for example, if the base tagsClassName styles was defined after the modifers, these styles 
+* - would override the styles set in the modifers., 
+*/
+
+  &--reverse {
+    .#{$projectCard} {
+      &__wrapper {
+        flex-direction: column-reverse;
+        @include breakpoint($smallTabletLandscapeName) {
+          flex-direction: row-reverse;
+        }
+      }
+      &__title,
+      &__details {
+        @include breakpoint($smallTabletLandscapeName) {
+          text-align: left;
+        }
+      }
+      &__feature {
+        justify-content: flex-start;
+      }
+      &__repositories {
+        @include breakpoint($smallTabletLandscapeName) {
+          justify-content: flex-start;
+        }
+      }
+    }
+    .#{$tagsClassName} {
+      @include breakpoint($smallTabletLandscapeName) {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &--dark {
+    .#{$projectCard} {
+      &__title {
+        color: $textWhite;
+      }
+      &__summary {
+        color: $textLightGrey;
+      }
+
+      &__spec {
+        color: $textSubtleWhite;
+      }
+      &__image {
+        @include boxShadowHover($backgroundSubtleWhite);
+      }
+      &__repository-link {
+        @include linkColorLight();
+      }
+    }
   }
 }
