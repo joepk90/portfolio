@@ -16,6 +16,7 @@ export * from './Section';
 export * from './DiagonalSeperator';
 export * from './SectionWithSeperator';
 export * from './Link';
+export * from './Email';
 export * from './ContentfulLink';
 export * from './IconWithContent';
 export * from './List';

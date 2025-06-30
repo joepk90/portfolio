@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import { FaMapMarkerAlt, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { IconWithContent, Link, Typography } from '@src/components/common';
 import { IconType } from 'react-icons';
+import { obfuscatedEmailHTML } from '@lib/utilities';
 
 const removeHttpeProtocol = (url: string) => url.replace('https://', '');
 
@@ -49,17 +50,32 @@ type ContactList = {
 
 export const generateContactListItems = (contactData: ContactList[]): ReactNode[] => {
   return contactData.map((contactItem) => {
-    const { icon: Icon, title, url, text } = contactItem;
+    const { icon: Icon, title, url, text, type } = contactItem;
+
+    const isEmail = type === 'email';
+
+    let textComponent: ReactNode;
+    if (isEmail) {
+      textComponent = <Typography variant="heading5" dangerouslySetInnerHTML={{ __html: text }} />;
+    } else {
+      textComponent = <Typography variant="heading5" children={text} />;
+    }
+
+    const renderListItem = () => {
+      if (!url || !title) {
+        return textComponent;
+      }
+
+      return (
+        <Link href={isEmail ? obfuscatedEmailHTML(url) : url} title={title} target="_blank">
+          {textComponent}
+        </Link>
+      );
+    };
 
     return (
       <IconWithContent key={contactItem.type} icon={<Icon fontSize={20} />}>
-        {url && title ? (
-          <Link href={url} title={title} target="_blank">
-            <Typography variant="heading5">{text}</Typography>
-          </Link>
-        ) : (
-          <Typography variant="heading5">{text}</Typography>
-        )}
+        {renderListItem()}
       </IconWithContent>
     );
   });

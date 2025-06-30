@@ -3,7 +3,7 @@ import { PropsWithChildren, FC, ReactNode, HTMLAttributeAnchorTarget } from 'rea
 export type LinkProps = {
   href: string;
   title: string;
-  children: ReactNode;
+  children?: ReactNode;
   target?: HTMLAttributeAnchorTarget;
   [propName: string]: any;
 };
