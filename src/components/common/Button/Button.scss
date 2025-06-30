@@ -1,7 +1,8 @@
 @import '@styles/base/_base.scss';
 @import '@styles/helpers/_helpers.scss';
+@import '@components/common/Button/Button.module.scss';
 
-.button {
+.#{$button} {
   @include linkColorLight();
   transition:
     background,
