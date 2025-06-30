@@ -1,5 +1,15 @@
 @import '@styles/base/_base.scss';
 @import '@styles/helpers/_helpers.scss';
+@import '@components/common/Button/Button.module.scss';
 
 .contact-page {
+  // TODO: create a padding component - specifically to handle very custom padding
+  .container {
+    padding-top: rem(60px);
+    padding-bottom: rem(60px);
+    @include breakpoint($smallTabletLandscapeName) {
+      padding-top: rem(150px) 0;
+      padding-bottom: rem(150px) 0;
+    }
+  }
 }

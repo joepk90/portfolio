@@ -1,0 +1,42 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
+.lets-connect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(40px);
+  @include breakpoint($smallTabletLandscapeName) {
+    gap: rem(80px);
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__header {
+    max-width: rem(500px);
+  }
+
+  &__heading {
+    text-align: center;
+    font-size: rem(80px);
+    margin-bottom: rem(5px);
+    margin-top: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @include breakpoint($smallTabletLandscapeName) {
+      text-align: right;
+    }
+    @include breakpoint($largeDesktopName) {
+      text-align: right;
+      font-size: rem(100px);
+    }
+  }
+
+  &__sub-heading {
+    text-align: center;
+    @include breakpoint($smallTabletLandscapeName) {
+      text-align: right;
+    }
+  }
+}
