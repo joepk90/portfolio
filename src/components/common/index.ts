@@ -17,3 +17,4 @@ export * from './DiagonalSeperator';
 export * from './SectionWithSeperator';
 export * from './Link';
 export * from './ContentfulLink';
+export * from './IconWithContent';
