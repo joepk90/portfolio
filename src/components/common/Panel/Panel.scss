@@ -1,0 +1,9 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
+.panel {
+  background-color: $backgroundWhite;
+  padding: rem(40px);
+  border: 0.5px solid $borderGrey;
+  border-radius: 5px;
+}

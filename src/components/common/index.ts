@@ -19,3 +19,4 @@ export * from './Link';
 export * from './ContentfulLink';
 export * from './IconWithContent';
 export * from './List';
+export * from './Panel';
