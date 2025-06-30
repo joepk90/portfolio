@@ -18,3 +18,4 @@ export * from './SectionWithSeperator';
 export * from './Link';
 export * from './ContentfulLink';
 export * from './IconWithContent';
+export * from './List';
