@@ -10,6 +10,7 @@ export const siteURL: string = getSiteUrl();
  */
 export const indexURL: string = '/';
 export const projectsURL: string = 'projects';
+export const contactURL: string = 'contact';
 
 /**
  * Site Settings
@@ -41,15 +42,15 @@ export const menuItems = [
   //     label: "About",
   //     path: "/about",
   // },
-  // {
-  //     name: 'contact',
-  //     label: "Contact",
-  //     path: "/contact",
-  // },
   {
     id: 'projects',
     label: 'View Work',
     path: '/projects',
+  },
+  {
+    id: 'contact',
+    label: 'Contact',
+    path: '/contact',
   },
 ];
 

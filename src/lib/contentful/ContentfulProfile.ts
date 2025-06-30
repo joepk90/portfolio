@@ -6,6 +6,11 @@ export interface ContentfulProfileInterface {
   getBio(): string;
   getName(): string;
   getImage(): Asset;
+  getLocation(): string;
+  getEmail(): string;
+  getGithubLink(): string;
+  getLinkedInLink(): string;
+  getCVLink(): string;
 }
 
 export type Profile = {
@@ -13,6 +18,11 @@ export type Profile = {
   name: string;
   bio: string;
   image: Asset;
+  location: string;
+  email: string;
+  githubLink: string;
+  linkedInLink: string;
+  cvLink: string;
 };
 
 export class ContentfulProfile
@@ -33,5 +43,25 @@ export class ContentfulProfile
 
   getImage = (): Asset => {
     return this.getField('image');
+  };
+
+  getLocation = (): string => {
+    return this.getField('location');
+  };
+
+  getEmail = (): string => {
+    return this.getField('email');
+  };
+
+  getGithubLink = (): string => {
+    return this.getField('githubLink');
+  };
+
+  getLinkedInLink = (): string => {
+    return this.getField('linkedInLink');
+  };
+
+  getCVLink = (): string => {
+    return this.getField('cvLink');
   };
 }

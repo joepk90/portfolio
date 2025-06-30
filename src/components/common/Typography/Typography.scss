@@ -1,0 +1,28 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
+.typography {
+  &--heading1 {
+    @include h1FontSizes();
+  }
+
+  &--heading2 {
+    @include h2FontSizes();
+  }
+
+  &--heading3 {
+    @include h3FontSizes();
+  }
+
+  &--heading4 {
+    font-size: $h4FontSize;
+  }
+
+  &--heading5 {
+    font-size: $h5FontSize;
+  }
+
+  &--heading6 {
+    font-size: $h6FontSize;
+  }
+}

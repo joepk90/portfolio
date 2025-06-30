@@ -1,0 +1,52 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+@import '@components/common/Button/Button.module.scss';
+
+.view-cv {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: rem(50px); // TODO REVIEW - browser incompatiblity
+  align-items: center;
+  @include breakpoint($smallTabletLandscapeName) {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__heading {
+    max-width: rem(400px);
+    font-size: rem(80px);
+    margin-bottom: 0.2em;
+    margin-top: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    @include breakpoint($smallTabletLandscapeName) {
+      text-align: right;
+      font-size: rem(90px);
+    }
+
+    // TODO: remove custom styles - make heading component styles more customisable
+
+    @include breakpoint($smallTabletLandscapeName) {
+      text-align: left;
+      max-width: rem(400px);
+    }
+  }
+
+  // TODO: remove button styles - make button component styles more customisable
+  .#{$button} {
+    padding: rem(20px) rem(40px);
+    background-color: $backgroundWhite;
+    color: $textDarkGrey;
+    border-radius: rem(3px);
+    text-transform: uppercase;
+    font-weight: 700;
+
+    &:hover {
+      background-color: $buttercup;
+      color: $textWhite;
+    }
+  }
+}

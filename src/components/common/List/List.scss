@@ -1,0 +1,9 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
+.list {
+  @extend %listStyleNone;
+  display: flex;
+  flex-direction: column;
+  gap: rem(20px);
+}

@@ -9,3 +9,4 @@ export * from './SiteBranding';
 export * from './SiteLogo';
 export * from './SiteTagline';
 export * from './SiteTitle';
+export * from './ContactPage';

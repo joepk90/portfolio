@@ -1,0 +1,31 @@
+import React, { HTMLAttributes, FC, PropsWithChildren } from 'react';
+import { generateBEMModifiersClassList } from '@src/lib/utilities';
+import '@components/common/Typography/Typography.scss';
+
+// TODO review variant names - setup paragraph and caption variants?
+
+type Variant = 'heading1' | 'heading2' | 'heading3' | 'heading4' | 'heading5' | 'heading6';
+
+interface TypographyProps extends HTMLAttributes<HTMLDivElement> {
+  variant?: Variant;
+  className?: string;
+}
+
+export const Typography: FC<PropsWithChildren<TypographyProps>> = ({
+  variant,
+  children,
+  ...props
+}) => {
+  const modifiers = [];
+  if (variant) {
+    modifiers.push(variant);
+  }
+
+  const className = generateBEMModifiersClassList('typography', modifiers);
+
+  return (
+    <div className={className} {...props}>
+      {children}
+    </div>
+  );
+};
