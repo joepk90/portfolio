@@ -1,9 +1,8 @@
-import { PropsWithChildren, FC, ReactNode, HTMLAttributeAnchorTarget } from 'react';
+import { PropsWithChildren, FC, HTMLAttributeAnchorTarget } from 'react';
 
 export type LinkProps = {
   href: string;
   title: string;
-  children: ReactNode;
   target?: HTMLAttributeAnchorTarget;
   [propName: string]: any;
 };

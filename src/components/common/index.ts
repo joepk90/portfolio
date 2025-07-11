@@ -1,3 +1,4 @@
+export * from './ClonedElement';
 export * from './BrushStroke';
 export * from './BrushStrokeWrapper';
 export * from './Button';
@@ -16,6 +17,7 @@ export * from './Section';
 export * from './DiagonalSeperator';
 export * from './SectionWithSeperator';
 export * from './Link';
+export * from './Email';
 export * from './ContentfulLink';
 export * from './IconWithContent';
 export * from './List';
