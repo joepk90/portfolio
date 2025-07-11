@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { FaMapMarkerAlt, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { IconWithContent, Link, Typography } from '@src/components/common';
+import { IconWithContent, Link, Typography, Email, ClonedElement } from '@src/components/common';
 import { IconType } from 'react-icons';
 
 const removeHttpeProtocol = (url: string) => url.replace('https://', '');
@@ -47,19 +47,31 @@ type ContactList = {
   title?: string;
 };
 
+const textComponent = <Typography variant="heading5" />;
+
 export const generateContactListItems = (contactData: ContactList[]): ReactNode[] => {
   return contactData.map((contactItem) => {
-    const { icon: Icon, title, url, text } = contactItem;
+    const { icon: Icon, title, url, text, type } = contactItem;
+
+    const renderListItem = () => {
+      if (!url || !title) {
+        return <ClonedElement element={textComponent} children={text} />;
+      }
+
+      if (type === 'email') {
+        return <Email href={url} text={text} title={title} childComponent={textComponent} />;
+      }
+
+      return (
+        <Link href={url} title={title} target="_blank">
+          <ClonedElement element={textComponent} children={text} />
+        </Link>
+      );
+    };
 
     return (
       <IconWithContent key={contactItem.type} icon={<Icon fontSize={20} />}>
-        {url && title ? (
-          <Link href={url} title={title} target="_blank">
-            <Typography variant="heading5">{text}</Typography>
-          </Link>
-        ) : (
-          <Typography variant="heading5">{text}</Typography>
-        )}
+        {renderListItem()}
       </IconWithContent>
     );
   });
