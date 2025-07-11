@@ -12,7 +12,6 @@ const pageUrl = getPageUrl(projectsURL);
 export const getStaticProps: GetStaticProps = async () => getProjectsStaticProps();
 
 const Index: NextPage<ProjectsProps> = ({ projects }) => {
-  const projectsArrayLength = projects.length - 1;
   return (
     <Layout>
       <NextSeo title={`${SEO.title} | Projects`} canonical={pageUrl} />
