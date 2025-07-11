@@ -62,7 +62,7 @@ export const generateContactListItems = (contactData: ContactList[]): ReactNode[
 
     const renderListItem = () => {
       if (!url || !title) {
-        return <ClonedElement element={textComponent} children={text} />;
+        return <ClonedElement element={textComponent}>{text}</ClonedElement>;
       }
 
       if (type === ContactListType.Email) {
@@ -71,7 +71,7 @@ export const generateContactListItems = (contactData: ContactList[]): ReactNode[
 
       return (
         <Link href={url} title={title} target="_blank">
-          <ClonedElement element={textComponent} children={text} />
+          <ClonedElement element={textComponent}>{text}</ClonedElement>
         </Link>
       );
     };
