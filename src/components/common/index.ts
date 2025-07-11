@@ -23,3 +23,4 @@ export * from './IconWithContent';
 export * from './List';
 export * from './Panel';
 export * from './Typography';
+export * from './SideBarModal';
