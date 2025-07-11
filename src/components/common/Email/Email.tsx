@@ -8,6 +8,18 @@ type EmailProps = LinkProps & {
   childComponent?: ReactElement; // should this be converted to a typograhpy variant?
 };
 
+const getEmailAttributes = (text: string, childComponent?: ReactElement) => {
+  const innerHtml = { dangerouslySetInnerHTML: { __html: text } };
+
+  if (childComponent) {
+    return {
+      children: <ClonedElement element={childComponent} {...innerHtml} />,
+    };
+  }
+
+  return innerHtml;
+};
+
 export const Email: FC<PropsWithChildren<EmailProps>> = ({
   title,
   href,
@@ -15,26 +27,9 @@ export const Email: FC<PropsWithChildren<EmailProps>> = ({
   childComponent,
   ...rest
 }) => {
-  const obfiscatedEmailText = obfuscatedHTML(href);
+  const obfiscatedEmailText = obfuscatedHTML(text);
   const obfiscatedEmailHref = `mailto:${obfiscatedEmailText}`;
+  const emailAttributes = getEmailAttributes(obfiscatedEmailText, childComponent);
 
-  if (childComponent) {
-    return (
-      <Link title={title} href={obfiscatedEmailHref} {...rest}>
-        <ClonedElement
-          element={childComponent}
-          dangerouslySetInnerHTML={{ __html: obfuscatedHTML(text) }}
-        />
-      </Link>
-    );
-  }
-
-  return (
-    <Link
-      title={title}
-      href={obfiscatedEmailHref}
-      dangerouslySetInnerHTML={{ __html: obfuscatedHTML(text) }}
-      {...rest}
-    />
-  );
+  return <Link title={title} href={obfiscatedEmailHref} {...emailAttributes} {...rest} />;
 };
