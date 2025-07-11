@@ -1,4 +1,4 @@
-import { cloneElement, ReactElement, ReactNode } from 'react';
+import { cloneElement, FC, PropsWithChildren, ReactElement, ReactNode } from 'react';
 
 /**
  * ClonedElement
@@ -13,17 +13,16 @@ type DangerousHTML = {
 
 type ClonedElementProps = {
   element: ReactElement;
-  children?: ReactNode;
   dangerouslySetInnerHTML?: DangerousHTML;
   props?: Record<string, any>;
 };
 
-export const ClonedElement = ({
+export const ClonedElement: FC<PropsWithChildren<ClonedElementProps>> = ({
   element,
   children,
   dangerouslySetInnerHTML,
   props = {},
-}: ClonedElementProps) => {
+}) => {
   return cloneElement(element, {
     dangerouslySetInnerHTML,
     ...props,
