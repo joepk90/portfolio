@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story, ComponentMeta } from '@storybook/react';
-import Button, { ButtonProps } from '@src/components/common/Button/Button'; // TODO setup aliases in storybook..
+import { Button, ButtonProps } from '@src/components/common/Button/Button'; // TODO setup aliases in storybook..
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

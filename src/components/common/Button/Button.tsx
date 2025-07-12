@@ -10,7 +10,7 @@ export type ButtonProps = {
   [propName: string]: any;
 };
 
-const Button: FC<PropsWithChildren<ButtonProps>> = ({ children, className, ...rest }) => {
+export const Button: FC<PropsWithChildren<ButtonProps>> = ({ children, className, ...rest }) => {
   const classList = appendString(buttonClass, className);
 
   return (
@@ -19,5 +19,3 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({ children, className, ...re
     </button>
   );
 };
-
-export default Button;

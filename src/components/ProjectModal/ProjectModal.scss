@@ -1,0 +1,25 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
+.project-modal {
+  &__repositories {
+    @extend %listStyleNone;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+  }
+
+  &__repository-list-item {
+    font-size: $fontSizeSmall;
+    text-transform: uppercase;
+    &:not(:last-child) {
+      &::after {
+        padding: 0 rem(10px);
+        content: '|';
+      }
+    }
+  }
+  &__repository-link {
+    @include linkColorDark();
+  }
+}

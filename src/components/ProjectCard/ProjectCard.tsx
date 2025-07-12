@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+// import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { ProjectProps } from '@src/lib/contentful/ContentfulProject';
 import { Tags } from '@components/common/Tags/Tags';
-import { ContentfulImageAlias, ContentfulLink } from '@components/common';
+import { ContentfulImageAlias, ContentfulLink, Button } from '@components/common';
 import {
   generateBEMModifiersClassList,
   ThemeVariant,
@@ -16,6 +16,7 @@ const tagsLimit = 5;
 
 export type ProjectCardComponentProps = {
   project: ProjectProps;
+  onReadMoreClick: (index: number) => void;
   variant?: ThemeVariant;
   reverse?: boolean;
 };
@@ -27,10 +28,11 @@ export const tagsVariantMap = {
 
 const Project: FC<ProjectCardComponentProps> = ({
   project,
+  onReadMoreClick,
   variant = ThemeVariant.Light,
   reverse = false,
 }) => {
-  const { date, summary, title, type, url, tags, image, repositoryLinks } = project;
+  const { date, summary, title, type, url, tags, image, repositoryLinks, description } = project;
 
   const isSmallTabletLandscape = useMediaQuery({
     query: smallTabletLandscapeBreakpoint,
@@ -134,6 +136,17 @@ const Project: FC<ProjectCardComponentProps> = ({
     );
   };
 
+  const renderReadMoreLink = () => {
+    // TODO TEST !description works correctly
+    if (!description) return null;
+
+    return (
+      <Button title="Read More" onClick={onReadMoreClick} className="project-card__read-more">
+        {`Read More >`}
+      </Button>
+    );
+  };
+
   const modifers = [variant as string];
   if (reverse) {
     modifers.push('reverse');
@@ -149,7 +162,8 @@ const Project: FC<ProjectCardComponentProps> = ({
           {renderSpecs()}
           {renderSummary()}
           {renderTags()}
-          {renderRepositoryLinks()}
+          {/* {renderRepositoryLinks()} */}
+          {renderReadMoreLink()}
         </div>
         <div className="project-card__feature">
           {!isSmallTabletLandscape && renderTitle()}
