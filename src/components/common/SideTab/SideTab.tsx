@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { generateBEMModifiersClassList } from '@src/lib/utilities/utilities';
-import Button from '@components/common/Button/Button';
+import { Button } from '@components/common/Button/Button';
 import '@components/common/SideTab/SideTab.scss';
 
 export type SideTabProps = {

@@ -1,8 +1,8 @@
 import { FC, ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import { useIsClient } from '@src/hooks';
+import { Button } from '@src/components/common/Button/Button';
 import '@components/common/SideBarModal/SideBarModal.scss';
-import { Button } from '@src/components';
 
 interface SideBarModalProps {
   isOpen: boolean;
