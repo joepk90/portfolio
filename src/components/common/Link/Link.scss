@@ -1,0 +1,13 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
+.link {
+  cursor: pointer;
+  &--dark {
+    @include linkColorLight();
+  }
+
+  &--light {
+    @include linkColorDark();
+  }
+}
