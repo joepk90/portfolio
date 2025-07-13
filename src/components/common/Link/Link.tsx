@@ -1,18 +1,13 @@
 import { PropsWithChildren, FC, HTMLAttributeAnchorTarget } from 'react';
 
 export type LinkProps = {
-  href: string;
-  title: string;
+  title?: string;
   target?: HTMLAttributeAnchorTarget;
   [propName: string]: any;
 };
 
-export const Link: FC<PropsWithChildren<LinkProps>> = ({ title, href, children, ...rest }) => {
-  return (
-    <a title={title} href={href} {...rest}>
-      {children}
-    </a>
-  );
+export const Link: FC<PropsWithChildren<LinkProps>> = ({ children, ...rest }) => {
+  return <a {...rest}>{children}</a>;
 };
 
 export const getDefaultLinkProps = () => {
