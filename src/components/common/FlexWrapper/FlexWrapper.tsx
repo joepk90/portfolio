@@ -56,7 +56,7 @@ export const FlexWrapper = (props: FlexWrapperProps) => {
   //   setStyle(smallStyles)
   // }[style, smallStyles, mediumStyles, largeStyles])
 
-  const { className, display, ...rest } = props;
+  const { className, display, children, ...rest } = props;
 
   const classList = appendString('flex-wrapper', className);
 
@@ -68,7 +68,7 @@ export const FlexWrapper = (props: FlexWrapperProps) => {
         ...rest,
       }}
     >
-      {props.children}
+      {children}
     </div>
   );
 };
