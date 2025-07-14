@@ -1,4 +1,5 @@
 export * from './ClonedElement';
+export * from './Portal';
 export * from './BrushStroke';
 export * from './BrushStrokeWrapper';
 export * from './Button';
