@@ -11,3 +11,4 @@ export * from './SiteTagline';
 export * from './SiteTitle';
 export * from './ContactPage';
 export * from './ProjectsPage';
+export * from './ProjectModal';
