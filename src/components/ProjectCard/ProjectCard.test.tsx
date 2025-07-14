@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import ProjectCard from '@components/ProjectCard/ProjectCard';
 import { ProjectProps } from '@src/lib/contentful/ContentfulProject';
+import { ThemeVariant } from '@src/lib/utilities';
 
 const project: ProjectProps = {
   date: 'March 2022',
@@ -17,7 +18,7 @@ const project: ProjectProps = {
 };
 
 const renderMockedElement = () => {
-  return render(<ProjectCard project={project} />);
+  return render(<ProjectCard variant={ThemeVariant.Light} project={project} />);
 };
 
 describe('ProjectCard component', () => {

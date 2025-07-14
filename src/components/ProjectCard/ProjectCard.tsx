@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { FaArrowRight } from 'react-icons/fa';
 import { ProjectProps } from '@src/lib/contentful/ContentfulProject';
 import { Tags } from '@components/common/Tags/Tags';
-import { ContentfulImageAlias, ContentfulLink } from '@components/common';
+import { ContentfulImageAlias, Link, FlexWrapper } from '@components/common';
 import {
   generateBEMModifiersClassList,
   ThemeVariant,
@@ -16,6 +16,7 @@ const tagsLimit = 5;
 
 export type ProjectCardComponentProps = {
   project: ProjectProps;
+  onReadMoreClick?: () => void;
   variant?: ThemeVariant;
   reverse?: boolean;
 };
@@ -27,49 +28,15 @@ export const tagsVariantMap = {
 
 const Project: FC<ProjectCardComponentProps> = ({
   project,
+  onReadMoreClick,
   variant = ThemeVariant.Light,
   reverse = false,
 }) => {
-  const { date, summary, title, type, url, tags, image, repositoryLinks } = project;
+  const { date, summary, title, type, url, tags, image, description } = project;
 
   const isSmallTabletLandscape = useMediaQuery({
     query: smallTabletLandscapeBreakpoint,
   });
-
-  /**
-   * Descripiong and Repositories
-   * This code is left in as it will be used for the Project page in the future.
-   */
-  // const renderDescription = () => {
-  //   if (!description || typeof description === 'string') return '';
-
-  //   const text = documentToReactComponents(description);
-
-  //   const placeHolderText =
-  //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
-
-  //   return <div className="project-card__description">{placeHolderText}</div>;
-  // };
-
-  const renderRepositoryLinks = () => {
-    if (!repositoryLinks || repositoryLinks.length === 0) return '';
-
-    return (
-      <ul className="project-card__repositories">
-        {repositoryLinks.map((repositoryLink, key) => {
-          return (
-            <li className="project-card__repository-list-item" key={key}>
-              <ContentfulLink
-                {...repositoryLink}
-                className="project-card__repository-link"
-                target="_blank"
-              />
-            </li>
-          );
-        })}
-      </ul>
-    );
-  };
 
   const renderSpecs = () => {
     if (!type) return '';
@@ -134,6 +101,37 @@ const Project: FC<ProjectCardComponentProps> = ({
     );
   };
 
+  const renderReadMoreLink = () => {
+    if (!description) return null;
+
+    if (typeof onReadMoreClick !== 'function') {
+      return null;
+    }
+
+    // TODO use button instead of link
+    return (
+      <Link
+        variant={variant}
+        onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+          e.preventDefault();
+          onReadMoreClick();
+        }}
+      >
+        <FlexWrapper
+          className="project-card__read-more-content"
+          flexDirection="row"
+          alignItems="center"
+          gap={5}
+        >
+          <>
+            Read More
+            <FaArrowRight />
+          </>
+        </FlexWrapper>
+      </Link>
+    );
+  };
+
   const modifers = [variant as string];
   if (reverse) {
     modifers.push('reverse');
@@ -149,7 +147,7 @@ const Project: FC<ProjectCardComponentProps> = ({
           {renderSpecs()}
           {renderSummary()}
           {renderTags()}
-          {renderRepositoryLinks()}
+          {renderReadMoreLink()}
         </div>
         <div className="project-card__feature">
           {!isSmallTabletLandscape && renderTitle()}
