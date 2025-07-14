@@ -21,7 +21,7 @@ $projectCard: project-card;
   }
 
   &__details {
-    max-width: 50vw;
+    max-width: 450px;
     text-align: center;
     @include breakpoint($smallTabletLandscapeName) {
       text-align: right;
@@ -30,6 +30,7 @@ $projectCard: project-card;
   }
 
   &__feature {
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
