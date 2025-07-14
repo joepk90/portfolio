@@ -19,8 +19,8 @@ export const getContactData = ({ location, email, githubLink, linkedInLink }: Co
       type: ContactListType.Email,
       icon: FaEnvelope,
       title: 'Send me an email',
-      url: `mailto:${email}`, // TODO obfiscate
-      text: email, // TODO obfiscate
+      url: `mailto:${email}`,
+      text: email,
     },
     {
       type: ContactListType.Github,
