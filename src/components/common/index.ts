@@ -1,4 +1,5 @@
 export * from './ClonedElement';
+export * from './Portal';
 export * from './BrushStroke';
 export * from './BrushStrokeWrapper';
 export * from './Button';
@@ -23,3 +24,4 @@ export * from './IconWithContent';
 export * from './List';
 export * from './Panel';
 export * from './Typography';
+export * from './SideBarModal';

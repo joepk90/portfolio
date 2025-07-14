@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import Button from '@src/components/common/Button/Button'; // TODO setup aliases in storybook..
+import { Button } from '@src/components/common/Button/Button'; // TODO setup aliases in storybook..
 
 const buttonText = `Button Text`;
 

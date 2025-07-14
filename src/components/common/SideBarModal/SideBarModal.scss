@@ -1,0 +1,48 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
+.side-bar-modal {
+  &__window {
+    width: 85vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: rem(440px);
+    height: 100vh;
+    background: $backgroundWhite;
+    padding: rem(20px);
+    box-shadow: boxShadow(
+      $backgroundGrey,
+      0.5
+    ); // TODO set opacity variable + create mixin? (boxShadowHover)
+
+    @include breakpoint($smallHandsetLandscapeName) {
+      width: 100%;
+      max-width: rem(440px);
+    }
+  }
+
+  &__header {
+    top: 0;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: rem(25px);
+
+    // TODO (Remove line height style)
+    // - make typography component handle rendered element (rely on h1, h2, h3, h4 etc styles)
+    // - Or include the line-height style in the Typography heading mixin?
+    //  - This will allow elements have the same styles as headings, but not require the heading html
+    line-height: 1.2;
+  }
+
+  &__content {
+    height: 100vh;
+    overflow-y: scroll;
+    padding: rem(10px) rem(15px) rem(20px) 0;
+  }
+}

@@ -36,6 +36,7 @@ type StyleOptions = {
   flexShrink?: number;
   maxWidth?: number | string;
   height?: string;
+  gap?: number | string;
 };
 
 type FlexWrapperProps = StyleOptions & {

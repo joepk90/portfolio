@@ -3,6 +3,7 @@ import {
   GoogleTagManagerScript,
   GoogleTagManagerNoScript,
 } from '@components/common/GoogleTagManager/GoogleTagManager';
+import { portalRootId } from '@src/lib/utilities';
 
 // https://nextjs.org/docs/advanced-features/custom-document
 export default function Document() {
@@ -14,6 +15,8 @@ export default function Document() {
       <body>
         <GoogleTagManagerNoScript />
         <Main />
+        {/* used for the <Portal> Component */}
+        <div id={portalRootId} />
         <NextScript />
       </body>
     </Html>
