@@ -2,7 +2,12 @@ import React, { HTMLAttributes, FC, PropsWithChildren } from 'react';
 import { generateBEMModifiersClassList } from '@src/lib/utilities';
 import '@components/common/Typography/Typography.scss';
 
-// TODO review variant names - setup paragraph and caption variants?
+/**
+ * TODO:
+ * - review variant names - setup paragraph and caption variants?
+ * - update Typograhpy component to accept weight variant
+ * - make variant names affect rendered element: h1, h2, p, etc
+ */
 
 type Variant = 'heading1' | 'heading2' | 'heading3' | 'heading4' | 'heading5' | 'heading6';
 
