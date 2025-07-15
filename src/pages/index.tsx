@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import { NextSeo } from 'next-seo';
 import { GetStaticProps } from 'next';
-import { getHomePageStaticProps, HomePageProps } from '@src/lib/hooks/index';
+import { getHomePageStaticProps, HomePageProps } from '@src/lib/hooks/home';
 import { Layout } from '@components/Layout/Layout';
 import { SEO } from '@src/config';
 import { HomePage } from '@src/components';
