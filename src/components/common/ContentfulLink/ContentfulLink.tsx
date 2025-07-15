@@ -13,7 +13,7 @@ export type ContentfulLinkProps = ContentFulLinkProperties & {
  * the ContentfulLink component is used mapping the Contenful Link data to the Link component.
  */
 
-export const ContentfulLink: FC<ContentfulLinkProps> = ({ title, url, text, target, ...rest }) => {
+export const ContentfulLink: FC<ContentfulLinkProps> = ({ title, url, text, ...rest }) => {
   const defaultAtts = getDefaultLinkProps();
 
   return (
