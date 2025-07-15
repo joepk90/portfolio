@@ -5,13 +5,13 @@ import { ContentfulCollectionManager } from '@src/lib/contentful/ContentfulColle
 import { ContentfulPage, Page } from '@src/lib/contentful/ContentfulPage';
 import { ContentfulProfile, Profile } from '@src/lib/contentful/ContentfulProfile';
 
-export type IndexProps = {
+export type HomePageProps = {
   pageContent: string;
   profileImage: Asset;
   profileBio: string;
 };
 
-export async function getIndexStaticProps(): Promise<GetStaticPropsResult<IndexProps>> {
+export async function getHomePageStaticProps(): Promise<GetStaticPropsResult<HomePageProps>> {
   const pagesResponse: EntryCollection<Page> = await contentfulClient.getEntries({
     content_type: 'page',
     'fields.id': 'index',

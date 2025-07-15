@@ -9,6 +9,7 @@ export * from './SiteBranding';
 export * from './SiteLogo';
 export * from './SiteTagline';
 export * from './SiteTitle';
+export * from './HomePage';
 export * from './ContactPage';
 export * from './ProjectsPage';
 export * from './ProjectModal';
