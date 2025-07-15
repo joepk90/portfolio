@@ -1,0 +1,49 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+@import '@components/common/Tags/Tags.module.scss';
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  gap: rem(60px);
+  max-width: 80vw;
+  @include breakpoint($largeHandsetLandscapeName) {
+    max-width: none;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__content {
+    width: 100%;
+    text-align: center;
+    @include breakpoint($largeHandsetLandscapeName) {
+      text-align: right;
+      width: 50%;
+    }
+
+    * {
+      color: $textWhite;
+      font-size: $h5FontSize;
+    }
+    h2 {
+      font-weight: bold;
+      @include h1FontSizes();
+    }
+  }
+
+  &__tags-wrapper {
+    width: 100%;
+
+    @include breakpoint($largeHandsetLandscapeName) {
+      text-align: right;
+      width: 50%;
+    }
+  }
+
+  .#{$tagsClassName} {
+    justify-content: center;
+    @include breakpoint($largeHandsetLandscapeName) {
+      justify-content: flex-start;
+    }
+  }
+}

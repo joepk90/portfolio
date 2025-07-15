@@ -10,7 +10,7 @@ export const getStaticProps: GetStaticProps = async () => getHomePageStaticProps
 
 export const Index: NextPage<HomePageProps> = ({ pageContent, profileImage, profileBio }) => {
   return (
-    <Layout>
+    <Layout className="homepage">
       <NextSeo title={`${SEO.title} | Home`} />
 
       <HomePage pageContent={pageContent} profileImage={profileImage} profileBio={profileBio} />

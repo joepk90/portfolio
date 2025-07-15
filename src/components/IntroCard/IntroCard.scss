@@ -1,0 +1,56 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
+.intro-card {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: rem(40px);
+  @include breakpoint($largeHandsetLandscapeName) {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  @include breakpoint($largeTabletName) {
+    gap: rem(40px);
+  }
+
+  &__image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @include breakpoint($largeHandsetLandscapeName) {
+      justify-content: flex-start;
+      width: 40%;
+    }
+
+    @include breakpoint($largeTabletName) {
+      width: 40%;
+    }
+  }
+
+  &__heading {
+    width: 350px;
+    font-size: 110px;
+    margin: 0;
+    line-height: 0.9em;
+    font-weight: bold;
+    text-align: left;
+    @include breakpoint($largeTabletName) {
+      font-size: 140px;
+      text-align: left;
+      width: 60%;
+    }
+
+    @include breakpoint($smallTabletLandscapeName) {
+      font-size: 160px;
+    }
+
+    &:first-letter {
+      font-size: 140px;
+      @include breakpoint($largeTabletName) {
+        font-size: 200px;
+      }
+    }
+  }
+}
