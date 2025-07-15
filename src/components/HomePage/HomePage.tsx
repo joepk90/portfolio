@@ -2,7 +2,7 @@ import { FC } from 'react';
 import Container from '@src/components/common/Container/Container';
 import { ThemeVariant } from '@lib/utilities/utilities';
 import { GridContainer, Row, Col } from '@components/common/Grid/Grid';
-import { IndexProps } from '@src/lib/hooks/index';
+import { HomePageProps } from '@src/lib/hooks/home';
 import { ContentfulImageAlias as ContentfulImage } from '@components/common/ContentfulImage/ContentfulImage';
 import { ReactMarkdownAlias as ReactMarkdown } from '@components/common/ReactMarkdown/ReactMarkdown';
 import { Section } from '@components/common';
@@ -13,7 +13,7 @@ import BrushStrokeWrapper from '@components/common/BrushStrokeWrapper/BrushStrok
 import { tagsList } from '@src/config';
 // import '@components/HomePage/HomePage.scss';
 
-export const HomePage: FC<IndexProps> = ({ pageContent, profileImage, profileBio }) => {
+export const HomePage: FC<HomePageProps> = ({ pageContent, profileImage, profileBio }) => {
   return (
     <>
       <Section margin="lg">
