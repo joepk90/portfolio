@@ -3,6 +3,8 @@
 
 .link {
   cursor: pointer;
+  @include linkColor();
+
   &--dark {
     @include linkColorLight();
   }
