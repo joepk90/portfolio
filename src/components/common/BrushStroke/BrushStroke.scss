@@ -1,6 +1,9 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
 .brush-stroke {
   clip-path: url(#brush-stroke-clip-path);
-  background: white;
+  background: $backgroundSubtleWhite;
   display: block;
   width: 100%;
   height: 100px;
