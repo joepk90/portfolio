@@ -4,7 +4,6 @@ export * from './GlobalCSS';
 export * from './Header';
 export * from './Layout';
 export * from './ProjectCard';
-export * from './ResponsiveCard';
 export * from './AboutCard';
 export * from './IntroCard';
 export * from './SideTabContent';

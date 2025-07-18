@@ -6,26 +6,26 @@ $responsiveCardClassName: responsive-card;
 .#{$responsiveCardClassName} {
   display: flex;
   flex-direction: column;
+  gap: rem(40px);
   @include breakpoint($largeHandsetLandscapeName) {
-    justify-content: row;
+    flex-direction: row;
   }
 
   &__image {
     display: flex;
     justify-content: center;
-
     @include breakpoint($largeHandsetLandscapeName) {
+      width: 40%;
       justify-content: flex-end;
     }
   }
 
   &__content {
     display: flex;
-    // justify-content: center;
     text-align: center;
 
     @include breakpoint($largeHandsetLandscapeName) {
-      //   justify-content: flex-end;
+      width: 60%;
       text-align: left;
     }
   }
