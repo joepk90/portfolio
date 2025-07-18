@@ -3,7 +3,7 @@ import FlexWrapper from '@components/common/FlexWrapper/FlexWrapper';
 import { ReactMarkdownAlias as ReactMarkdown } from '@components/common/ReactMarkdown/ReactMarkdown';
 import Tags from '@components/common/Tags/Tags';
 import { ThemeVariant } from '@src/lib/utilities';
-import '@components/AboutCard/AboutCard.scss';
+import '@components/HomePage/components/AboutCard/AboutCard.scss';
 
 export type AboutCardProps = {
   pageContent: string;

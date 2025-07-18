@@ -4,8 +4,7 @@ import { ThemeVariant } from '@lib/utilities/utilities';
 import { HomePageProps } from '@src/lib/hooks/home';
 import { FlexWrapper, SectionWithSeperator } from '@components/common';
 import { tagsList } from '@src/config';
-import { IntroCard } from '@components/IntroCard';
-import { AboutCard } from '@components/AboutCard';
+import { IntroCard, AboutCard } from '@src/components/HomePage/components';
 import '@components/HomePage/HomePage.scss';
 
 export const HomePage: FC<HomePageProps> = ({ pageContent, profileImage }) => {
