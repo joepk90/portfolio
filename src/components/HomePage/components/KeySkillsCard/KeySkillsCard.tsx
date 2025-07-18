@@ -18,7 +18,9 @@ export const KeySkillsCard: FC<KeySkillsCardProps> = ({ tagsList, heading }) => 
         </FlexWrapper>
       </div>
 
-      <Heading className="key-skills-card__heading">{heading}</Heading>
+      <Heading level={3} className="key-skills-card__heading">
+        {heading}
+      </Heading>
     </div>
   );
 };
