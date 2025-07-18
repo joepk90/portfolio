@@ -1,0 +1,49 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+
+$responsiveCardClassName: responsive-card;
+
+.#{$responsiveCardClassName} {
+  display: flex;
+  flex-direction: column;
+  @include breakpoint($largeHandsetLandscapeName) {
+    justify-content: row;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint($largeHandsetLandscapeName) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__content {
+    display: flex;
+    // justify-content: center;
+    text-align: center;
+
+    @include breakpoint($largeHandsetLandscapeName) {
+      //   justify-content: flex-end;
+      text-align: left;
+    }
+  }
+
+  &--reverse {
+    flex-direction: column-reverse;
+
+    @include breakpoint($largeHandsetLandscapeName) {
+      flex-direction: row-reverse;
+    }
+
+    .#{$responsiveCardClassName} {
+      &__content {
+        text-align: right;
+      }
+      &__image {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
