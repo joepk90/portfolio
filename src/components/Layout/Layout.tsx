@@ -4,6 +4,8 @@ import Footer from '@components/Footer/Footer';
 import SideTab from '@components/common/SideTab/SideTab';
 import SideTabContent from '@components/SideTabContent/SideTabContent';
 
+const projectInfoTabIsEnabled = false;
+
 type LayoutProps = {
   className?: string;
 };
@@ -16,9 +18,11 @@ export const Layout: FC<PropsWithChildren<LayoutProps>> = ({ children, className
       <main {...classNameAttr}>{children}</main>
       <Footer />
 
-      <SideTab label="Project info">
-        <SideTabContent />
-      </SideTab>
+      {projectInfoTabIsEnabled && (
+        <SideTab label="Project info">
+          <SideTabContent />
+        </SideTab>
+      )}
     </>
   );
 };
