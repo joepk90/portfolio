@@ -2,68 +2,64 @@
 @import '@styles/helpers/_helpers.scss';
 @import '@components/common/Tags/Tags.module.scss';
 
-.about-card {
+.key-skills-card {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: column-reverse;
   gap: rem(60px);
   max-width: 90vw;
-
   @include breakpoint($smallTabletLandscapeName) {
     gap: rem(100px);
     flex-direction: row;
-    justify-content: center;
+    align-items: center;
   }
 
   &__content {
     width: 100%;
-    text-align: center;
+    @include breakpoint($smallTabletLandscapeName) {
+      width: 50%;
+    }
+  }
+
+  &__tags-wrapper {
+    width: 100%;
+  }
+
+  .#{$tagsClassName} {
+    justify-content: center;
+    width: 100%;
+
     @include breakpoint($mediumHandsetLandscapeName) {
       width: 80%;
     }
 
     @include breakpoint($smallTabletLandscapeName) {
-      text-align: left;
-      width: 50%;
+      justify-content: flex-end;
+      width: 100%;
     }
 
-    * {
-      color: $textWhite;
-      font-size: $h4FontSize;
-      line-height: 1.3em;
-    }
-    h2 {
-      display: none;
-      // font-weight: bold;
-      // @include h1FontSizes();
+    // TODO make tag size variant?
+    // or export the tag css name
+    .tag {
+      font-size: 22px;
     }
   }
 
   &__heading {
-    color: $textWhite;
+    font-size: 110px;
     margin: 0;
     line-height: 1em;
     font-weight: bold;
     text-align: center;
-    font-size: 80px;
+    font-size: 110px;
 
     @include breakpoint($smallTabletLandscapeName) {
-      text-align: right;
-    }
-
-    @include breakpoint($smallTabletLandscapeName) {
-      text-align: right;
-      font-size: rem(90px);
       width: 50%;
-    }
-
-    @include breakpoint($smallTabletLandscapeName) {
-      text-align: right;
       font-size: 120px;
+      text-align: left;
     }
 
     &:first-letter {
-      font-size: 120px;
+      font-size: 140px;
       @include breakpoint($smallTabletLandscapeName) {
         font-size: 200px;
       }

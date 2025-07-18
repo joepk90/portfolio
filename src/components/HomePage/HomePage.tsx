@@ -4,7 +4,7 @@ import { ThemeVariant } from '@lib/utilities/utilities';
 import { HomePageProps } from '@src/lib/hooks/home';
 import { FlexWrapper, SectionWithSeperator } from '@components/common';
 import { tagsList } from '@src/config';
-import { IntroCard, AboutCard } from '@src/components/HomePage/components';
+import { IntroCard, AboutCard, KeySkillsCard } from '@src/components/HomePage/components';
 import '@components/HomePage/HomePage.scss';
 
 export const HomePage: FC<HomePageProps> = ({ pageContent, profileImage }) => {
@@ -16,10 +16,18 @@ export const HomePage: FC<HomePageProps> = ({ pageContent, profileImage }) => {
         </Container>
       </SectionWithSeperator>
 
-      <SectionWithSeperator variant={ThemeVariant.Dark} disableDivider>
+      <SectionWithSeperator variant={ThemeVariant.Dark}>
         <Container>
           <FlexWrapper className="homepage__about-card">
-            <AboutCard pageContent={pageContent} tagsList={tagsList} />
+            <AboutCard pageContent={pageContent} heading="About Me" />
+          </FlexWrapper>
+        </Container>
+      </SectionWithSeperator>
+
+      <SectionWithSeperator variant={ThemeVariant.Light} disableDivider>
+        <Container>
+          <FlexWrapper className="homepage__key-skills-card">
+            <KeySkillsCard heading="Key Skills" tagsList={tagsList} />
           </FlexWrapper>
         </Container>
       </SectionWithSeperator>

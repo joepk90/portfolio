@@ -1,22 +1,18 @@
 import { FC } from 'react';
-import FlexWrapper from '@components/common/FlexWrapper/FlexWrapper';
 import { ReactMarkdownAlias as ReactMarkdown } from '@components/common/ReactMarkdown/ReactMarkdown';
-import Tags from '@components/common/Tags/Tags';
-import { ThemeVariant } from '@src/lib/utilities';
+import Heading from '@src/components/common/Heading/Heading';
 import '@components/HomePage/components/AboutCard/AboutCard.scss';
 
 export type AboutCardProps = {
   pageContent: string;
-  tagsList: string[];
+  heading: string;
 };
 
-export const AboutCard: FC<AboutCardProps> = ({ pageContent, tagsList }) => {
+export const AboutCard: FC<AboutCardProps> = ({ pageContent, heading }) => {
   return (
     <div className="about-card">
+      <Heading className="about-card__heading">{heading}</Heading>
       <ReactMarkdown className="about-card__content">{pageContent}</ReactMarkdown>
-      <FlexWrapper className="about-card__tags-wrapper">
-        <Tags tags={tagsList} variant={ThemeVariant.Light} />
-      </FlexWrapper>
     </div>
   );
 };
