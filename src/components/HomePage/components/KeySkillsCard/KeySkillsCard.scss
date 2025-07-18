@@ -1,0 +1,68 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+@import '@components/common/Tags/Tags.module.scss';
+
+.key-skills-card {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: rem(60px);
+  max-width: 90vw;
+  @include breakpoint($smallTabletLandscapeName) {
+    gap: rem(100px);
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__content {
+    width: 100%;
+    @include breakpoint($smallTabletLandscapeName) {
+      width: 50%;
+    }
+  }
+
+  &__tags-wrapper {
+    width: 100%;
+  }
+
+  .#{$tagsClassName} {
+    justify-content: center;
+    width: 100%;
+
+    @include breakpoint($mediumHandsetLandscapeName) {
+      width: 80%;
+    }
+
+    @include breakpoint($smallTabletLandscapeName) {
+      justify-content: flex-end;
+      width: 100%;
+    }
+
+    // TODO make tag size variant?
+    // or export the tag css name
+    .tag {
+      font-size: 22px;
+    }
+  }
+
+  &__heading {
+    font-size: 110px;
+    margin: 0;
+    line-height: 1em;
+    font-weight: bold;
+    text-align: center;
+    font-size: 110px;
+
+    @include breakpoint($smallTabletLandscapeName) {
+      width: 50%;
+      font-size: 120px;
+      text-align: left;
+    }
+
+    &:first-letter {
+      font-size: 140px;
+      @include breakpoint($smallTabletLandscapeName) {
+        font-size: 200px;
+      }
+    }
+  }
+}

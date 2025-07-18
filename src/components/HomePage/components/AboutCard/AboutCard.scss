@@ -1,0 +1,72 @@
+@import '@styles/base/_base.scss';
+@import '@styles/helpers/_helpers.scss';
+@import '@components/common/Tags/Tags.module.scss';
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(60px);
+  max-width: 90vw;
+
+  @include breakpoint($smallTabletLandscapeName) {
+    gap: rem(100px);
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__content {
+    width: 100%;
+    text-align: center;
+    @include breakpoint($mediumHandsetLandscapeName) {
+      width: 80%;
+    }
+
+    @include breakpoint($smallTabletLandscapeName) {
+      text-align: left;
+      width: 50%;
+    }
+
+    * {
+      color: $textWhite;
+      font-size: $h4FontSize;
+      line-height: 1.3em;
+    }
+    h2 {
+      display: none;
+      // font-weight: bold;
+      // @include h1FontSizes();
+    }
+  }
+
+  &__heading {
+    color: $textWhite;
+    margin: 0;
+    line-height: 1em;
+    font-weight: bold;
+    text-align: center;
+    font-size: 80px;
+
+    @include breakpoint($smallTabletLandscapeName) {
+      text-align: right;
+    }
+
+    @include breakpoint($smallTabletLandscapeName) {
+      text-align: right;
+      font-size: rem(90px);
+      width: 50%;
+    }
+
+    @include breakpoint($smallTabletLandscapeName) {
+      text-align: right;
+      font-size: 120px;
+    }
+
+    &:first-letter {
+      font-size: 120px;
+      @include breakpoint($smallTabletLandscapeName) {
+        font-size: 200px;
+      }
+    }
+  }
+}
