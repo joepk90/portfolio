@@ -11,7 +11,9 @@ export type AboutCardProps = {
 export const AboutCard: FC<AboutCardProps> = ({ pageContent, heading }) => {
   return (
     <div className="about-card">
-      <Heading className="about-card__heading">{heading}</Heading>
+      <Heading level={2} className="about-card__heading">
+        {heading}
+      </Heading>
       <ReactMarkdown className="about-card__content">{pageContent}</ReactMarkdown>
     </div>
   );
