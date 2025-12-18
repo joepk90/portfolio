@@ -8,7 +8,7 @@ export type Props = {
   className?: string;
 };
 
-const Container: FC<PropsWithChildren<Props>> = ({ children, className, fullWidth, noWrap }) => {
+export const Container: FC<PropsWithChildren<Props>> = ({ children, className, fullWidth, noWrap }) => {
   const generateModifiers = () => {
     const classList = [];
 
@@ -30,5 +30,3 @@ const Container: FC<PropsWithChildren<Props>> = ({ children, className, fullWidt
 
   return <div className={classList}>{children}</div>;
 };
-
-export default Container;

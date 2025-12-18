@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { ProjectProps } from '@src/lib/contentful/ContentfulProject';
-import { Tags } from '@components/common/Tags/Tags';
+import { Tags } from '@components/common';
 import { ContentfulImageAlias, Link, FlexWrapper } from '@components/common';
 import {
   generateBEMModifiersClassList,
@@ -26,7 +26,7 @@ export const tagsVariantMap = {
   [ThemeVariant.Dark]: ThemeVariant.Light,
 };
 
-const Project: FC<ProjectCardComponentProps> = ({
+export const ProjectCard: FC<ProjectCardComponentProps> = ({
   project,
   onReadMoreClick,
   variant = ThemeVariant.Light,
@@ -158,4 +158,3 @@ const Project: FC<ProjectCardComponentProps> = ({
   );
 };
 
-export default Project;

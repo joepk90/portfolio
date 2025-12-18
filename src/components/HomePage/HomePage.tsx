@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import Container from '@src/components/common/Container/Container';
+import { Container } from '@components/common';
 import { ThemeVariant } from '@lib/utilities/utilities';
 import { HomePageProps } from '@src/lib/hooks/home';
 import { FlexWrapper, SectionWithSeperator } from '@components/common';

@@ -1,4 +1,4 @@
-import Heading from '@components/common/Heading/Heading';
+import { Heading } from '@components/common';
 import { getComponentLibraryUrl, getSourceCodeUrl } from '@lib/utilities/environmentVars';
 
 /**
@@ -41,4 +41,3 @@ export const SideTabContent = () => {
   );
 };
 
-export default SideTabContent;

@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react';
-import Heading from '@components/common/Heading/Heading';
+import { Heading } from '@components/common';
 import { Typography, List, Panel } from '@components/common';
 import '@components/ContactPage/components/LetsConnect/LetsConnect.scss';
 

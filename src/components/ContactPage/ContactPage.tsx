@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import Container from '@src/components/common/Container/Container';
+import { Container } from '@components/common';
 import { SectionWithSeperator } from '@components/common';
 import { ThemeVariant } from '@lib/utilities/utilities';
 import { getContactData, generateContactListItems } from '@src/lib/helpers';

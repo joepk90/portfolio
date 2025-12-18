@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import { NextSeo } from 'next-seo';
 import { GetStaticProps } from 'next';
 import { getContactStaticProps, ContactProps } from '@src/lib/hooks/contact';
-import { Layout } from '@components/Layout/Layout';
+import { Layout } from '@components/Layout';
 import { getPageUrl } from '@lib/utilities/utilities';
 import { SEO, contactURL } from '@src/config';
 import { ContactPage } from '@src/components';

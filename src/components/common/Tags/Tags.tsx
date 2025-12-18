@@ -40,4 +40,3 @@ export const Tags: FC<TagsProps> = ({ tags, style, align, variant = ThemeVariant
   );
 };
 
-export default Tags;

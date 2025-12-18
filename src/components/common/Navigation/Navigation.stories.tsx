@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story, ComponentMeta } from '@storybook/react';
-import Navigation, { NavigationProps } from '@components/common/Navigation/Navigation'; // TODO setup aliases in storybook..
+import { Navigation, NavigationProps } from '@components/common/Navigation/Navigation'; // TODO setup aliases in storybook..
 import { menuItems } from '@src/config';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

@@ -5,7 +5,7 @@ import { ContentfulCollectionManager } from '@src/lib/contentful/ContentfulColle
 import { EntryCollection } from 'contentful';
 import { ContentfulPage, Page } from '@src/lib/contentful/ContentfulPage';
 import { Section } from '@components/common';
-import { Layout } from '@components/Layout/Layout';
+import { Layout } from '@components/Layout';
 import { setGTMOptOutCookie } from '@src/lib/utilities/googleTagManager';
 
 type StaticPathsProps = {

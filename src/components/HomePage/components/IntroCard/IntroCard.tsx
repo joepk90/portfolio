@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { ContentfulImageAlias as ContentfulImage } from '@components/common/ContentfulImage/ContentfulImage';
-import Heading from '@components/common/Heading/Heading';
-import BrushStrokeWrapper from '@components/common/BrushStrokeWrapper/BrushStrokeWrapper';
+import { ContentfulImageAlias as ContentfulImage } from '@components/common';
+import { Heading } from '@components/common';
+import { BrushStrokeWrapper } from '@components/common';
 import { Asset } from 'contentful';
 import '@components/HomePage/components/IntroCard/IntroCard.scss';
 

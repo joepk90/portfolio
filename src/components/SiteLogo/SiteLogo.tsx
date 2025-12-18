@@ -7,7 +7,7 @@ export type SiteLogoProps = {
   variant?: ThemeVariant;
 };
 
-const SiteLogo = ({ variant = ThemeVariant.Dark }: SiteLogoProps) => {
+export const SiteLogo = ({ variant = ThemeVariant.Dark }: SiteLogoProps) => {
   const classList = generateBEMModifiersClassList('site-logo', [variant]);
 
   return (
@@ -16,5 +16,3 @@ const SiteLogo = ({ variant = ThemeVariant.Dark }: SiteLogoProps) => {
     </span>
   );
 };
-
-export default SiteLogo;

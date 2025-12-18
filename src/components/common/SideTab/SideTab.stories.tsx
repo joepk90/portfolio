@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story, ComponentMeta } from '@storybook/react';
-import SideTab, { SideTabProps } from '@src/components/common/SideTab/SideTab'; // TODO setup aliases in storybook..
+import { SideTab, SideTabProps } from '@src/components/common/SideTab/SideTab'; // TODO setup aliases in storybook..
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

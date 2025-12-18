@@ -1,6 +1,6 @@
 import { Story, ComponentMeta } from '@storybook/react';
 import { ThemeVariant } from '@src/lib/utilities/utilities';
-import SiteLogo, { SiteLogoProps } from '@components/SiteLogo/SiteLogo';
+import { SiteLogo, SiteLogoProps } from '@components/SiteLogo/SiteLogo';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
