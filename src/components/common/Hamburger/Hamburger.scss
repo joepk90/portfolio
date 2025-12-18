@@ -1,8 +1,6 @@
 // @import 'hamburgers';
-@import '@styles/base/_base.scss';
-@import '@styles/helpers/_helpers.scss';
-@import 'HamburgerSettings'; // overrides the hamburgers settings included in the parent theme
-@import 'hamburgers/_sass/hamburgers/hamburgers.scss';
+@use 'HamburgerSettings' as *; // overrides the hamburgers settings included in the parent theme
+@use 'hamburgers/_sass/hamburgers/hamburgers.scss' as *;
 
 .hamburger {
   padding-bottom: 4px;

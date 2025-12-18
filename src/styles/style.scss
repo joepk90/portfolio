@@ -1,3 +1,1 @@
-@import 'base/base';
-@import 'helpers/helpers';
-@import 'global/global';
+@use 'global/global' as *;

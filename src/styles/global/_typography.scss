@@ -1,4 +1,11 @@
+@use "base/variables-colors.module" as *;
+@use "base/variables-typography" as *;
+@use "helpers/mixin" as *;
+@use "helpers/placeholders" as *;
+@use "helpers/typography" as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Lato:ital,wght@0,100;0,400;0,900;1,100;1,400;1,900&display=swap');
+
 
 body {
   @extend %baseFont;

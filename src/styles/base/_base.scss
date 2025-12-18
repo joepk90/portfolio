@@ -1,4 +1,4 @@
-@import 'variables-breakpoints.module';
-@import 'varaibles-utilities';
-@import 'variables-colors.module';
-@import 'variables-typography';
+@use 'variables-breakpoints.module' as *;
+@use 'varaibles-utilities' as *;
+@use 'variables-colors.module' as *;
+@use 'variables-typography' as *;

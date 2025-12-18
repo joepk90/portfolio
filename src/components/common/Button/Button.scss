@@ -1,8 +1,13 @@
-@import '@styles/base/_base.scss';
-@import '@styles/helpers/_helpers.scss';
-@import '@components/common/Button/Button.module.scss';
+@use "base/varaibles-utilities" as *;
+@use "base/variables-colors.module" as *;
+@use "base/variables-colors.module" as *;
+@use "helpers/typography" as *;
+@use "helpers/mixin" as *;
 
-.#{$button} {
+@use '@components/common/Button/Button.module.scss' as button;
+
+
+.#{button.$button} {
   @include linkColorLight();
   transition:
     background,

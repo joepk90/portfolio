@@ -1,5 +1,6 @@
-@import '@styles/base/_base.scss';
-@import '@styles/helpers/_helpers.scss';
+@use "base/variables-breakpoints.module" as *;
+@use "helpers/mixin" as *;
+@use "helpers/breakpoints" as *;
 
 .project-modal {
   &__wrapper {

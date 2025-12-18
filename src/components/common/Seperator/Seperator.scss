@@ -1,5 +1,4 @@
-@import '@styles/base/_base.scss';
-@import '@styles/helpers/_helpers.scss';
+@use "base/variables-colors.module" as *;
 
 .seperator {
   margin: auto;

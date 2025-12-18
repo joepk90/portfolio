@@ -1,5 +1,6 @@
-@import '@styles/base/_base.scss';
-@import '@styles/helpers/_helpers.scss';
+@use "base/variables-colors.module" as *;
+@use "base/variables-typography" as *;
+@use "helpers/mixin" as *;
 
 .tag {
   border-radius: 3px;
