@@ -8,5 +8,9 @@ export type ReactMarkdownProps = {
 }
 
 export const ReactMarkdownAlias = ({ children, className }: ReactMarkdownProps) => {
-    return <ReactMarkdown className={className}>{children}</ReactMarkdown>
+    return (
+      <div className={className}>
+        <ReactMarkdown>{children}</ReactMarkdown>
+      </div>
+    );
 }
