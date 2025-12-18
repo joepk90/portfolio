@@ -12,7 +12,7 @@ export type MenuItemProps = {
   variant?: Variant;
 };
 
-const MenuItem = ({ path, label, variant }: MenuItemProps) => {
+export const MenuItem = ({ path, label, variant }: MenuItemProps) => {
   const classModifiers = variant ? [variant] : [];
 
   const classList = generateBEMModifiersClassList('menu-item', classModifiers);
@@ -27,5 +27,3 @@ const MenuItem = ({ path, label, variant }: MenuItemProps) => {
     </li>
   );
 };
-
-export default MenuItem;

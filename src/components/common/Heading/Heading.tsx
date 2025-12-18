@@ -10,7 +10,7 @@ export type HeadingProps = {
   className?: string;
 };
 
-const Heading = ({ children, style, className, level = 1 }: HeadingProps) => {
+export const Heading = ({ children, style, className, level = 1 }: HeadingProps) => {
   const Component: React.ElementType = `h${level}` || 'h1';
 
   const classList = appendString('heading', className);
@@ -21,5 +21,3 @@ const Heading = ({ children, style, className, level = 1 }: HeadingProps) => {
     </Component>
   );
 };
-
-export default Heading;

@@ -1,5 +1,5 @@
 import { ComponentMeta, Story } from '@storybook/react';
-import Tag, { TagProps } from '@components/common/Tag/Tag';
+import { Tag, TagProps } from '@components/common/Tag/Tag';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

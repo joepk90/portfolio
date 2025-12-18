@@ -74,4 +74,3 @@ export const FlexWrapper = (props: FlexWrapperProps) => {
   );
 };
 
-export default FlexWrapper;

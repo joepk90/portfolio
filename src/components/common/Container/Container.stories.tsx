@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
 import { Story, ComponentMeta } from '@storybook/react';
-import Container, { Props } from '@components/common/Container/Container';
+import { Container, Props } from '@components/common/Container/Container';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

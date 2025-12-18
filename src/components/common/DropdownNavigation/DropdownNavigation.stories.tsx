@@ -1,6 +1,7 @@
 import React from 'react';
 import { Story, ComponentMeta } from '@storybook/react';
-import DropdownNavigation, {
+import {
+  DropdownNavigation,
   DropdownNavigationProps,
 } from '@src/components/common/DropdownNavigation/DropdownNavigation'; // TODO setup aliases in storybook..
 import { menuItems } from '@src/config';

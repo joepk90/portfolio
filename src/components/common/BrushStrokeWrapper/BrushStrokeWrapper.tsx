@@ -1,11 +1,11 @@
-import BrushStroke from '@components/common/BrushStroke/BrushStroke';
+import { BrushStroke } from '@components/common';
 import '@components/common/BrushStrokeWrapper/BrushStrokeWrapper.scss';
 
 export type BrushStrokeWrapperProps = {
   children: any;
 };
 
-const BrushStrokeWrapper = ({ children }: BrushStrokeWrapperProps) => {
+export const BrushStrokeWrapper = ({ children }: BrushStrokeWrapperProps) => {
   return (
     <div className="brush-stroke-wrapper">
       <BrushStroke className="brush-stroke-wrapper__top" />
@@ -14,5 +14,3 @@ const BrushStrokeWrapper = ({ children }: BrushStrokeWrapperProps) => {
     </div>
   );
 };
-
-export default BrushStrokeWrapper;

@@ -1,8 +1,8 @@
 import { FC, useState } from 'react';
 import { ProjectsProps } from '@src/lib/hooks/projects';
-import Container from '@src/components/common/Container/Container';
-import Project from '@src/components/ProjectCard/ProjectCard';
-import { ProjectModal } from '@src/components/ProjectModal/ProjectModal';
+import { Container } from '@components/common';
+import { ProjectCard } from '@components/ProjectCard';
+import { ProjectModal } from '@components/ProjectModal';
 import { SectionWithSeperator } from '@components/common';
 import { ProjectProps } from '@src/lib/contentful/ContentfulProject';
 import { ThemeVariant } from '@lib/utilities/utilities';
@@ -46,7 +46,7 @@ export const ProjectsPage: FC<ProjectsProps> = ({ projects }) => {
             disableDivider={index === projectsArrayLength}
           >
             <Container>
-              <Project
+              <ProjectCard
                 key={index}
                 project={project}
                 variant={variant}

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import Heading from '@components/common/Heading/Heading';
+import { Heading } from '@components/common';
 import { Typography, Link } from '@components/common';
-import { Button } from '@components/common/Button/Button';
+import { Button } from '@components/common';
 import '@components/ContactPage/components/ViewCV/ViewCV.scss';
 
 /**

@@ -6,7 +6,7 @@ export type SiteTitleProps = {
   variant?: ThemeVariant;
 };
 
-const SiteTitle = ({ variant = ThemeVariant.Dark }: SiteTitleProps) => {
+export const SiteTitle = ({ variant = ThemeVariant.Dark }: SiteTitleProps) => {
   const classList = generateBEMModifiersClassList('site-title', [variant]);
 
   return (
@@ -15,5 +15,3 @@ const SiteTitle = ({ variant = ThemeVariant.Dark }: SiteTitleProps) => {
     </span>
   );
 };
-
-export default SiteTitle;

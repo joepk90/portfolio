@@ -4,8 +4,6 @@ export * from './GlobalCSS';
 export * from './Header';
 export * from './Layout';
 export * from './ProjectCard';
-export * from './HomePage/components/AboutCard';
-export * from './HomePage/components/IntroCard';
 export * from './SideTabContent';
 export * from './SiteBranding';
 export * from './SiteLogo';

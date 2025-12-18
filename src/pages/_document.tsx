@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document';
 import {
   GoogleTagManagerScript,
   GoogleTagManagerNoScript,
-} from '@components/common/GoogleTagManager/GoogleTagManager';
+} from '@components/common';
 import { portalRootId } from '@src/lib/utilities';
 
 // https://nextjs.org/docs/advanced-features/custom-document

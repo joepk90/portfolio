@@ -1,4 +1,4 @@
-import MenuItem, { MenuItemProps } from '@components/common/MenuItem/MenuItem';
+import { MenuItem, MenuItemProps } from '@components/common';
 import '@components/common/Navigation/Navigation.scss';
 
 type Variant = 'dark' | 'light';
@@ -9,7 +9,7 @@ export type NavigationProps = {
 };
 
 // TODO add logic to make navigation disabled (aria-hidden=true) on desktop device/in Header
-const Navigation = ({ menuItems, variant = 'dark' }: NavigationProps) => {
+export const Navigation = ({ menuItems, variant = 'dark' }: NavigationProps) => {
   return (
     <nav className="navigation" role="navigation">
       <ul className="navigation__menu-items">
@@ -20,5 +20,3 @@ const Navigation = ({ menuItems, variant = 'dark' }: NavigationProps) => {
     </nav>
   );
 };
-
-export default Navigation;

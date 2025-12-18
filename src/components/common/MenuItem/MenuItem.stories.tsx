@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story, ComponentMeta } from '@storybook/react';
-import MenuItem, { MenuItemProps } from '@components/common/MenuItem/MenuItem'; // TODO setup aliases in storybook..
+import { MenuItem, MenuItemProps } from '@components/common/MenuItem/MenuItem'; // TODO setup aliases in storybook..
 
 export default {
   title: 'Atoms/MenuItem',

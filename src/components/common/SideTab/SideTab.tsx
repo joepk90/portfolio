@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { generateBEMModifiersClassList } from '@src/lib/utilities/utilities';
-import { Button } from '@components/common/Button/Button';
+import { Button } from '@components/common';
 import '@components/common/SideTab/SideTab.scss';
 
 export type SideTabProps = {
@@ -8,7 +8,7 @@ export type SideTabProps = {
   children: any;
 };
 
-const SideTab = ({ label, children }: SideTabProps) => {
+export const SideTab = ({ label, children }: SideTabProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   if (!children) return <></>;
@@ -51,5 +51,3 @@ const SideTab = ({ label, children }: SideTabProps) => {
     </aside>
   );
 };
-
-export default SideTab;

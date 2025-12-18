@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story, ComponentMeta } from '@storybook/react';
-import Heading, { HeadingProps, headingLevels } from '@components/common/Heading/Heading';
+import { Heading, HeadingProps, headingLevels } from '@components/common/Heading/Heading';
 
 export default {
   title: 'Atoms/Heading',

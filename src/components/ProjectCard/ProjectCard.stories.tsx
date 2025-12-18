@@ -1,5 +1,5 @@
 import { ComponentMeta, Story } from '@storybook/react';
-import ProjectCard, { ProjectCardComponentProps } from '@components/ProjectCard/ProjectCard';
+import { ProjectCard, ProjectCardComponentProps } from '@components/ProjectCard/ProjectCard';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

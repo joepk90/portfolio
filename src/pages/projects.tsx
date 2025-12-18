@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import { NextSeo } from 'next-seo';
 import { GetStaticProps } from 'next';
 import { getProjectsStaticProps, ProjectsProps } from '@src/lib/hooks/projects';
-import { Layout } from '@components/Layout/Layout';
+import { Layout } from '@components/Layout';
 import { getPageUrl } from '@lib/utilities/utilities';
 import { SEO, projectsURL } from '@src/config';
 import { ProjectsPage } from '@src/components';

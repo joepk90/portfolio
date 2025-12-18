@@ -3,7 +3,8 @@ import { BrushStrokeSVGClipPath } from '@components/common/BrushStroke/BrushStro
 // import Image from 'next/image';
 import { ContentfulImageAlias as ContentfulImage } from '@components/common/ContentfulImage/ContentfulImage';
 
-import BrushStrokeWrapper, {
+import {
+  BrushStrokeWrapper,
   BrushStrokeWrapperProps,
 } from '@components/common/BrushStrokeWrapper/BrushStrokeWrapper';
 

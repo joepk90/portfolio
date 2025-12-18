@@ -1,5 +1,6 @@
 import { Story, ComponentMeta } from '@storybook/react';
-import BrushStroke, {
+import {
+  BrushStroke,
   BrushStrokeProps,
   BrushStrokeSVGClipPath,
 } from '@components/common/BrushStroke/BrushStroke';

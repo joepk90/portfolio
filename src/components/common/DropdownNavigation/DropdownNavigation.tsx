@@ -1,4 +1,4 @@
-import MenuItem, { MenuItemProps } from '@components/common/MenuItem/MenuItem';
+import { MenuItem, MenuItemProps } from '@components/common';
 import '@components/common/DropdownNavigation/DropdownNavigation.scss';
 
 export type DropdownNavigationProps = {
@@ -10,7 +10,7 @@ export type DropdownNavigationProps = {
 // - animate dropdown
 // - make dropdown an overlay (currently pushes content down -> CLS)
 // - test dropdown open/close logic
-const DropdownNavigation = ({ menuItems, isOpen = false }: DropdownNavigationProps) => {
+export const DropdownNavigation = ({ menuItems, isOpen = false }: DropdownNavigationProps) => {
   const isOpenClass = isOpen === true ? 'is-open' : '';
 
   return (
@@ -23,5 +23,3 @@ const DropdownNavigation = ({ menuItems, isOpen = false }: DropdownNavigationPro
     </nav>
   );
 };
-
-export default DropdownNavigation;

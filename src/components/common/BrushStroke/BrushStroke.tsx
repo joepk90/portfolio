@@ -5,13 +5,11 @@ export type BrushStrokeProps = {
   className?: string;
 };
 
-const BrushStroke = ({ className }: BrushStrokeProps) => {
+export const BrushStroke = ({ className }: BrushStrokeProps) => {
   const classList = appendString('brush-stroke', className);
 
   return <div className={classList} role="presentation"></div>;
 };
-
-export default BrushStroke;
 
 // SVG Clip path is being injected in the app component
 export const BrushStrokeSVGClipPath = () => {

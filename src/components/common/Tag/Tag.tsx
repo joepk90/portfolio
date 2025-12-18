@@ -15,4 +15,3 @@ export const Tag = ({ label, variant = ThemeVariant.Light }: TagProps) => {
   );
 };
 
-export default Tag;

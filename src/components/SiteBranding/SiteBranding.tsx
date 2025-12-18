@@ -1,6 +1,6 @@
 import React from 'react';
-import SiteLogo from '@components/SiteLogo/SiteLogo';
-import SiteTitle from '@components/SiteTitle/SiteTitle';
+import { SiteLogo } from '@components/SiteLogo';
+import { SiteTitle } from '@components/SiteTitle';
 import '@components/SiteBranding/SiteBranding.scss';
 
 // TODO setup mobile first media query logic (client or SSR?)

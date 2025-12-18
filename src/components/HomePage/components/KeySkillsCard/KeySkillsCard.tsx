@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import Heading from '@components/common/Heading/Heading';
-import FlexWrapper from '@components/common/FlexWrapper/FlexWrapper';
-import Tags from '@components/common/Tags/Tags';
+import { Heading } from '@components/common';
+import { FlexWrapper } from '@components/common';
+import { Tags } from '@components/common';
 import '@components/HomePage/components/KeySkillsCard/KeySkillsCard.scss';
 
 export type KeySkillsCardProps = {

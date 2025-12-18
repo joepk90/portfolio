@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { FaMapMarkerAlt, FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { IconWithContent, Link, Typography, Email, ClonedElement } from '@src/components/common';
+import { IconWithContent, Link, Typography, Email, ClonedElement } from '@components/common';
 import { IconType } from 'react-icons';
 
 const removeHttpeProtocol = (url: string) => url.replace('https://', '');
