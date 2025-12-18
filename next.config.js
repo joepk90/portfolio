@@ -1,6 +1,8 @@
 const { withGlobalCss } = require('next-global-css')
 const withConfig = withGlobalCss()
 
+// remotePatters used for image optimisation, requried for the image component
+// could not use <Image> and render <img>, but would lose image optimization benefits
 const remotePatterns = [
   {
     protocol: 'https',
