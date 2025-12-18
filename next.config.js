@@ -20,5 +20,9 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
   },
+  sassOptions: {
+    includePaths: ['src/styles'],
+    quietDeps: true,
+  },
 };
 module.exports = withConfig(nextConfig)
