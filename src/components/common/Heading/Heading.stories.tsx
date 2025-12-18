@@ -1,5 +1,5 @@
 import React from 'react';
-import { Story, ComponentMeta } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/react';
 import { Heading, HeadingProps, headingLevels } from '@components/common/Heading/Heading';
 
 export default {
@@ -18,9 +18,9 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof Heading>;
+} as Meta<typeof Heading>;
 
-const Template: Story<HeadingProps> = (args: HeadingProps) => {
+const Template: StoryFn<HeadingProps> = (args: HeadingProps) => {
   return <Heading {...args}></Heading>;
 };
 

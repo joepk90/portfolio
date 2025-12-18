@@ -1,4 +1,4 @@
-import { ComponentMeta, Story } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/react';
 import { ThemeVariant } from '@src/lib/utilities/utilities';
 import { SiteTitle, SiteTitleProps } from '@components/SiteTitle/SiteTitle';
 
@@ -12,9 +12,9 @@ export default {
       options: ThemeVariant,
     },
   },
-} as ComponentMeta<typeof SiteTitle>;
+} as Meta<typeof SiteTitle>;
 
-export const Primary: Story<SiteTitleProps> = (args: SiteTitleProps) => <SiteTitle {...args} />;
+export const Primary: StoryFn<SiteTitleProps> = (args: SiteTitleProps) => <SiteTitle {...args} />;
 
 Primary.storyName = 'SiteTitle';
 Primary.args = {

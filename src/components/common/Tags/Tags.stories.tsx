@@ -1,4 +1,4 @@
-import { ComponentMeta, Story } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/react';
 import { Tags, TagsProps, TagsAlignmentVariant } from '@components/common';
 
 const tagList = ['React', 'Next', 'Javascript', 'PHP', 'HTML'];
@@ -7,9 +7,9 @@ const tagList = ['React', 'Next', 'Javascript', 'PHP', 'HTML'];
 export default {
   title: 'Molecules/Tags',
   component: Tags,
-} as ComponentMeta<typeof Tags>;
+} as Meta<typeof Tags>;
 
-export const Template: Story<TagsProps> = () => <Tags tags={tagList} />;
+export const Template: StoryFn<TagsProps> = () => <Tags tags={tagList} />;
 
 Template.storyName = 'Tags';
 

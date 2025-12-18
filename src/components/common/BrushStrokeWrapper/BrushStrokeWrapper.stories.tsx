@@ -1,4 +1,4 @@
-import { Story, ComponentMeta } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/react';
 import { BrushStrokeSVGClipPath } from '@components/common/BrushStroke/BrushStroke';
 // import Image from 'next/image';
 import { ContentfulImageAlias as ContentfulImage } from '@components/common/ContentfulImage/ContentfulImage';
@@ -19,9 +19,9 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof BrushStrokeWrapper>;
+} as Meta<typeof BrushStrokeWrapper>;
 
-const Template: Story<BrushStrokeWrapperProps> = (args: BrushStrokeWrapperProps) => {
+const Template: StoryFn<BrushStrokeWrapperProps> = (args: BrushStrokeWrapperProps) => {
   return (
     <>
       <BrushStrokeSVGClipPath />

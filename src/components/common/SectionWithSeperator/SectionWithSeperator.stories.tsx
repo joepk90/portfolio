@@ -1,4 +1,4 @@
-import { ComponentMeta, Story } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/react';
 import { SectionWithSeperator, SectionWithSeperatorProps } from '@src/components/common';
 import { ThemeVariant } from '@src/lib/utilities';
 
@@ -11,9 +11,9 @@ export default {
       options: Object.values(ThemeVariant),
     },
   },
-} as ComponentMeta<typeof SectionWithSeperator>;
+} as Meta<typeof SectionWithSeperator>;
 
-export const Template: Story<SectionWithSeperatorProps> = (args) => (
+export const Template: StoryFn<SectionWithSeperatorProps> = (args) => (
   <SectionWithSeperator {...args} />
 );
 

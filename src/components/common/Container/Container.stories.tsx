@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react';
-import { Story, ComponentMeta } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/react';
 import { Container, Props } from '@components/common/Container/Container';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -12,9 +12,9 @@ export default {
     className: { control: { type: 'text' } },
     children: { control: { type: 'text' } },
   },
-} as ComponentMeta<typeof Container>;
+} as Meta<typeof Container>;
 
-const Template: Story<PropsWithChildren<Props>> = (args: Props) => {
+const Template: StoryFn<PropsWithChildren<Props>> = (args: Props) => {
   return <Container {...args}></Container>;
 };
 

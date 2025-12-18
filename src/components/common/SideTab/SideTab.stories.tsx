@@ -1,5 +1,5 @@
 import React from 'react';
-import { Story, ComponentMeta } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/react';
 import { SideTab, SideTabProps } from '@src/components/common/SideTab/SideTab'; // TODO setup aliases in storybook..
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -14,9 +14,9 @@ export default {
       control: { type: 'text' },
     },
   },
-} as ComponentMeta<typeof SideTab>;
+} as Meta<typeof SideTab>;
 
-const Template: Story<SideTabProps> = (args: any) => {
+const Template: StoryFn<SideTabProps> = (args: any) => {
   return <SideTab {...args}></SideTab>;
 };
 

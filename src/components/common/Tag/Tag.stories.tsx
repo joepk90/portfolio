@@ -1,12 +1,12 @@
-import { ComponentMeta, Story } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/react';
 import { Tag, TagProps } from '@components/common/Tag/Tag';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Atoms/Tag',
   component: Tag,
-} as ComponentMeta<typeof Tag>;
+} as Meta<typeof Tag>;
 
-export const Primary: Story<TagProps> = () => <Tag label="Portfolio" />;
+export const Primary: StoryFn<TagProps> = () => <Tag label="Portfolio" />;
 
 Primary.storyName = 'Tag';

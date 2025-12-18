@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentMeta } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { Hamburger } from './Hamburger'; // TODO setup aliases in storybook..
 
@@ -7,7 +7,7 @@ import { Hamburger } from './Hamburger'; // TODO setup aliases in storybook..
 export default {
   title: 'Atoms/Hamburger',
   component: Hamburger,
-} as ComponentMeta<typeof Hamburger>;
+} as Meta<typeof Hamburger>;
 
 export const Primary = () => <Hamburger onClick={action('Click Handler')}></Hamburger>;
 

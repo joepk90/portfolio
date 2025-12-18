@@ -1,11 +1,11 @@
-import { ComponentMeta } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 import { SiteTagline } from '@components/SiteTagline/SiteTagline';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Atoms/SiteTagline',
   component: SiteTagline,
-} as ComponentMeta<typeof SiteTagline>;
+} as Meta<typeof SiteTagline>;
 
 export const Primary = () => <SiteTagline />;
 

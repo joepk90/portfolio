@@ -1,4 +1,4 @@
-import { Story, ComponentMeta } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/react';
 import { ContentfulImageAlias as ContentfulImage } from '@components/common/ContentfulImage/ContentfulImage';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

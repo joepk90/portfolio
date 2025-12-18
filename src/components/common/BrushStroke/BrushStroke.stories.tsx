@@ -1,4 +1,4 @@
-import { Story, ComponentMeta } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/react';
 import {
   BrushStroke,
   BrushStrokeProps,
@@ -10,9 +10,9 @@ export default {
   title: 'Atoms/BrushStroke',
   component: BrushStroke,
   argTypes: {},
-} as ComponentMeta<typeof BrushStroke>;
+} as Meta<typeof BrushStroke>;
 
-export const Primary: Story<BrushStrokeProps> = (args: BrushStrokeProps) => {
+export const Primary: StoryFn<BrushStrokeProps> = (args: BrushStrokeProps) => {
   return (
     <>
       <BrushStrokeSVGClipPath />

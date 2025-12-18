@@ -1,5 +1,5 @@
 import React from 'react';
-import { Story, ComponentMeta } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/react';
 import { Link, LinkProps } from '@src/components/common';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -11,9 +11,9 @@ export default {
       control: { type: 'text' },
     },
   },
-} as ComponentMeta<typeof Link>;
+} as Meta<typeof Link>;
 
-const Template: Story<LinkProps> = (args: any) => {
+const Template: StoryFn<LinkProps> = (args: any) => {
   const { attributes, ...rest } = args;
 
   return <Link {...attributes} {...rest}></Link>;
