@@ -1,18 +1,22 @@
 const { withGlobalCss } = require('next-global-css')
 const withConfig = withGlobalCss()
 
-const imageDomains = [
-  "images.ctfassets.net"
-]
+const remotePatterns = [
+  {
+    protocol: 'https',
+    hostname: 'images.ctfassets.net',
+    pathname: '**',
+  },
+];
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: imageDomains,
+    remotePatterns: remotePatterns,
   },
   env: {
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL,
-  }
-}
+  },
+};
 module.exports = withConfig(nextConfig)
