@@ -35,6 +35,7 @@
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "^16.3.1",
     "@types/node": "18.17.0",
+    "@types/react-dom": "^19.2.3",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "@typescript-eslint/parser": "^5.45.0",
     "babel-loader": "^8.2.3",
@@ -55,6 +56,6 @@
     "react-markdown": "^8.0.1",
     "sass": "^1.97.0",
     "tsconfig-paths-webpack-plugin": "^4.0.0",
-    "typescript": "^5.2.0"
+    "typescript": "^5.9.3"
   }
 }
