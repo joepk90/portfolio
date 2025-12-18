@@ -19,10 +19,8 @@ export const Header = () => {
         <div className="header__section">
           <div className="header__details">
             <div className="header__branding">
-              <Link href={indexURL}>
-                <a title="Home">
-                  <SiteBranding />
-                </a>
+              <Link href={indexURL} title="Home">
+                <SiteBranding />
               </Link>
             </div>
             <div className="header__navigation-desktop">
