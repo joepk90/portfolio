@@ -6,7 +6,11 @@ export default {
   component: ContentfulImage,
   argTypes: {
     image: {
-      control: { type: 'text' },
+      file: {
+        url: {
+          control: { type: 'text' },
+        },
+      },
     },
   },
 };
