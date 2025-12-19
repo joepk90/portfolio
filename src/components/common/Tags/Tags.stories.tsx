@@ -14,13 +14,11 @@ export const Template: StoryFn<TagsProps> = () => <Tags tags={tagList} />;
 Template.storyName = 'Tags';
 
 export const Left = Template.bind({});
-Left.storyName = 'Left';
 Left.args = {
   align: TagsAlignmentVariant.Left,
 };
 
 export const Right = Template.bind({});
-Right.storyName = 'Right';
 Right.args = {
   align: TagsAlignmentVariant.Right,
 };

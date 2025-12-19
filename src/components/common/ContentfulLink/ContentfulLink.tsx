@@ -4,7 +4,7 @@ import { FC, HTMLAttributeAnchorTarget } from 'react';
 
 export type ContentfulLinkProps = ContentFulLinkProperties & {
   target: HTMLAttributeAnchorTarget;
-  [propName: string]: any;
+  [propName: string]: unknown;
 };
 
 /**

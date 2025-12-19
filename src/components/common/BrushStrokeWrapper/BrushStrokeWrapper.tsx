@@ -1,9 +1,10 @@
 import '@components/common/BrushStrokeWrapper/BrushStrokeWrapper.scss';
 
 import { BrushStroke } from '@components/common';
+import { ReactNode } from 'react';
 
 export type BrushStrokeWrapperProps = {
-  children: any;
+  children: ReactNode;
 };
 
 export const BrushStrokeWrapper = ({ children }: BrushStrokeWrapperProps) => {

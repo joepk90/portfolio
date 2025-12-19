@@ -19,6 +19,8 @@ export const GoogleTagManagerScript = () => {
   if (!googleTagManagerID || nodeEnv !== 'production') return <></>;
 
   return (
+    // TODO install the @next/third-parties library to handle this script - https://nextjs.org/docs/messages/next-script-for-ga
+    // eslint-disable-next-line @next/next/next-script-for-ga
     <script
       dangerouslySetInnerHTML={{
         __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

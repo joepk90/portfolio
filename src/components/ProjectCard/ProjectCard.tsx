@@ -67,6 +67,7 @@ export const ProjectCard: FC<ProjectCardComponentProps> = ({
     if (!tags || tags.length === 0) return '';
 
     // limit tags?
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const limitedTagsArray = getLimitedTagsArray(tags);
 
     return (

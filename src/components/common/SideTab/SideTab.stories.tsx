@@ -16,7 +16,7 @@ export default {
   },
 } as Meta<typeof SideTab>;
 
-const Template: StoryFn<SideTabProps> = (args: any) => {
+const Template: StoryFn<SideTabProps> = (args: SideTabProps) => {
   return <SideTab {...args}></SideTab>;
 };
 

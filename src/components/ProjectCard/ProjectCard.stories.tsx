@@ -28,26 +28,22 @@ const project = {
 Template.storyName = 'ProjectCard';
 
 export const Light = Template.bind({});
-Light.storyName = 'Light';
 Light.args = {
   project,
 };
 
 export const Dark = Template.bind({});
-Dark.storyName = 'Dark';
 Dark.args = {
   project,
 };
 
 export const LightReversed = Template.bind({});
-LightReversed.storyName = 'Light Reversed';
 LightReversed.args = {
   project,
   reverse: true,
 };
 
 export const DarkReversed = Template.bind({});
-DarkReversed.storyName = 'Dark Reversed';
 DarkReversed.args = {
   project,
   reverse: true,

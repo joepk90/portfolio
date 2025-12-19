@@ -19,6 +19,8 @@ export default {
   },
 } as Meta<typeof Button>;
 
+// TODO setup ts generic to handle this
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Template: StoryFn<ButtonProps> = (args: any) => {
   const { attributes, ...rest } = args;
 

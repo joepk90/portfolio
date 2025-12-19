@@ -7,7 +7,7 @@ const { buttonClass } = styles;
 
 export type ButtonProps = {
   className?: string;
-  [propName: string]: any;
+  [propName: string]: unknown; // TODO setup ts generic to handle this
 };
 
 export const Button: FC<PropsWithChildren<ButtonProps>> = ({ children, className, ...rest }) => {

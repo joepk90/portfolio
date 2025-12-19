@@ -13,7 +13,7 @@ export default {
   },
 } as Meta<typeof Link>;
 
-const Template: StoryFn<LinkProps> = (args: any) => {
+const Template: StoryFn<LinkProps> = (args: LinkProps) => {
   const { attributes, ...rest } = args;
 
   return <Link {...attributes} {...rest}></Link>;

@@ -20,13 +20,11 @@ export const Template: StoryFn<SectionWithSeperatorProps> = (args) => (
 Template.storyName = 'SectionWithSeperator';
 
 export const Light = Template.bind({});
-Light.storyName = 'Light';
 Light.args = {
   variant: ThemeVariant.Light,
 };
 
 export const Dark = Template.bind({});
-Dark.storyName = 'Light';
 Dark.args = {
   variant: ThemeVariant.Dark,
 };

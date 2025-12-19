@@ -11,7 +11,7 @@ export type ProjectModalProps = {
 };
 
 export const ProjectModal: FC<ProjectModalProps> = ({ project }) => {
-  const { title, repositoryLinks, description } = project;
+  const { repositoryLinks, description } = project;
 
   const renderDescription = () => {
     if (!description || typeof description === 'string') return '';

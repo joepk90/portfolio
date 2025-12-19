@@ -18,10 +18,8 @@ export default {
   },
 } as Meta<typeof DropdownNavigation>;
 
-const Template: StoryFn<DropdownNavigationProps> = (args: any) => {
-  return (
-    <DropdownNavigation {...args} menuItems={menuItems} variant="dropdown"></DropdownNavigation>
-  );
+const Template: StoryFn<DropdownNavigationProps> = (args: DropdownNavigationProps) => {
+  return <DropdownNavigation {...args} menuItems={menuItems}></DropdownNavigation>;
 };
 
 export const Primary = Template.bind({});

@@ -21,7 +21,8 @@ const getEmailAttributes = (text: string, childComponent?: ReactElement) => {
 
 export const Email: FC<PropsWithChildren<EmailProps>> = ({
   title,
-  href,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  href, // TODO href not in use
   text,
   childComponent,
   ...rest

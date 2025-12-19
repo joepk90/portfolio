@@ -42,7 +42,7 @@ describe('Utility Function: appendString', () => {
 
   it('should return the original string if appended string is undefined', () => {
     const originalString = 'original';
-    let stringToAppend: any;
+    let stringToAppend: undefined;
     const updateString = appendString(originalString, stringToAppend);
     expect(updateString).toMatch(`${originalString}`);
   });

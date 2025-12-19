@@ -1,5 +1,6 @@
 // import { useEffect } from 'react';
 import { appendString } from '@src/lib/utilities/utilities';
+import { ReactNode } from 'react';
 
 // https://betterprogramming.pub/make-a-flexbox-react-component-e96a038da7ec
 
@@ -40,7 +41,7 @@ type StyleOptions = {
 };
 
 type FlexWrapperProps = StyleOptions & {
-  children: any;
+  children: ReactNode;
   className?: string;
   // styles: Style
   // smallStyles: Style
