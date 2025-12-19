@@ -1,4 +1,4 @@
-import { Story, ComponentMeta } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/nextjs-vite';
 import { ThemeVariant } from '@src/lib/utilities/utilities';
 import { SiteLogo, SiteLogoProps } from '@components/SiteLogo/SiteLogo';
 
@@ -14,9 +14,9 @@ export default {
       },
     },
   },
-} as ComponentMeta<typeof SiteLogo>;
+} as Meta<typeof SiteLogo>;
 
-export const Primary: Story<SiteLogoProps> = (args: SiteLogoProps) => <SiteLogo {...args} />;
+export const Primary: StoryFn<SiteLogoProps> = (args: SiteLogoProps) => <SiteLogo {...args} />;
 
 Primary.storyName = 'SiteLogo';
 Primary.args = {

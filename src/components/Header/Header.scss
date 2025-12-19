@@ -1,5 +1,6 @@
-@import '@styles/base/_base.scss';
-@import '@styles/helpers/_helpers.scss';
+@use "helpers/breakpoints" as *;
+@use "base/variables-breakpoints.module" as *;
+@use "helpers/placeholders" as *;
 
 .header {
   width: 100%;

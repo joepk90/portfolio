@@ -1,5 +1,5 @@
-@import '@styles/base/_base.scss';
-@import '@styles/helpers/_helpers.scss';
+@use "helpers/mixin" as *;
+@use "helpers/typography" as *;
 
 .list {
   @extend %listStyleNone;

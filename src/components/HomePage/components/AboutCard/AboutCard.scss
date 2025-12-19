@@ -1,6 +1,8 @@
-@import '@styles/base/_base.scss';
-@import '@styles/helpers/_helpers.scss';
-@import '@components/common/Tags/Tags.module.scss';
+@use "helpers/mixin" as *;
+@use "helpers/breakpoints" as *;
+@use "base/variables-breakpoints.module" as *;
+@use "base/variables-colors.module" as *;
+@use "base/variables-typography" as *;
 
 .about-card {
   display: flex;

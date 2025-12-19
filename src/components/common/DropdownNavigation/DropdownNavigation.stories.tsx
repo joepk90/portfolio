@@ -1,5 +1,5 @@
 import React from 'react';
-import { Story, ComponentMeta } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/nextjs-vite';
 import {
   DropdownNavigation,
   DropdownNavigationProps,
@@ -16,9 +16,9 @@ export default {
       control: { type: 'boolean' },
     },
   },
-} as ComponentMeta<typeof DropdownNavigation>;
+} as Meta<typeof DropdownNavigation>;
 
-const Template: Story<DropdownNavigationProps> = (args: any) => {
+const Template: StoryFn<DropdownNavigationProps> = (args: any) => {
   return (
     <DropdownNavigation {...args} menuItems={menuItems} variant="dropdown"></DropdownNavigation>
   );

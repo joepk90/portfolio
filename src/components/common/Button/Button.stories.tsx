@@ -1,5 +1,5 @@
 import React from 'react';
-import { Story, ComponentMeta } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/nextjs-vite';
 import { Button, ButtonProps } from '@src/components/common/Button/Button'; // TODO setup aliases in storybook..
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -17,9 +17,9 @@ export default {
       control: { type: 'object' },
     },
   },
-} as ComponentMeta<typeof Button>;
+} as Meta<typeof Button>;
 
-const Template: Story<ButtonProps> = (args: any) => {
+const Template: StoryFn<ButtonProps> = (args: any) => {
   const { attributes, ...rest } = args;
 
   return <Button {...attributes} {...rest}></Button>;

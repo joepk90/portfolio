@@ -1,5 +1,5 @@
 import React from 'react';
-import { Story, ComponentMeta } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/nextjs-vite';
 import { Navigation, NavigationProps } from '@components/common/Navigation/Navigation'; // TODO setup aliases in storybook..
 import { menuItems } from '@src/config';
 
@@ -13,9 +13,9 @@ export default {
       control: { type: 'radio' },
     },
   },
-} as ComponentMeta<typeof Navigation>;
+} as Meta<typeof Navigation>;
 
-const Template: Story<NavigationProps> = (args: NavigationProps) => {
+const Template: StoryFn<NavigationProps> = (args: NavigationProps) => {
   return <Navigation {...args} menuItems={menuItems}></Navigation>;
 };
 

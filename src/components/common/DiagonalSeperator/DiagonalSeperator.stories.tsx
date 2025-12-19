@@ -1,4 +1,4 @@
-import { ComponentMeta, Story } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/nextjs-vite';
 import {
   DiagonalSeperator,
   DiagonalSeperatorProps,
@@ -8,9 +8,9 @@ import { BackgroundVariant } from '@src/lib/utilities';
 export default {
   title: 'Atoms/DiagonalSeperator',
   component: DiagonalSeperator,
-} as ComponentMeta<typeof DiagonalSeperator>;
+} as Meta<typeof DiagonalSeperator>;
 
-export const Template: Story<DiagonalSeperatorProps> = () => <DiagonalSeperator />;
+export const Template: StoryFn<DiagonalSeperatorProps> = () => <DiagonalSeperator />;
 
 Template.storyName = 'DiagonalSeperator';
 

@@ -1,5 +1,5 @@
-@import '@styles/base/_base.scss';
-@import '@styles/helpers/_helpers.scss';
+@use "base/_variables-colors.module" as *;
+@use "helpers/mixin" as *;
 
 .panel {
   background-color: $backgroundWhite;

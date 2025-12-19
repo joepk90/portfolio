@@ -1,5 +1,5 @@
 import React from 'react';
-import { Story, ComponentMeta } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/nextjs-vite';
 import { MenuItem, MenuItemProps } from '@components/common/MenuItem/MenuItem'; // TODO setup aliases in storybook..
 
 export default {
@@ -20,9 +20,9 @@ export default {
       control: { type: 'radio' },
     },
   },
-} as ComponentMeta<typeof MenuItem>;
+} as Meta<typeof MenuItem>;
 
-const Template: Story<MenuItemProps> = (args: any) => {
+const Template: StoryFn<MenuItemProps> = (args: any) => {
   return (
     <ul style={{ listStyle: 'none', padding: 0 }}>
       <MenuItem {...args}></MenuItem>

@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react';
-import { Story, ComponentMeta } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/nextjs-vite';
 import { Section, SectionProps, sizeOptions } from '@components/common/Section/Section';
 
 // TODO add option to reset control state
@@ -27,9 +27,9 @@ export default {
     className: { control: { type: 'text' } },
     children: { control: { type: 'text' } },
   },
-} as ComponentMeta<typeof Section>;
+} as Meta<typeof Section>;
 
-const Template: Story<PropsWithChildren<SectionProps>> = (
+const Template: StoryFn<PropsWithChildren<SectionProps>> = (
   args: PropsWithChildren<SectionProps>,
 ) => {
   return <Section {...args}></Section>;

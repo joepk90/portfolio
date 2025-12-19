@@ -1,5 +1,7 @@
-@function rem($px, $baseFontSize: $baseFontSize) {
-  @return ($px / $baseFontSize) * 1rem;
+@use "base/variables-typography" as vars;
+
+@function rem($px, $baseFontSize: vars.$baseFontSize) {
+  @return calc($px / $baseFontSize) * 1rem;
 }
 
 @function boxShadow($color, $opacity) {

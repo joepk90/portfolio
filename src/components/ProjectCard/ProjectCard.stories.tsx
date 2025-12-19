@@ -1,13 +1,13 @@
-import { ComponentMeta, Story } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/nextjs-vite';
 import { ProjectCard, ProjectCardComponentProps } from '@components/ProjectCard/ProjectCard';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Organisms/ProjectCard',
   component: ProjectCard,
-} as ComponentMeta<typeof ProjectCard>;
+} as Meta<typeof ProjectCard>;
 
-const Template: Story<ProjectCardComponentProps> = (args: ProjectCardComponentProps) => {
+const Template: StoryFn<ProjectCardComponentProps> = (args: ProjectCardComponentProps) => {
   return <ProjectCard {...args}></ProjectCard>;
 };
 

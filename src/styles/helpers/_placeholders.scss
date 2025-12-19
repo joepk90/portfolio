@@ -1,3 +1,7 @@
+@use "base/varaibles-utilities" as *;
+@use "base/variables-colors.module" as *;
+@use "helpers/mixin" as *;
+
 %container {
   margin: 0 auto;
   max-width: $maxWidth;

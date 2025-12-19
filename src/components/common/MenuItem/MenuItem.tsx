@@ -19,10 +19,8 @@ export const MenuItem = ({ path, label, variant }: MenuItemProps) => {
 
   return (
     <li className={classList}>
-      <Link href={path}>
-        <a className="menu-item__link" role="menuitem">
-          {label}
-        </a>
+      <Link href={path} className="menu-item__link" role="menuitem">
+        {label}
       </Link>
     </li>
   );

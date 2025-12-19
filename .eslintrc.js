@@ -20,6 +20,7 @@ module.exports = {
     'next',
     'next/core-web-vitals',
     'prettier',
+    'plugin:storybook/recommended',
   ],
   rules: {
     // Next.js + React 17+

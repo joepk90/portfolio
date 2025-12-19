@@ -1,13 +1,13 @@
 import React from 'react';
-import { ComponentMeta } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+import type { Meta } from '@storybook/nextjs-vite';
+import { action } from 'storybook/actions';
 import { Hamburger } from './Hamburger'; // TODO setup aliases in storybook..
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Atoms/Hamburger',
   component: Hamburger,
-} as ComponentMeta<typeof Hamburger>;
+} as Meta<typeof Hamburger>;
 
 export const Primary = () => <Hamburger onClick={action('Click Handler')}></Hamburger>;
 

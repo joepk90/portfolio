@@ -1,5 +1,4 @@
-@import '@styles/base/_base.scss';
-@import '@styles/helpers/_helpers.scss';
+@use "helpers/typography" as *;
 
 .link {
   cursor: pointer;

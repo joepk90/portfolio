@@ -1,6 +1,12 @@
-@import '@styles/base/_base.scss';
-@import '@styles/helpers/_helpers.scss';
-@import '@components/common/Tags/Tags.module.scss';
+@use "base/variables-breakpoints.module" as *;
+@use "base/variables-colors.module" as *;
+@use "base/variables-typography" as *;
+@use "helpers/mixin" as *;
+@use "helpers/breakpoints" as *;
+@use "helpers/typography" as *;
+@use "helpers/placeholders" as *;
+
+@use '@components/common/Tags/Tags.module.scss' as tags;
 
 $projectCard: project-card;
 
@@ -79,7 +85,7 @@ $projectCard: project-card;
     padding: rem(20px) 0;
   }
 
-  .#{$tagsClassName} {
+  .#{tags.$tagsClassName} {
     justify-content: center;
     @include breakpoint($smallTabletLandscapeName) {
       justify-content: flex-end;
@@ -126,7 +132,7 @@ $projectCard: project-card;
         }
       }
     }
-    .#{$tagsClassName} {
+    .#{tags.$tagsClassName} {
       @include breakpoint($smallTabletLandscapeName) {
         justify-content: flex-start;
       }

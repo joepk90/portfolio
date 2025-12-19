@@ -19,9 +19,13 @@ export const ClonedElement: FC<PropsWithChildren<ClonedElementProps>> = ({
   dangerouslySetInnerHTML,
   props = {},
 }) => {
-  return cloneElement(element, {
-    dangerouslySetInnerHTML,
-    ...props,
-    children,
-  });
+  return cloneElement(
+    element,
+    {
+      ...props,
+      ...(dangerouslySetInnerHTML ? { dangerouslySetInnerHTML } : {}),
+    },
+    // Only pass children if dangerouslySetInnerHTML is NOT set
+    dangerouslySetInnerHTML ? undefined : children,
+  );
 };

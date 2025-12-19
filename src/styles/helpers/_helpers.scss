@@ -1,4 +1,4 @@
-@import 'mixin';
-@import 'placeholders';
-@import 'breakpoints';
-@import 'typography';
+@use 'mixin' as *;
+@use 'placeholders' as *;
+@use 'breakpoints' as *;
+@use 'typography' as *;

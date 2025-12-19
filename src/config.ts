@@ -8,9 +8,9 @@ export const siteURL: string = getSiteUrl();
 /**
  * Base URLS
  */
-export const indexURL: string = '/';
-export const projectsURL: string = 'projects';
-export const contactURL: string = 'contact';
+export const indexURL = '/';
+export const projectsURL = 'projects';
+export const contactURL = 'contact';
 
 /**
  * Site Settings

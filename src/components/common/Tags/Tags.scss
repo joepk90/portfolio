@@ -1,8 +1,9 @@
-@import '@styles/base/_base.scss';
-@import '@styles/helpers/_helpers.scss';
-@import '@components/common/Tags/Tags.module.scss';
+@use "helpers/mixin" as *;
+@use "helpers/typography" as *;
 
-.#{$tagsClassName} {
+@use '@components/common/Tags/Tags.module.scss' as tags;
+
+.#{tags.$tagsClassName} {
   display: inline-flex;
   flex-wrap: wrap;
   gap: rem(10px); // TODO review: only works in modern browsers

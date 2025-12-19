@@ -1,5 +1,7 @@
-@import '@styles/base/_base.scss';
-@import '@styles/helpers/_helpers.scss';
+@use "helpers/mixin" as *;
+@use "base/variables-colors.module" as *;
+@use "base/variables-breakpoints.module" as *;
+@use "helpers/breakpoints" as *;
 
 .side-bar-modal {
   &__window {
