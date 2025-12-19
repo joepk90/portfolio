@@ -1,9 +1,12 @@
-import { FC } from 'react';
-import { ContentfulImageAlias as ContentfulImage } from '@components/common';
-import { Heading } from '@components/common';
-import { BrushStrokeWrapper } from '@components/common';
-import { Asset } from 'contentful';
 import '@components/HomePage/components/IntroCard/IntroCard.scss';
+
+import {
+  BrushStrokeWrapper,
+  ContentfulImageAlias as ContentfulImage,
+  Heading,
+} from '@components/common';
+import { Asset } from 'contentful';
+import { FC } from 'react';
 
 export type IntroCardProps = {
   image: Asset;
