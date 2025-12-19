@@ -1,4 +1,5 @@
 import '@components/common/DiagonalSeperator/DiagonalSeperator.scss';
+
 import { BackgroundVariant, generateBEMModifiersClassList } from '@src/lib/utilities';
 import { FC } from 'react';
 

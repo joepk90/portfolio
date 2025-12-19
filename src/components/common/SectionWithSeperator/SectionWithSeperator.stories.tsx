@@ -1,6 +1,6 @@
-import type { StoryFn, Meta } from '@storybook/nextjs-vite';
 import { SectionWithSeperator, SectionWithSeperatorProps } from '@src/components/common';
 import { ThemeVariant } from '@src/lib/utilities';
+import type { Meta, StoryFn } from '@storybook/nextjs-vite';
 
 export default {
   title: 'Atoms/SectionWithSeperator',

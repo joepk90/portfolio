@@ -1,5 +1,5 @@
+import { Tags } from '@src/components/common';
 import { render, screen } from '@testing-library/react';
-import Tags from '@src/components/common/Tags/Tags';
 
 const tagList = ['React', 'Next', 'Javascript'];
 

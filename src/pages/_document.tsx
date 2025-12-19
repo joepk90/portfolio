@@ -1,9 +1,6 @@
-import { Html, Head, Main, NextScript } from 'next/document';
-import {
-  GoogleTagManagerScript,
-  GoogleTagManagerNoScript,
-} from '@components/common';
+import { GoogleTagManagerNoScript, GoogleTagManagerScript } from '@components/common';
 import { portalRootId } from '@src/lib/utilities';
+import { Head, Html, Main, NextScript } from 'next/document';
 
 // https://nextjs.org/docs/advanced-features/custom-document
 export default function Document() {

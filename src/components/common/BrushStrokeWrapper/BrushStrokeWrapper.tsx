@@ -1,5 +1,6 @@
-import { BrushStroke } from '@components/common';
 import '@components/common/BrushStrokeWrapper/BrushStrokeWrapper.scss';
+
+import { BrushStroke } from '@components/common';
 
 export type BrushStrokeWrapperProps = {
   children: any;

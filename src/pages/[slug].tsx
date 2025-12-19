@@ -1,12 +1,12 @@
-import { useEffect } from 'react';
-import { NextPage, GetStaticPropsResult, GetStaticPathsResult } from 'next';
-import { contentfulClient } from '@src/lib/services/contentful';
-import { ContentfulCollectionManager } from '@src/lib/contentful/ContentfulCollectionManager';
-import { EntryCollection } from 'contentful';
-import { ContentfulPage, Page } from '@src/lib/contentful/ContentfulPage';
 import { Section } from '@components/common';
 import { Layout } from '@components/Layout';
+import { ContentfulCollectionManager } from '@src/lib/contentful/ContentfulCollectionManager';
+import { ContentfulPage, Page } from '@src/lib/contentful/ContentfulPage';
+import { contentfulClient } from '@src/lib/services/contentful';
 import { setGTMOptOutCookie } from '@src/lib/utilities/googleTagManager';
+import { EntryCollection } from 'contentful';
+import { GetStaticPathsResult, GetStaticPropsResult, NextPage } from 'next';
+import { useEffect } from 'react';
 
 type StaticPathsProps = {
   slug: string;

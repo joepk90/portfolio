@@ -1,9 +1,9 @@
-import type { StoryFn, Meta } from '@storybook/nextjs-vite';
 import {
   DiagonalSeperator,
   DiagonalSeperatorProps,
 } from '@src/components/common/DiagonalSeperator/DiagonalSeperator';
 import { BackgroundVariant } from '@src/lib/utilities';
+import type { Meta, StoryFn } from '@storybook/nextjs-vite';
 
 export default {
   title: 'Atoms/DiagonalSeperator',

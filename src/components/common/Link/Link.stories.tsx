@@ -1,6 +1,6 @@
-import React from 'react';
-import type { StoryFn, Meta } from '@storybook/nextjs-vite';
 import { Link, LinkProps } from '@src/components/common';
+import type { Meta, StoryFn } from '@storybook/nextjs-vite';
+import React from 'react';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

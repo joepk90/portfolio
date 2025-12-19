@@ -1,9 +1,9 @@
-import { FC, PropsWithChildren } from 'react';
-
-import { Section, SectionProps, DiagonalSeperator } from '@components/common';
-import { BackgroundVariant, ThemeVariant } from '@src/lib/utilities';
-import styles from '@components/common/SectionWithSeperator/SectionWithSeperator.module.scss';
 import '@components/common/SectionWithSeperator/SectionWithSeperator.scss';
+
+import { DiagonalSeperator, Section, SectionProps } from '@components/common';
+import styles from '@components/common/SectionWithSeperator/SectionWithSeperator.module.scss';
+import { BackgroundVariant, ThemeVariant } from '@src/lib/utilities';
+import { FC, PropsWithChildren } from 'react';
 
 const { sectionWithSeperator } = styles;
 const componentClassName = sectionWithSeperator;

@@ -1,6 +1,6 @@
-import React from 'react';
+import { DropdownNavigation } from '@src/components/common';
 import { render, screen } from '@testing-library/react';
-import DropdownNavigation from '@src/components/common/DropdownNavigation/DropdownNavigation';
+import React from 'react';
 
 const menuItems = [
   {

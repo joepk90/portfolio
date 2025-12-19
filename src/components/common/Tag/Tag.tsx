@@ -1,5 +1,6 @@
-import { generateBEMModifiersClassList, ThemeVariant } from '@src/lib/utilities';
 import '@components/common/Tag/Tag.scss';
+
+import { generateBEMModifiersClassList, ThemeVariant } from '@src/lib/utilities';
 
 export type TagProps = {
   label: string;
@@ -14,4 +15,3 @@ export const Tag = ({ label, variant = ThemeVariant.Light }: TagProps) => {
     </li>
   );
 };
-

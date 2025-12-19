@@ -1,6 +1,6 @@
-import React from 'react';
+import { MenuItem } from '@components/common';
 import { render, screen } from '@testing-library/react';
-import MenuItem from '@components/common/MenuItem/MenuItem';
+import React from 'react';
 
 const path = '/';
 const label = 'Menu Item';

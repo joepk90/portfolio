@@ -1,4 +1,4 @@
-import { Entry, TagLink, Metadata } from 'contentful';
+import { Entry, Metadata, TagLink } from 'contentful';
 
 interface ContentfulEntryManagerInterface<Fields> {
   getFields(): Fields;
@@ -8,9 +8,9 @@ interface ContentfulEntryManagerInterface<Fields> {
   getTags(key: string): string[];
 }
 
-export abstract class ContentfulEntryManager<Fields>
-  implements ContentfulEntryManagerInterface<Fields>
-{
+export abstract class ContentfulEntryManager<
+  Fields,
+> implements ContentfulEntryManagerInterface<Fields> {
   entry: Entry<Fields>;
   tags: string[];
 

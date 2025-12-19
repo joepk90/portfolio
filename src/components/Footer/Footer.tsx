@@ -1,8 +1,9 @@
+import '@components/Footer/Footer.scss';
+
 import { Container, Navigation, Section } from '@components/common';
 import { SiteTitle } from '@components/SiteTitle';
 import { menuItems, siteDescription } from '@src/config';
 import { ThemeVariant } from '@src/lib/utilities';
-import '@components/Footer/Footer.scss';
 
 export const Footer = () => {
   return (
@@ -37,4 +38,3 @@ export const Footer = () => {
     </footer>
   );
 };
-

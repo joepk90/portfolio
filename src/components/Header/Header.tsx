@@ -1,10 +1,10 @@
-import Link from 'next/link';
-import { useState } from 'react';
+import '@components/Header/Header.scss';
 
 import { DropdownNavigation, Hamburger, Navigation, Seperator } from '@components/common';
 import { SiteBranding } from '@components/SiteBranding';
-import { menuItems, indexURL } from '@src/config';
-import '@components/Header/Header.scss';
+import { indexURL, menuItems } from '@src/config';
+import Link from 'next/link';
+import { useState } from 'react';
 
 export const Header = () => {
   const [isNavOpen, setNavIsOpen] = useState(false);

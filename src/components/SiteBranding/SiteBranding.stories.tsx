@@ -1,6 +1,6 @@
-import React from 'react';
-import type { Meta } from '@storybook/nextjs-vite';
 import { SiteBranding } from '@components/SiteBranding/SiteBranding';
+import type { Meta } from '@storybook/nextjs-vite';
+import React from 'react';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

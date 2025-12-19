@@ -1,6 +1,6 @@
-import React from 'react';
+import { Navigation } from '@components/common/Navigation/Navigation';
 import { render, screen } from '@testing-library/react';
-import Navigation from '@components/common/Navigation/Navigation';
+import React from 'react';
 
 const menuItems = [
   {

@@ -1,7 +1,7 @@
-import { EntryCollection, Metadata, TagLink } from 'contentful';
 import { ContentfulCollectionManager } from '@lib/contentful/ContentfulCollectionManager';
 import { contentfulClient } from '@lib/services/contentful';
 import { ContentfulEntryManager } from '@src/lib/contentful/ContentfulEntryManager';
+import { EntryCollection, Metadata, TagLink } from 'contentful';
 
 type ItemFields = {
   title: string;

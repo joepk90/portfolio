@@ -1,9 +1,9 @@
-import { FC } from 'react';
-import { Tag } from '@components/common';
-import { generateBEMModifiersClassList, ThemeVariant } from '@src/lib/utilities';
 import '@components/common/Tags/Tags.scss';
 
+import { Tag } from '@components/common';
 import tagsStyles from '@components/common/Tags/Tags.module.scss';
+import { generateBEMModifiersClassList, ThemeVariant } from '@src/lib/utilities';
+import { FC } from 'react';
 const { tagsClassName } = tagsStyles;
 
 export enum TagsAlignmentVariant {
@@ -39,4 +39,3 @@ export const Tags: FC<TagsProps> = ({ tags, style, align, variant = ThemeVariant
     </ul>
   );
 };
-

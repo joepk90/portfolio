@@ -1,8 +1,8 @@
-import { PropsWithChildren, FC } from 'react';
-import { appendString } from '@src/lib/utilities/utilities';
 import '@components/common/Button/Button.scss';
 
 import styles from '@components/common/Button/Button.module.scss';
+import { appendString } from '@src/lib/utilities/utilities';
+import { FC, PropsWithChildren } from 'react';
 const { buttonClass } = styles;
 
 export type ButtonProps = {

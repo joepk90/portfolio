@@ -1,10 +1,11 @@
-import { PropsWithChildren, FC, HTMLAttributeAnchorTarget } from 'react';
+import '@components/common/Link/Link.scss';
+
 import {
   appendString,
   generateBEMModifiersClassList,
   ThemeVariant,
 } from '@src/lib/utilities/utilities';
-import '@components/common/Link/Link.scss';
+import { FC, HTMLAttributeAnchorTarget, PropsWithChildren } from 'react';
 
 export type LinkProps = {
   variant?: ThemeVariant;

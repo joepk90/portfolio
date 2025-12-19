@@ -1,6 +1,6 @@
-import { render, screen } from '@testing-library/react';
 import { BrushStrokeSVGClipPath } from '@components/common/BrushStroke/BrushStroke';
-import BrushStrokeWrapper from '@components/common/BrushStrokeWrapper/BrushStrokeWrapper';
+import { BrushStrokeWrapper } from '@components/common/BrushStrokeWrapper/BrushStrokeWrapper';
+import { render, screen } from '@testing-library/react';
 
 const mockedElement = () => {
   return (

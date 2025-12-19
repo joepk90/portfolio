@@ -1,7 +1,8 @@
-import React from 'react';
+import '@components/SiteLogo/SiteLogo.scss';
+
 import { siteAuthorInitials } from '@src/config';
 import { generateBEMModifiersClassList, ThemeVariant } from '@src/lib/utilities/utilities';
-import '@components/SiteLogo/SiteLogo.scss';
+import React from 'react';
 
 export type SiteLogoProps = {
   variant?: ThemeVariant;

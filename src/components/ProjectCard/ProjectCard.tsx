@@ -1,16 +1,15 @@
-import { FC } from 'react';
-import { FaArrowRight } from 'react-icons/fa';
+import '@components/ProjectCard/ProjectCard.scss';
+
+import { ContentfulImageAlias, FlexWrapper, Link, Tags } from '@components/common';
 import { ProjectProps } from '@src/lib/contentful/ContentfulProject';
-import { Tags } from '@components/common';
-import { ContentfulImageAlias, Link, FlexWrapper } from '@components/common';
 import {
   generateBEMModifiersClassList,
-  ThemeVariant,
   smallTabletLandscapeBreakpoint,
+  ThemeVariant,
 } from '@src/lib/utilities';
+import { FC } from 'react';
+import { FaArrowRight } from 'react-icons/fa';
 import { useMediaQuery } from 'react-responsive';
-
-import '@components/ProjectCard/ProjectCard.scss';
 
 const tagsLimit = 5;
 
@@ -157,4 +156,3 @@ export const ProjectCard: FC<ProjectCardComponentProps> = ({
     </div>
   );
 };
-

@@ -1,12 +1,11 @@
-import { FC, useState } from 'react';
-import { ProjectsProps } from '@src/lib/hooks/projects';
-import { Container } from '@components/common';
+import { Container, SectionWithSeperator } from '@components/common';
 import { ProjectCard } from '@components/ProjectCard';
 import { ProjectModal } from '@components/ProjectModal';
-import { SectionWithSeperator } from '@components/common';
-import { ProjectProps } from '@src/lib/contentful/ContentfulProject';
 import { ThemeVariant } from '@lib/utilities/utilities';
 import { SideBarModal } from '@src/components';
+import { ProjectProps } from '@src/lib/contentful/ContentfulProject';
+import { ProjectsProps } from '@src/lib/hooks/projects';
+import { FC, useState } from 'react';
 
 const isEven = (index: number) => index % 2 === 0;
 const getSectionVariant = (index: number) =>

@@ -1,5 +1,5 @@
-import type { StoryFn, Meta } from '@storybook/nextjs-vite';
 import { Seperator, SeperatorProps } from '@components/common/Seperator/Seperator';
+import type { Meta, StoryFn } from '@storybook/nextjs-vite';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

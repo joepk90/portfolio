@@ -1,7 +1,7 @@
-import { EntryCollection, Entry } from 'contentful';
 import { ContentfulCollectionManager } from '@lib/contentful/ContentfulCollectionManager';
 import { contentfulClient } from '@lib/services/contentful';
 import { ContentfulPage, ContentfulPageInterface, Page } from '@src/lib/contentful/ContentfulPage';
+import { Entry, EntryCollection } from 'contentful';
 
 type Item = {
   fields: Page;

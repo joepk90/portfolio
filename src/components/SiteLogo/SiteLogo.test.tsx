@@ -1,5 +1,5 @@
+import { SiteLogo } from '@components/SiteLogo/SiteLogo';
 import { render, screen } from '@testing-library/react';
-import SiteLogo from '@components/SiteLogo/SiteLogo';
 
 describe('SiteLogo', () => {
   it('should render the author initials text', () => {

@@ -1,7 +1,6 @@
-import { PropsWithChildren, FC } from 'react';
-import { Link, LinkProps, ClonedElement } from '@components/common';
+import { ClonedElement, Link, LinkProps } from '@components/common';
 import { obfuscatedHTML } from '@lib/utilities';
-import { ReactElement } from 'react';
+import { FC, PropsWithChildren, ReactElement } from 'react';
 
 type EmailProps = LinkProps & {
   text: string;

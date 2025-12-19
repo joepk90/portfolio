@@ -1,5 +1,5 @@
-import type { StoryFn, Meta } from '@storybook/nextjs-vite';
-import { Tags, TagsProps, TagsAlignmentVariant } from '@components/common';
+import { Tags, TagsAlignmentVariant, TagsProps } from '@components/common';
+import type { Meta, StoryFn } from '@storybook/nextjs-vite';
 
 const tagList = ['React', 'Next', 'Javascript', 'PHP', 'HTML'];
 
