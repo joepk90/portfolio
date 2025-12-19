@@ -4,7 +4,10 @@ import {
   BrushStrokeWrapperProps,
 } from '@components/common/BrushStrokeWrapper/BrushStrokeWrapper';
 // import Image from 'next/image';
-import { ContentfulImageAlias as ContentfulImage } from '@components/common/ContentfulImage/ContentfulImage';
+import {
+  ContentfulImageAlias as ContentfulImage,
+  ContentfulImageProps,
+} from '@components/common/ContentfulImage/ContentfulImage';
 import type { Meta, StoryFn } from '@storybook/nextjs-vite';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -31,10 +34,18 @@ const Template: StoryFn<BrushStrokeWrapperProps> = (args: BrushStrokeWrapperProp
   );
 };
 
-// const image = () =>
+const image: ContentfulImageProps = {
+  fields: {
+    title: 'placeholder image',
+    file: {
+      url: 'http://via.placeholder.com/300.png',
+    },
+  },
+};
+
 export const ImageDecoration = Template.bind({});
 ImageDecoration.args = {
-  children: <ContentfulImage image="http://via.placeholder.com/300.png" width={300} height={300} />, // TODO replace with nextjs Image
+  children: <ContentfulImage image={image} width={300} height={300} />,
 };
 
 export const ElementDecoration = Template.bind({});
