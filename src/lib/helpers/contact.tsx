@@ -40,10 +40,10 @@ export const getContactData = ({ location, email, githubLink, linkedInLink }: Co
 };
 
 enum ContactListType {
-  Location = 'email',
+  Location = 'location',
   Email = 'email',
   Github = 'github',
-  LinkedIn = 'email',
+  LinkedIn = 'linkedin',
 }
 
 type ContactList = {
@@ -54,10 +54,10 @@ type ContactList = {
   title?: string;
 };
 
-const textComponent = <Typography variant="heading5" />;
-
 export const generateContactListItems = (contactData: ContactList[]): ReactNode[] => {
-  return contactData.map((contactItem) => {
+  const textComponent = <Typography variant="heading5" />;
+
+  return contactData.map((contactItem, index) => {
     const { icon: Icon, title, url, text, type } = contactItem;
 
     const renderListItem = () => {
@@ -77,7 +77,7 @@ export const generateContactListItems = (contactData: ContactList[]): ReactNode[
     };
 
     return (
-      <IconWithContent key={contactItem.type} icon={<Icon fontSize={20} />}>
+      <IconWithContent key={`contact-item-${type}-${index}`} icon={<Icon fontSize={20} />}>
         {renderListItem()}
       </IconWithContent>
     );
