@@ -16,6 +16,7 @@ const config: StorybookConfig = {
     viteConfig.resolve = viteConfig.resolve || {};
     viteConfig.resolve.alias = {
       ...(viteConfig.resolve.alias || {}),
+      // TODO investigate solution to handle these aliases in a single place (ideally nextjs config)
       '@components': path.resolve('./src/components'),
       base: path.resolve('./src/styles/base'),
       helpers: path.resolve('./src/styles/helpers'),

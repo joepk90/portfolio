@@ -22,6 +22,8 @@ const nextConfig = {
   },
   sassOptions: {
     includePaths: ['src/styles'],
+    // TODO investigate alternative hamburgers package - remove the quietDeps flag
+    // quietDeps:true added to supress warning from the hamburgers depricated sass syntax
     quietDeps: true,
   },
 };
