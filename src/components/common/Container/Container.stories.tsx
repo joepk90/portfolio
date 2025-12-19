@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react';
-import type { StoryFn, Meta } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/nextjs-vite';
 import { Container, Props } from '@components/common/Container/Container';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

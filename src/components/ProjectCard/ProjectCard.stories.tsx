@@ -1,4 +1,4 @@
-import type { StoryFn, Meta } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/nextjs-vite';
 import { ProjectCard, ProjectCardComponentProps } from '@components/ProjectCard/ProjectCard';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

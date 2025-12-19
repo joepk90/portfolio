@@ -1,4 +1,4 @@
-import type { StoryFn, Meta } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/nextjs-vite';
 import { ThemeVariant } from '@src/lib/utilities/utilities';
 import { SiteTitle, SiteTitleProps } from '@components/SiteTitle/SiteTitle';
 

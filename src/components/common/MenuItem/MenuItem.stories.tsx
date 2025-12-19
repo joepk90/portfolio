@@ -1,5 +1,5 @@
 import React from 'react';
-import type { StoryFn, Meta } from '@storybook/react';
+import type { StoryFn, Meta } from '@storybook/nextjs-vite';
 import { MenuItem, MenuItemProps } from '@components/common/MenuItem/MenuItem'; // TODO setup aliases in storybook..
 
 export default {

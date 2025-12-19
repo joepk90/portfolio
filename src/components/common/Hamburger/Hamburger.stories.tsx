@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Meta } from '@storybook/react';
+import type { Meta } from '@storybook/nextjs-vite';
 import { action } from 'storybook/actions';
 import { Hamburger } from './Hamburger'; // TODO setup aliases in storybook..
 
