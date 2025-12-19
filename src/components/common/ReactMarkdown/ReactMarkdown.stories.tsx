@@ -15,7 +15,7 @@ export default {
   },
 } as Meta<typeof ReactMarkdown>;
 
-const Template: StoryFn<ReactMarkdownProps> = (args: any) => {
+const Template: StoryFn<ReactMarkdownProps> = (args: ReactMarkdownProps) => {
   return <ReactMarkdown {...args}></ReactMarkdown>;
 };
 

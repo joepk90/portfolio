@@ -22,7 +22,7 @@ export default {
   },
 } as Meta<typeof MenuItem>;
 
-const Template: StoryFn<MenuItemProps> = (args: any) => {
+const Template: StoryFn<MenuItemProps> = (args: MenuItemProps) => {
   return (
     <ul style={{ listStyle: 'none', padding: 0 }}>
       <MenuItem {...args}></MenuItem>
