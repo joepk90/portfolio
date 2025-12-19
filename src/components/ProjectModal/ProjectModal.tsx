@@ -1,9 +1,9 @@
 import '@components/ProjectModal/ProjectModal.scss';
 
-import { ContentfulLink } from '@components/common';
+import { ContentfulLink } from '@components';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { Document } from '@contentful/rich-text-types';
-import { ProjectProps } from '@src/lib/contentful/ContentfulProject';
+import { ProjectProps } from '@lib';
 import { FC } from 'react';
 
 export type ProjectModalProps = {

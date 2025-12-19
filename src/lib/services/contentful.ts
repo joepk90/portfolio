@@ -1,4 +1,4 @@
-import { getContentfullAccessToken, getContentfullSpaceID } from '@lib';
+import { getContentfullAccessToken, getContentfullSpaceID } from '@lib/core';
 import { createClient, CreateClientParams } from 'contentful';
 
 let contentfulClientInstance: ReturnType<typeof createClient> | null = null;

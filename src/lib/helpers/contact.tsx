@@ -1,4 +1,4 @@
-import { ClonedElement, Email, IconWithContent, Link, Typography } from '@components/common';
+import { ClonedElement, Email, IconWithContent, Link, Typography } from '@components';
 import { ReactNode } from 'react';
 import { IconType } from 'react-icons';
 import { FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt } from 'react-icons/fa';

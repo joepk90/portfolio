@@ -1,10 +1,11 @@
-import { Container, SectionWithSeperator } from '@components/common';
-import { ProjectCard } from '@components/ProjectCard';
-import { ProjectModal } from '@components/ProjectModal';
-import { ThemeVariant } from '@lib/utilities/utilities';
-import { SideBarModal } from '@src/components';
-import { ProjectProps } from '@src/lib/contentful/ContentfulProject';
-import { ProjectsProps } from '@src/lib/hooks/projects';
+import {
+  Container,
+  SectionWithSeperator,
+  ProjectCard,
+  ProjectModal,
+  SideBarModal,
+} from '@components';
+import { ProjectProps, ProjectsProps, ThemeVariant } from '@lib';
 import { FC, useState } from 'react';
 
 const isEven = (index: number) => index % 2 === 0;

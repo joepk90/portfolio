@@ -1,5 +1,5 @@
-import { Navigation, NavigationProps } from '@components/common/Navigation/Navigation'; // TODO setup aliases in storybook..
-import { menuItems } from '@src/config';
+import { Navigation, NavigationProps } from '@components';
+import { menuItems } from '@config';
 import type { Meta, StoryFn } from '@storybook/nextjs-vite';
 import React from 'react';
 

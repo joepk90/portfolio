@@ -1,10 +1,6 @@
-import {
-  DropdownNavigation,
-  DropdownNavigationProps,
-} from '@src/components/common/DropdownNavigation/DropdownNavigation'; // TODO setup aliases in storybook..
-import { menuItems } from '@src/config';
+import { DropdownNavigation, DropdownNavigationProps } from '@components'; // TODO setup aliases in storybook..
+import { menuItems } from '@config';
 import type { Meta, StoryFn } from '@storybook/nextjs-vite';
-import React from 'react';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

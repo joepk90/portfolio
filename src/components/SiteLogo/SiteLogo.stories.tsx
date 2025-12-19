@@ -1,5 +1,5 @@
-import { SiteLogo, SiteLogoProps } from '@components/SiteLogo/SiteLogo';
-import { ThemeVariant } from '@src/lib/utilities/utilities';
+import { SiteLogo, SiteLogoProps } from '@components';
+import { ThemeVariant } from '@lib';
 import type { Meta, StoryFn } from '@storybook/nextjs-vite';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

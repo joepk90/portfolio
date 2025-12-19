@@ -1,4 +1,4 @@
-import { DropdownNavigation } from '@src/components/common';
+import { DropdownNavigation } from '@components';
 import { render, screen } from '@testing-library/react';
 import React from 'react';
 

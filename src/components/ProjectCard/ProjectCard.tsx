@@ -1,12 +1,12 @@
 import '@components/ProjectCard/ProjectCard.scss';
 
-import { ContentfulImageAlias, FlexWrapper, Link, Tags } from '@components/common';
-import { ProjectProps } from '@src/lib/contentful/ContentfulProject';
+import { ContentfulImageAlias, FlexWrapper, Link, Tags } from '@components';
 import {
+  ProjectProps,
   generateBEMModifiersClassList,
   smallTabletLandscapeBreakpoint,
   ThemeVariant,
-} from '@src/lib/utilities';
+} from '@lib';
 import { FC } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { useMediaQuery } from 'react-responsive';

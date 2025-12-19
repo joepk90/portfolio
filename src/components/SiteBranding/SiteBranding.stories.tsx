@@ -1,4 +1,4 @@
-import { SiteBranding } from '@components/SiteBranding/SiteBranding';
+import { SiteBranding } from '@components';
 import type { Meta } from '@storybook/nextjs-vite';
 import React from 'react';
 

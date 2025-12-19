@@ -1,4 +1,4 @@
-import { Section, SectionProps, sizeOptions } from '@components/common/Section/Section';
+import { Section, SectionProps, sizeOptions } from '@components';
 import type { Meta, StoryFn } from '@storybook/nextjs-vite';
 import { PropsWithChildren } from 'react';
 

@@ -1,4 +1,4 @@
-import { Heading, headingLevels, HeadingProps } from '@components/common/Heading/Heading';
+import { Heading, headingLevels, HeadingProps } from '@components';
 import type { Meta, StoryFn } from '@storybook/nextjs-vite';
 import React from 'react';
 

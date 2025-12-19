@@ -1,8 +1,6 @@
-import { Layout } from '@components/Layout';
-import { getPageUrl } from '@lib/utilities/utilities';
-import { ContactPage } from '@src/components';
-import { contactURL, SEO } from '@src/config';
-import { ContactProps, getContactStaticProps } from '@src/lib/hooks/contact';
+import { ContactPage, Layout } from '@components';
+import { contactURL, SEO } from '@config';
+import { ContactProps, getContactStaticProps, getPageUrl } from '@lib';
 import type { NextPage } from 'next';
 import { GetStaticProps } from 'next';
 import { NextSeo } from 'next-seo';

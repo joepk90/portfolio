@@ -1,4 +1,4 @@
-import { Seperator } from '@components/common';
+import { Seperator } from '@components';
 import { render } from '@testing-library/react';
 
 const renderMockedElement = () => {

@@ -1,5 +1,5 @@
-import { SectionWithSeperator, SectionWithSeperatorProps } from '@src/components/common';
-import { ThemeVariant } from '@src/lib/utilities';
+import { SectionWithSeperator, SectionWithSeperatorProps } from '@components';
+import { ThemeVariant } from '@lib';
 import type { Meta, StoryFn } from '@storybook/nextjs-vite';
 
 export default {

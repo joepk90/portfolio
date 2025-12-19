@@ -1,4 +1,4 @@
-import '@src/components/common/ContentfulImage/ContentfulImage.scss';
+import '@components/common/ContentfulImage/ContentfulImage.scss';
 
 import Image from 'next/image';
 

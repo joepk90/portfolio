@@ -1,4 +1,4 @@
-import { appendString, generateBEMModifiersClassList } from '@src/lib/utilities/utilities';
+import { appendString, generateBEMModifiersClassList } from '@lib';
 
 // https://jestjs.io/docs/using-matchers
 describe('Utility Function: generateBEMModifiersClassList', () => {

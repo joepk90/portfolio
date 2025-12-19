@@ -1,6 +1,6 @@
 import '@components/common/Container/Container.scss';
 
-import { appendString, generateBEMModifiersClassList } from '@src/lib/utilities/utilities';
+import { appendString, generateBEMModifiersClassList } from '@lib';
 import React, { FC, PropsWithChildren } from 'react';
 
 export type Props = {

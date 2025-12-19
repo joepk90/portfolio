@@ -1,6 +1,6 @@
 import '@components/common/Tag/Tag.scss';
 
-import { generateBEMModifiersClassList, ThemeVariant } from '@src/lib/utilities';
+import { generateBEMModifiersClassList, ThemeVariant } from '@lib';
 
 export type TagProps = {
   label: string;

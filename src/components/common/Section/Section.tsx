@@ -1,7 +1,11 @@
 import '@components/common/Section/Section.scss';
 
-import { BackgroundVariant, backgroundVariantOptions } from '@lib/utilities';
-import { appendString, generateBEMModifiersClassList } from '@src/lib/utilities/utilities';
+import {
+  BackgroundVariant,
+  backgroundVariantOptions,
+  appendString,
+  generateBEMModifiersClassList,
+} from '@lib';
 import { CSSProperties, FC, PropsWithChildren } from 'react';
 
 export const sizeOptions = ['sm', 'md', 'lg'] as const;

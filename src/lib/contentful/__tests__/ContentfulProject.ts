@@ -1,6 +1,5 @@
+import { contentfulClient, ContentfulProject, ProjectProps } from '@lib';
 import { ContentfulCollectionManager } from '@lib/contentful/ContentfulCollectionManager';
-import { contentfulClient } from '@lib/services/contentful';
-import { ContentfulProject, ProjectProps } from '@src/lib/contentful/ContentfulProject';
 import { Entry, EntryCollection, TagLink } from 'contentful';
 
 const tagLink: TagLink = {

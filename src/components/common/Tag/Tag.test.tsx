@@ -1,4 +1,4 @@
-import { Tag } from '@src/components/common';
+import { Tag } from '@components';
 import { render, screen } from '@testing-library/react';
 
 const tabLabel = 'React';

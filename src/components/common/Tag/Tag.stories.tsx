@@ -1,4 +1,4 @@
-import { Tag, TagProps } from '@components/common/Tag/Tag';
+import { Tag, TagProps } from '@components';
 import type { Meta, StoryFn } from '@storybook/nextjs-vite';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

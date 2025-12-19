@@ -1,8 +1,8 @@
 import '@components/common/Tags/Tags.scss';
 
-import { Tag } from '@components/common';
+import { Tag } from '@components';
 import tagsStyles from '@components/common/Tags/Tags.module.scss';
-import { generateBEMModifiersClassList, ThemeVariant } from '@src/lib/utilities';
+import { generateBEMModifiersClassList, ThemeVariant } from '@lib';
 import { FC } from 'react';
 const { tagsClassName } = tagsStyles;
 

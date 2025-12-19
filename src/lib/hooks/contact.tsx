@@ -1,7 +1,7 @@
-import { ContentfulCollectionManager } from '@src/lib/contentful/ContentfulCollectionManager';
-import { ContentfulProfile, Profile } from '@src/lib/contentful/ContentfulProfile';
-import { contentfulClient } from '@src/lib/services/contentful';
+import { contentfulClient, ContentfulCollectionManager, ContentfulProfile, Profile } from '@lib';
+
 import { EntryCollection } from 'contentful';
+
 import { GetStaticPropsResult } from 'next';
 
 export type ContactProps = {

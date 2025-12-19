@@ -1,10 +1,5 @@
+import { contentfulClient, ContentfulProfile, ContentfulProfileInterface, Profile } from '@lib';
 import { ContentfulCollectionManager } from '@lib/contentful/ContentfulCollectionManager';
-import { contentfulClient } from '@lib/services/contentful';
-import {
-  ContentfulProfile,
-  ContentfulProfileInterface,
-  Profile,
-} from '@src/lib/contentful/ContentfulProfile';
 import { Entry, EntryCollection } from 'contentful';
 
 type Item = {

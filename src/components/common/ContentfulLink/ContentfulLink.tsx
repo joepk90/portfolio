@@ -1,5 +1,5 @@
-import { getDefaultLinkProps, Link } from '@components/common';
-import { ContentfulLink as ContentFulLinkProperties } from '@lib/contentful';
+import { getDefaultLinkProps, Link } from '@components';
+import { ContentfulLink as ContentFulLinkProperties } from '@lib';
 import { FC, HTMLAttributeAnchorTarget } from 'react';
 
 export type ContentfulLinkProps = ContentFulLinkProperties & {

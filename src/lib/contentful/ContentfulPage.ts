@@ -1,4 +1,4 @@
-import { ContentfulEntryManager } from '@src/lib/contentful/ContentfulEntryManager';
+import { ContentfulEntryManager } from './ContentfulEntryManager';
 
 export interface ContentfulPageInterface {
   getId(): string;

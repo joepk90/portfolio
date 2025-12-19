@@ -1,4 +1,4 @@
-import { Layout } from '@components/Layout/Layout';
+import { Layout } from '@components';
 import { render } from '@testing-library/react';
 import React from 'react';
 

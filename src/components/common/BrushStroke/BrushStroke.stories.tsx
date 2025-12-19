@@ -1,8 +1,4 @@
-import {
-  BrushStroke,
-  BrushStrokeProps,
-  BrushStrokeSVGClipPath,
-} from '@components/common/BrushStroke/BrushStroke';
+import { BrushStroke, BrushStrokeProps, BrushStrokeSVGClipPath } from '@components';
 import type { Meta, StoryFn } from '@storybook/nextjs-vite';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

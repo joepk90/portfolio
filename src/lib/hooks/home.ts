@@ -1,7 +1,11 @@
-import { ContentfulCollectionManager } from '@src/lib/contentful/ContentfulCollectionManager';
-import { ContentfulPage, Page } from '@src/lib/contentful/ContentfulPage';
-import { ContentfulProfile, Profile } from '@src/lib/contentful/ContentfulProfile';
-import { contentfulClient } from '@src/lib/services/contentful';
+import {
+  contentfulClient,
+  ContentfulCollectionManager,
+  ContentfulPage,
+  ContentfulProfile,
+  Page,
+  Profile,
+} from '@lib';
 import { Asset, EntryCollection } from 'contentful';
 import { GetStaticPropsResult } from 'next';
 

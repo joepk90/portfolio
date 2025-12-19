@@ -1,4 +1,4 @@
-import { SiteTitle } from '@components/SiteTitle/SiteTitle';
+import { SiteTitle } from '@components';
 import { render, screen } from '@testing-library/react';
 
 describe('SiteTitle', () => {

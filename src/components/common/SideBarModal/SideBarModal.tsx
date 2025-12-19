@@ -1,6 +1,6 @@
 import '@components/common/SideBarModal/SideBarModal.scss';
 
-import { Button, Portal, Typography } from '@components/common';
+import { Button, Portal, Typography } from '@components';
 import { FC, ReactNode } from 'react';
 
 interface SideBarModalProps {

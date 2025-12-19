@@ -1,4 +1,4 @@
-import { Navigation } from '@components/common/Navigation/Navigation';
+import { Navigation } from '@components';
 import { render, screen } from '@testing-library/react';
 import React from 'react';
 

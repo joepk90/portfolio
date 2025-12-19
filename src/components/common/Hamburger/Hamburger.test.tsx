@@ -1,4 +1,4 @@
-import { Hamburger } from '@components/common/Hamburger/Hamburger';
+import { Hamburger } from '@components';
 import { fireEvent, render, screen } from '@testing-library/react';
 import React from 'react';
 

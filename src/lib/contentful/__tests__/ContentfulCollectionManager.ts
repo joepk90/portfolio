@@ -1,8 +1,8 @@
 import {
   ContentfulCollectionManager,
   ContentfulCollectionManagerInterface,
-} from '@lib/contentful/ContentfulCollectionManager';
-import { contentfulClient } from '@lib/services/contentful';
+  contentfulClient,
+} from '@lib';
 import { EntryCollection } from 'contentful';
 
 jest.mock('@lib/services/contentful.ts', () => ({

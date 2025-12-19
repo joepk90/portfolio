@@ -1,6 +1,9 @@
-import { ContentfulCollectionManager } from '@src/lib/contentful/ContentfulCollectionManager';
-import { ContentfulProject, ProjectProps } from '@src/lib/contentful/ContentfulProject';
-import { contentfulClient } from '@src/lib/services/contentful';
+import {
+  contentfulClient,
+  ContentfulCollectionManager,
+  ContentfulProject,
+  ProjectProps,
+} from '@lib';
 import { EntryCollection } from 'contentful';
 import { GetStaticPropsResult } from 'next';
 

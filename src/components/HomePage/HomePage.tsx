@@ -1,10 +1,9 @@
 import '@components/HomePage/HomePage.scss';
 
-import { Container, FlexWrapper, SectionWithSeperator } from '@components/common';
-import { ThemeVariant } from '@lib/utilities/utilities';
-import { AboutCard, IntroCard, KeySkillsCard } from '@src/components/HomePage/components';
-import { tagsList } from '@src/config';
-import { HomePageProps } from '@src/lib/hooks/home';
+import { Container, FlexWrapper, SectionWithSeperator } from '@components';
+import { AboutCard, IntroCard, KeySkillsCard } from '@components/HomePage/components';
+import { tagsList } from '@config';
+import { HomePageProps, ThemeVariant } from '@lib';
 import { FC } from 'react';
 
 export const HomePage: FC<HomePageProps> = ({ pageContent, profileImage }) => {

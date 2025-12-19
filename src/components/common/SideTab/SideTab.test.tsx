@@ -1,4 +1,4 @@
-import { SideTab } from '@src/components/common'; // TODO setup aliases in storybook..
+import { SideTab } from '@components'; // TODO setup aliases in storybook..
 import { fireEvent, render, screen } from '@testing-library/react';
 
 const sideTabLabel = `Tab Label`;

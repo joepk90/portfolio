@@ -1,4 +1,4 @@
-import { Container, Props } from '@components/common/Container/Container';
+import { Container, Props } from '@components';
 import type { Meta, StoryFn } from '@storybook/nextjs-vite';
 import { PropsWithChildren } from 'react';
 

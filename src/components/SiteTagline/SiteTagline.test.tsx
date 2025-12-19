@@ -1,4 +1,4 @@
-import { SiteTagline } from '@components/SiteTagline/SiteTagline';
+import { SiteTagline } from '@components';
 import { render, screen } from '@testing-library/react';
 
 describe('SiteTagline', () => {

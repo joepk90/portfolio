@@ -1,4 +1,4 @@
-import { MenuItem, MenuItemProps } from '@components/common/MenuItem/MenuItem'; // TODO setup aliases in storybook..
+import { MenuItem, MenuItemProps } from '@components'; // TODO setup aliases in storybook..
 import type { Meta, StoryFn } from '@storybook/nextjs-vite';
 import React from 'react';
 

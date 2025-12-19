@@ -1,10 +1,6 @@
 import '@components/HomePage/components/IntroCard/IntroCard.scss';
 
-import {
-  BrushStrokeWrapper,
-  ContentfulImageAlias as ContentfulImage,
-  Heading,
-} from '@components/common';
+import { BrushStrokeWrapper, ContentfulImageAlias as ContentfulImage, Heading } from '@components';
 import { Asset } from 'contentful';
 import { FC } from 'react';
 
