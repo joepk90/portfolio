@@ -1,5 +1,5 @@
-import { SiteTitle, SiteTitleProps } from '@components/SiteTitle/SiteTitle';
-import { ThemeVariant } from '@src/lib/utilities/utilities';
+import { SiteTitle, SiteTitleProps } from '@components';
+import { ThemeVariant } from '@lib';
 import type { Meta, StoryFn } from '@storybook/nextjs-vite';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

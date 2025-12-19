@@ -1,8 +1,6 @@
-import { Layout } from '@components/Layout';
-import { getPageUrl } from '@lib/utilities/utilities';
-import { ProjectsPage } from '@src/components';
+import { Layout, ProjectsPage } from '@components';
 import { projectsURL, SEO } from '@src/config';
-import { getProjectsStaticProps, ProjectsProps } from '@src/lib/hooks/projects';
+import { getProjectsStaticProps, ProjectsProps, getPageUrl } from '@lib';
 import type { NextPage } from 'next';
 import { GetStaticProps } from 'next';
 import { NextSeo } from 'next-seo';
