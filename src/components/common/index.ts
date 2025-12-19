@@ -10,7 +10,6 @@ export * from './DropdownNavigation';
 export * from './Email';
 export * from './FlexWrapper';
 export * from './GoogleTagManager';
-export * from './Grid';
 export * from './Hamburger';
 export * from './Heading';
 export * from './IconWithContent';
