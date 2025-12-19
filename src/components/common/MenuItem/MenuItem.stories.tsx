@@ -1,6 +1,6 @@
-import React from 'react';
-import type { StoryFn, Meta } from '@storybook/nextjs-vite';
 import { MenuItem, MenuItemProps } from '@components/common/MenuItem/MenuItem'; // TODO setup aliases in storybook..
+import type { Meta, StoryFn } from '@storybook/nextjs-vite';
+import React from 'react';
 
 export default {
   title: 'Atoms/MenuItem',
@@ -22,7 +22,7 @@ export default {
   },
 } as Meta<typeof MenuItem>;
 
-const Template: StoryFn<MenuItemProps> = (args: any) => {
+const Template: StoryFn<MenuItemProps> = (args: MenuItemProps) => {
   return (
     <ul style={{ listStyle: 'none', padding: 0 }}>
       <MenuItem {...args}></MenuItem>

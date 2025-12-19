@@ -1,9 +1,9 @@
-import React from 'react';
-import type { StoryFn, Meta } from '@storybook/nextjs-vite';
 import {
   ReactMarkdownAlias as ReactMarkdown,
   ReactMarkdownProps,
 } from '@components/common/ReactMarkdown/ReactMarkdown';
+import type { Meta, StoryFn } from '@storybook/nextjs-vite';
+import React from 'react';
 
 export default {
   title: 'Atoms/ReactMarkdown',
@@ -15,7 +15,7 @@ export default {
   },
 } as Meta<typeof ReactMarkdown>;
 
-const Template: StoryFn<ReactMarkdownProps> = (args: any) => {
+const Template: StoryFn<ReactMarkdownProps> = (args: ReactMarkdownProps) => {
   return <ReactMarkdown {...args}></ReactMarkdown>;
 };
 
