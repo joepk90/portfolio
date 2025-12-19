@@ -1,4 +1,3 @@
-import { EntryCollection, Entry } from 'contentful';
 import { ContentfulCollectionManager } from '@lib/contentful/ContentfulCollectionManager';
 import { contentfulClient } from '@lib/services/contentful';
 import {
@@ -6,6 +5,7 @@ import {
   ContentfulProfileInterface,
   Profile,
 } from '@src/lib/contentful/ContentfulProfile';
+import { Entry, EntryCollection } from 'contentful';
 
 type Item = {
   fields: ProfileFields;
@@ -17,6 +17,11 @@ const itemFields: ProfileFields = {
   id: 1,
   name: 'name',
   bio: 'bio',
+  cvLink: '',
+  email: '',
+  githubLink: '',
+  linkedInLink: '',
+  location: '',
 };
 
 const item: Item = {

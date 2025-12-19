@@ -9,7 +9,7 @@ module.exports = {
   settings: {
     react: { version: 'detect' },
   },
-  plugins: ['react', 'react-hooks', '@typescript-eslint', 'import'],
+  plugins: ['react', 'react-hooks', '@typescript-eslint', 'simple-import-sort', 'import'],
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
@@ -27,24 +27,15 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
 
-    // Import order
-    'import/order': [
-      'warn',
-      {
-        groups: [
-          'builtin', // e.g. fs, path
-          'external', // e.g. react, next
-          'internal', // e.g. @/components/*
-          'parent', // e.g. ../
-          'sibling', // e.g. ./Button
-          'index', // e.g. ./
-          'object', // e.g. import * as something from ...
-          'type', // import type { Foo }
-        ],
-        'newlines-between': 'always',
-        alphabetize: { order: 'asc', caseInsensitive: true },
-      },
-    ],
+    'simple-import-sort/imports': 'warn',
+    'simple-import-sort/exports': 'warn',
+
+    // Prevent duplicate imports
+    'import/no-duplicates': 'warn',
+
+    // Disable conflicting rules
+    'import/order': 'off',
+
     'import/named': 'off',
 
     // Optional: tighten rules here if desired

@@ -1,5 +1,6 @@
-import { MenuItem, MenuItemProps } from '@components/common';
 import '@components/common/DropdownNavigation/DropdownNavigation.scss';
+
+import { MenuItem, MenuItemProps } from '@components/common';
 
 export type DropdownNavigationProps = {
   menuItems: MenuItemProps[];

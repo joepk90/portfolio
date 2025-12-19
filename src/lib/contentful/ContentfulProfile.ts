@@ -1,5 +1,5 @@
-import { Asset } from 'contentful';
 import { ContentfulEntryManager } from '@src/lib/contentful/ContentfulEntryManager';
+import { Asset } from 'contentful';
 
 export interface ContentfulProfileInterface {
   getId(): number;

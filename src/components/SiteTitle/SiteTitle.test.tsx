@@ -1,5 +1,5 @@
+import { SiteTitle } from '@components/SiteTitle/SiteTitle';
 import { render, screen } from '@testing-library/react';
-import SiteTitle from '@components/SiteTitle/SiteTitle';
 
 describe('SiteTitle', () => {
   it('should render the site author text', () => {

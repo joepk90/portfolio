@@ -1,7 +1,8 @@
-import React from 'react';
-import Link from 'next/link';
-import { generateBEMModifiersClassList } from '@src/lib/utilities/utilities';
 import '@components/common/MenuItem/MenuItem.scss';
+
+import { generateBEMModifiersClassList } from '@src/lib/utilities/utilities';
+import Link from 'next/link';
+import React from 'react';
 
 type Variant = 'dropdown' | 'light' | 'dark';
 

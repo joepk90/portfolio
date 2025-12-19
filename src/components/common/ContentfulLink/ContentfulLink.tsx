@@ -1,10 +1,10 @@
-import { FC, HTMLAttributeAnchorTarget } from 'react';
-import { Link, getDefaultLinkProps } from '@components/common';
+import { getDefaultLinkProps, Link } from '@components/common';
 import { ContentfulLink as ContentFulLinkProperties } from '@lib/contentful';
+import { FC, HTMLAttributeAnchorTarget } from 'react';
 
 export type ContentfulLinkProps = ContentFulLinkProperties & {
   target: HTMLAttributeAnchorTarget;
-  [propName: string]: any;
+  [propName: string]: unknown;
 };
 
 /**

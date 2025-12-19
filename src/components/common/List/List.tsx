@@ -1,5 +1,6 @@
-import { FC, ReactNode } from 'react';
 import '@components/common/List/List.scss';
+
+import { FC, ReactNode } from 'react';
 
 type ListProps = {
   listItems: ReactNode[];

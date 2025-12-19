@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';
 import { SiteBranding } from '@components/SiteBranding/SiteBranding';
+import { render } from '@testing-library/react';
 
 describe('SiteBranding', () => {
   it('should render the site title text', () => {

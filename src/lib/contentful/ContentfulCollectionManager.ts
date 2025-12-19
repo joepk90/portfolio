@@ -1,4 +1,4 @@
-import { EntryCollection, Entry } from 'contentful';
+import { Entry, EntryCollection } from 'contentful';
 
 export interface ContentfulCollectionManagerInterface<Fields> {
   collection: EntryCollection<Fields>;
@@ -6,9 +6,9 @@ export interface ContentfulCollectionManagerInterface<Fields> {
   getFirstEntry(): Entry<Fields>;
 }
 
-export class ContentfulCollectionManager<Fields>
-  implements ContentfulCollectionManagerInterface<Fields>
-{
+export class ContentfulCollectionManager<
+  Fields,
+> implements ContentfulCollectionManagerInterface<Fields> {
   collection: EntryCollection<Fields>;
 
   constructor(collection: EntryCollection<Fields>) {

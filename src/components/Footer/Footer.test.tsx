@@ -1,6 +1,6 @@
-import { render, screen, fireEvent } from '@testing-library/react';
-import { menuItems, siteDescription } from '@src/config';
-import Footer from '@components/Footer/Footer';
+import { Footer } from '@components/Footer/Footer';
+import { siteDescription } from '@src/config';
+import { render, screen } from '@testing-library/react';
 
 const renderMockedElement = () => {
   return render(<Footer />);

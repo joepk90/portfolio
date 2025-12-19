@@ -1,7 +1,7 @@
-import { FC, ReactNode } from 'react';
-import { createPortal } from 'react-dom';
 import { useIsClient } from '@src/hooks';
 import { portalRootId } from '@src/lib/utilities';
+import { FC, ReactNode } from 'react';
+import { createPortal } from 'react-dom';
 
 interface PortalProps {
   children: ReactNode;

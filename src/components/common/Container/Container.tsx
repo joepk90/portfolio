@@ -1,6 +1,7 @@
-import React, { PropsWithChildren, FC } from 'react';
-import { generateBEMModifiersClassList, appendString } from '@src/lib/utilities/utilities';
 import '@components/common/Container/Container.scss';
+
+import { appendString, generateBEMModifiersClassList } from '@src/lib/utilities/utilities';
+import React, { FC, PropsWithChildren } from 'react';
 
 export type Props = {
   fullWidth?: boolean;
@@ -8,7 +9,12 @@ export type Props = {
   className?: string;
 };
 
-export const Container: FC<PropsWithChildren<Props>> = ({ children, className, fullWidth, noWrap }) => {
+export const Container: FC<PropsWithChildren<Props>> = ({
+  children,
+  className,
+  fullWidth,
+  noWrap,
+}) => {
   const generateModifiers = () => {
     const classList = [];
 

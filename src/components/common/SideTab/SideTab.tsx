@@ -1,11 +1,12 @@
-import { useState } from 'react';
-import { generateBEMModifiersClassList } from '@src/lib/utilities/utilities';
-import { Button } from '@components/common';
 import '@components/common/SideTab/SideTab.scss';
+
+import { Button } from '@components/common';
+import { generateBEMModifiersClassList } from '@src/lib/utilities/utilities';
+import { ReactNode, useState } from 'react';
 
 export type SideTabProps = {
   label: string;
-  children: any;
+  children: ReactNode;
 };
 
 export const SideTab = ({ label, children }: SideTabProps) => {

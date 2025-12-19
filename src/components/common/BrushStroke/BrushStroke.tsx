@@ -1,4 +1,5 @@
 import '@components/common/BrushStroke/BrushStroke.scss';
+
 import { appendString } from '@src/lib/utilities/utilities';
 
 export type BrushStrokeProps = {
@@ -13,10 +14,11 @@ export const BrushStroke = ({ className }: BrushStrokeProps) => {
 
 // SVG Clip path is being injected in the app component
 export const BrushStrokeSVGClipPath = () => {
-  const style = {
-    position: 'absolute',
-    pointerEvents: 'none',
-  };
+  // TODO unused style const - remove?
+  // const style = {
+  //   position: 'absolute',
+  //   pointerEvents: 'none',
+  // };
 
   // https://stackoverflow.com/questions/71201080/brushstroke-effect-using-css-javascript
   return (

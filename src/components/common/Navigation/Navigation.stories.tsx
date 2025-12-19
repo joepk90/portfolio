@@ -1,7 +1,7 @@
-import React from 'react';
-import type { StoryFn, Meta } from '@storybook/nextjs-vite';
 import { Navigation, NavigationProps } from '@components/common/Navigation/Navigation'; // TODO setup aliases in storybook..
 import { menuItems } from '@src/config';
+import type { Meta, StoryFn } from '@storybook/nextjs-vite';
+import React from 'react';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

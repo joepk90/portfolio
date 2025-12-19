@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';
-import Seperator from '@components/common/Seperator/Seperator';
+import { Seperator } from '@components/common';
+import { render } from '@testing-library/react';
 
 const renderMockedElement = () => {
   return render(<Seperator />);

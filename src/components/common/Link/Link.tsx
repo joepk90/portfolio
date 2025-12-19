@@ -1,16 +1,19 @@
-import { PropsWithChildren, FC, HTMLAttributeAnchorTarget } from 'react';
+import '@components/common/Link/Link.scss';
+
 import {
   appendString,
   generateBEMModifiersClassList,
   ThemeVariant,
 } from '@src/lib/utilities/utilities';
-import '@components/common/Link/Link.scss';
+import { FC, HTMLAttributeAnchorTarget, PropsWithChildren } from 'react';
 
 export type LinkProps = {
   variant?: ThemeVariant;
   title?: string;
+  className?: string;
   target?: HTMLAttributeAnchorTarget;
-  [propName: string]: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [propName: string]: any; // TODO fix any type - use generic?
 };
 
 export const Link: FC<PropsWithChildren<LinkProps>> = ({

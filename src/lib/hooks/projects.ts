@@ -1,8 +1,8 @@
-import { GetStaticPropsResult } from 'next';
-import { EntryCollection } from 'contentful';
-import { contentfulClient } from '@src/lib/services/contentful';
 import { ContentfulCollectionManager } from '@src/lib/contentful/ContentfulCollectionManager';
 import { ContentfulProject, ProjectProps } from '@src/lib/contentful/ContentfulProject';
+import { contentfulClient } from '@src/lib/services/contentful';
+import { EntryCollection } from 'contentful';
+import { GetStaticPropsResult } from 'next';
 
 export type ProjectsProps = {
   projects: ProjectProps[];

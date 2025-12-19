@@ -1,6 +1,7 @@
-import React from 'react';
-import { siteTagline } from '@src/config';
 import '@components/SiteTagline/SiteTagline.scss';
+
+import { siteTagline } from '@src/config';
+import React from 'react';
 
 export const SiteTagline = () => {
   return (

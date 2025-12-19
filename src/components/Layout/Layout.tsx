@@ -1,9 +1,8 @@
-import React, { FC, PropsWithChildren } from 'react';
-
 import { SideTab } from '@components/common';
 import { Footer } from '@components/Footer';
 import { Header } from '@components/Header';
 import { SideTabContent } from '@components/SideTabContent';
+import React, { FC, PropsWithChildren } from 'react';
 
 const projectInfoTabIsEnabled = false;
 

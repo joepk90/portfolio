@@ -1,11 +1,11 @@
-import type { NextPage } from 'next';
-import { NextSeo } from 'next-seo';
-import { GetStaticProps } from 'next';
-import { getContactStaticProps, ContactProps } from '@src/lib/hooks/contact';
 import { Layout } from '@components/Layout';
 import { getPageUrl } from '@lib/utilities/utilities';
-import { SEO, contactURL } from '@src/config';
 import { ContactPage } from '@src/components';
+import { contactURL, SEO } from '@src/config';
+import { ContactProps, getContactStaticProps } from '@src/lib/hooks/contact';
+import type { NextPage } from 'next';
+import { GetStaticProps } from 'next';
+import { NextSeo } from 'next-seo';
 
 const pageUrl = getPageUrl(contactURL);
 

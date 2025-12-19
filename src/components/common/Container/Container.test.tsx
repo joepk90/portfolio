@@ -1,5 +1,5 @@
+import { Container } from '@components/common';
 import { render, screen } from '@testing-library/react';
-import Container from '@components/common/Container/Container';
 
 const lorum = `Lorem ipsum dolor`;
 

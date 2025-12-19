@@ -1,6 +1,7 @@
-import React from 'react';
 import type { Meta } from '@storybook/nextjs-vite';
+import React from 'react';
 import { action } from 'storybook/actions';
+
 import { Hamburger } from './Hamburger'; // TODO setup aliases in storybook..
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

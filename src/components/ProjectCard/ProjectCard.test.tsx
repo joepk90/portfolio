@@ -1,7 +1,7 @@
-import { render, screen } from '@testing-library/react';
-import ProjectCard from '@components/ProjectCard/ProjectCard';
+import { ProjectCard } from '@components/ProjectCard/ProjectCard';
 import { ProjectProps } from '@src/lib/contentful/ContentfulProject';
 import { ThemeVariant } from '@src/lib/utilities';
+import { render, screen } from '@testing-library/react';
 
 const project: ProjectProps = {
   date: 'March 2022',

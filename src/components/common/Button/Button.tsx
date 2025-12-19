@@ -1,13 +1,13 @@
-import { PropsWithChildren, FC } from 'react';
-import { appendString } from '@src/lib/utilities/utilities';
 import '@components/common/Button/Button.scss';
 
 import styles from '@components/common/Button/Button.module.scss';
+import { appendString } from '@src/lib/utilities/utilities';
+import { FC, PropsWithChildren } from 'react';
 const { buttonClass } = styles;
 
 export type ButtonProps = {
   className?: string;
-  [propName: string]: any;
+  [propName: string]: unknown; // TODO setup ts generic to handle this
 };
 
 export const Button: FC<PropsWithChildren<ButtonProps>> = ({ children, className, ...rest }) => {

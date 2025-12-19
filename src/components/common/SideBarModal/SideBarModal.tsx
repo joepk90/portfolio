@@ -1,6 +1,7 @@
-import { FC, ReactNode } from 'react';
-import { Button, Typography, Portal } from '@components/common';
 import '@components/common/SideBarModal/SideBarModal.scss';
+
+import { Button, Portal, Typography } from '@components/common';
+import { FC, ReactNode } from 'react';
 
 interface SideBarModalProps {
   isOpen: boolean;

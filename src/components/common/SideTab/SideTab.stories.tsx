@@ -1,6 +1,6 @@
-import React from 'react';
-import type { StoryFn, Meta } from '@storybook/nextjs-vite';
 import { SideTab, SideTabProps } from '@src/components/common/SideTab/SideTab'; // TODO setup aliases in storybook..
+import type { Meta, StoryFn } from '@storybook/nextjs-vite';
+import React from 'react';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -16,7 +16,7 @@ export default {
   },
 } as Meta<typeof SideTab>;
 
-const Template: StoryFn<SideTabProps> = (args: any) => {
+const Template: StoryFn<SideTabProps> = (args: SideTabProps) => {
   return <SideTab {...args}></SideTab>;
 };
 

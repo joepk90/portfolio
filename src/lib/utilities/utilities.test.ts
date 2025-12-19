@@ -1,4 +1,4 @@
-import { generateBEMModifiersClassList, appendString } from '@src/lib/utilities/utilities';
+import { appendString, generateBEMModifiersClassList } from '@src/lib/utilities/utilities';
 
 // https://jestjs.io/docs/using-matchers
 describe('Utility Function: generateBEMModifiersClassList', () => {
@@ -42,7 +42,7 @@ describe('Utility Function: appendString', () => {
 
   it('should return the original string if appended string is undefined', () => {
     const originalString = 'original';
-    let stringToAppend: any;
+    let stringToAppend: undefined;
     const updateString = appendString(originalString, stringToAppend);
     expect(updateString).toMatch(`${originalString}`);
   });

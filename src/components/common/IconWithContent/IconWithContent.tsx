@@ -1,5 +1,6 @@
-import { PropsWithChildren, FC, ReactNode } from 'react';
 import '@components/common/IconWithContent/IconWithContent.scss';
+
+import { FC, PropsWithChildren, ReactNode } from 'react';
 
 export type IconWithContentProps = {
   icon: ReactNode;

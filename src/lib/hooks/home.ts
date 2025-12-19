@@ -1,9 +1,9 @@
-import { GetStaticPropsResult } from 'next';
-import { ContentfulClientApi, Asset, EntryCollection } from 'contentful';
-import { contentfulClient } from '@src/lib/services/contentful';
 import { ContentfulCollectionManager } from '@src/lib/contentful/ContentfulCollectionManager';
 import { ContentfulPage, Page } from '@src/lib/contentful/ContentfulPage';
 import { ContentfulProfile, Profile } from '@src/lib/contentful/ContentfulProfile';
+import { contentfulClient } from '@src/lib/services/contentful';
+import { Asset, EntryCollection } from 'contentful';
+import { GetStaticPropsResult } from 'next';
 
 export type HomePageProps = {
   pageContent: string;

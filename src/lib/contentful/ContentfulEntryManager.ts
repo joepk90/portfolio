@@ -1,16 +1,17 @@
-import { Entry, TagLink, Metadata } from 'contentful';
+import { Entry, Metadata, TagLink } from 'contentful';
 
 interface ContentfulEntryManagerInterface<Fields> {
   getFields(): Fields;
-  getField(key: string): any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  getField(key: string): any; // TODO: fix any declaration (should all this be moved to gql service?)
   getMetadata(): Metadata | null;
   getTagLinks(): TagLink[];
   getTags(key: string): string[];
 }
 
-export abstract class ContentfulEntryManager<Fields>
-  implements ContentfulEntryManagerInterface<Fields>
-{
+export abstract class ContentfulEntryManager<
+  Fields,
+> implements ContentfulEntryManagerInterface<Fields> {
   entry: Entry<Fields>;
   tags: string[];
 
@@ -23,7 +24,9 @@ export abstract class ContentfulEntryManager<Fields>
     return this.entry.fields;
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   getField = (key: string): any => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const fields: any = this.getFields();
     return fields[key]; // TODO: Fix returned dynamic type issue
   };

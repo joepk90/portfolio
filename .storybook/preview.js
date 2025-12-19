@@ -1,7 +1,7 @@
 import { GlobalCSS } from '@components/GlobalCSS/GlobalCSS';
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -11,9 +11,9 @@ export const parameters = {
   options: {
     storySort: {
       method: 'alphabetical',
-    }
-  }
-}
+    },
+  },
+};
 
 // theme decorator (applies logic to all stories)
 const themeDecorator = (Story) => (
@@ -21,4 +21,4 @@ const themeDecorator = (Story) => (
     <GlobalCSS />
     <Story />
   </>
-)
+);

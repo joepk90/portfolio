@@ -1,9 +1,9 @@
-import type { StoryFn, Meta } from '@storybook/nextjs-vite';
 import {
   DiagonalSeperator,
   DiagonalSeperatorProps,
 } from '@src/components/common/DiagonalSeperator/DiagonalSeperator';
 import { BackgroundVariant } from '@src/lib/utilities';
+import type { Meta, StoryFn } from '@storybook/nextjs-vite';
 
 export default {
   title: 'Atoms/DiagonalSeperator',
@@ -15,13 +15,11 @@ export const Template: StoryFn<DiagonalSeperatorProps> = () => <DiagonalSeperato
 Template.storyName = 'DiagonalSeperator';
 
 export const Light = Template.bind({});
-Light.storyName = 'Light';
 Light.args = {
   backgroundVariant: BackgroundVariant.LightGrey,
 };
 
 export const Dark = Template.bind({});
-Dark.storyName = 'Dark';
 Dark.args = {
   backgroundVariant: BackgroundVariant.LightGrey,
 };

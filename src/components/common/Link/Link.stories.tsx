@@ -1,6 +1,6 @@
-import React from 'react';
-import type { StoryFn, Meta } from '@storybook/nextjs-vite';
 import { Link, LinkProps } from '@src/components/common';
+import type { Meta, StoryFn } from '@storybook/nextjs-vite';
+import React from 'react';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -13,7 +13,7 @@ export default {
   },
 } as Meta<typeof Link>;
 
-const Template: StoryFn<LinkProps> = (args: any) => {
+const Template: StoryFn<LinkProps> = (args: LinkProps) => {
   const { attributes, ...rest } = args;
 
   return <Link {...attributes} {...rest}></Link>;

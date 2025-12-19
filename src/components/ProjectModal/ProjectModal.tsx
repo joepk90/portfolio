@@ -1,17 +1,17 @@
-import { FC } from 'react';
-import { Document } from '@contentful/rich-text-types';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { ProjectProps } from '@src/lib/contentful/ContentfulProject';
-import { ContentfulLink } from '@components/common';
-
 import '@components/ProjectModal/ProjectModal.scss';
+
+import { ContentfulLink } from '@components/common';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { Document } from '@contentful/rich-text-types';
+import { ProjectProps } from '@src/lib/contentful/ContentfulProject';
+import { FC } from 'react';
 
 export type ProjectModalProps = {
   project: ProjectProps;
 };
 
 export const ProjectModal: FC<ProjectModalProps> = ({ project }) => {
-  const { title, repositoryLinks, description } = project;
+  const { repositoryLinks, description } = project;
 
   const renderDescription = () => {
     if (!description || typeof description === 'string') return '';

@@ -1,5 +1,6 @@
-import { useState } from 'react';
 import '@components/common/Hamburger/Hamburger.scss';
+
+import { useState } from 'react';
 
 type Props = {
   onClick: () => void;

@@ -1,6 +1,6 @@
-import { PropsWithChildren } from 'react';
-import type { StoryFn, Meta } from '@storybook/nextjs-vite';
 import { Section, SectionProps, sizeOptions } from '@components/common/Section/Section';
+import type { Meta, StoryFn } from '@storybook/nextjs-vite';
+import { PropsWithChildren } from 'react';
 
 // TODO add option to reset control state
 // https://github.com/storybookjs/storybook/issues/11487
