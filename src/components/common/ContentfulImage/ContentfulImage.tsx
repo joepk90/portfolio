@@ -11,7 +11,7 @@ type ContentfulImageProps = {
   };
 };
 
-type ContentfulImageAliasProps = {
+export type ContentfulImageAliasProps = {
   image: ContentfulImageProps;
   width: number;
   height: number;
