@@ -2,7 +2,7 @@ import '@src/components/common/ContentfulImage/ContentfulImage.scss';
 
 import Image from 'next/image';
 
-type ContentfulImageProps = {
+export type ContentfulImageProps = {
   fields: {
     title: string;
     file: {
