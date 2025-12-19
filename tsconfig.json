@@ -16,13 +16,17 @@
     "incremental": true,
     "baseUrl": ".",
     "types": ["jest", "@testing-library/jest-dom"],
-    "paths": {
+     "paths": {
       "@src/*": ["src/*"],
-      "@components": ["src/components"],
-      "@pages": ["src/pages"],
-      "@styles": ["src/styles"],
-      "@lib": ["src/lib"],
-      "@types": ["src/types"]
+      "@components": ["src/components/index.ts"],
+      "@components/*": ["src/components/*"],
+      "@pages": ["src/pages/index.ts"],
+      "@pages/*": ["src/pages/*"],
+      "@lib": ["src/lib/index.ts"],
+      "@lib/*": ["src/lib/*"],
+      "@types": ["src/types/index.ts"],
+      "@types/*": ["src/types/*"],
+      "@styles/*": ["src/styles/*"]
     }
   },
   "include": ["next-env.d.ts", "additional.d.ts", "**/*.ts", "**/*.tsx"],
