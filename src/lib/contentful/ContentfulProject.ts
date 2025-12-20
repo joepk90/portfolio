@@ -1,7 +1,7 @@
 import { Document } from '@contentful/rich-text-types';
+import { ContentfulEntryManager } from '@lib/contentful/ContentfulEntryManager';
+import { ContentfulLink } from '@lib/contentful/ContentfulLink';
 import { Asset, Entry } from 'contentful';
-import { ContentfulEntryManager } from './ContentfulEntryManager';
-import { ContentfulLink } from './ContentfulLink';
 
 export type ProjectProps = {
   date: string;
