@@ -1,0 +1,56 @@
+name: Test
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  test:
+    name: Run tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests (with JUnit & coverage)
+        env:
+          CI: true
+          JEST_JUNIT_OUTPUT: jest-junit.xml
+        run: npm run test:ci
+
+      - name: Upload JUnit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: junit-report
+          path: jest-junit.xml
+
+      - name: Upload coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage
+
+      # TODO enable and add to readme
+      # [![Codecov](https://codecov.io/gh/joepk90/portfolio/branch/main/graph/badge.svg)](https://codecov.io/gh/joepk90/portfolio)
+      # - name: Upload coverage to Codecov
+      #   if: success()
+      #   uses: codecov/codecov-action@v4
+      #   with:
+      #     files: coverage/lcov.info
+      #     token: ${{ secrets.CODECOV_TOKEN }}
+      #     fail_ci_if_error: false
+      #     verbose: true
