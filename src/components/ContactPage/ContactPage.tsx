@@ -2,7 +2,8 @@ import '@components/ContactPage/ContactPage.scss';
 
 import { Container, SectionWithSeperator } from '@components';
 import { LetsConnect, ViewCV } from '@components/ContactPage/components';
-import { ContactProps, ThemeVariant, generateContactListItems, getContactData } from '@lib';
+import { generateContactListItems } from '@components/ContactPage/utils';
+import { ContactProps, ThemeVariant, getContactData } from '@lib';
 import { FC } from 'react';
 
 export const ContactPage: FC<ContactProps> = ({
