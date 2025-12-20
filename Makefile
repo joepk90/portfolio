@@ -12,3 +12,7 @@ storybook-build:
 
 test:
 	npm run test
+
+.PHONY: lint-fix
+lint-fix:
+	npx eslint "src/**/*.{ts,tsx}" --fix
