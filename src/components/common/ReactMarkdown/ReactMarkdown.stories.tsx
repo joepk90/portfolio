@@ -1,6 +1,8 @@
-import { ReactMarkdownAlias as ReactMarkdown, ReactMarkdownProps } from '@components';
+import {
+  ReactMarkdownAlias as ReactMarkdown,
+  ReactMarkdownProps,
+} from '@components/common/ReactMarkdown';
 import type { Meta, StoryFn } from '@storybook/nextjs-vite';
-import React from 'react';
 
 export default {
   title: 'Atoms/ReactMarkdown',
