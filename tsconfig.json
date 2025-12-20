@@ -22,10 +22,13 @@
       "@components/*": ["src/components/*"],
       "@pages": ["src/pages/index.ts"],
       "@pages/*": ["src/pages/*"],
+      "@hooks": ["src/hooks/index.ts"],
+      "@hooks/*": ["src/hooks/*"],
       "@lib": ["src/lib/index.ts"],
       "@lib/*": ["src/lib/*"],
       "@types": ["src/types/index.ts"],
       "@types/*": ["src/types/*"],
+      "@config": ["src/config.ts"],
       "@styles/*": ["src/styles/*"]
     }
   },
