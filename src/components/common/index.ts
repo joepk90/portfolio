@@ -19,7 +19,8 @@ export * from './MenuItem';
 export * from './Navigation';
 export * from './Panel';
 export * from './Portal';
-export * from './ReactMarkdown';
+// TODO: ReactMarkdown is ESM only, not compatible with Jest (unit tests). Further investigation required
+// export * from './ReactMarkdown';
 export * from './Section';
 export * from './SectionWithSeperator';
 export * from './Seperator';

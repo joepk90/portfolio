@@ -9,3 +9,6 @@ storybook:
 
 storybook-build:
 	npm run storybook-build
+
+test:
+	npm run test
