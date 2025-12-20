@@ -10,6 +10,7 @@
     "postbuild": "next-sitemap",
     "lint": "next lint",
     "test": "jest --watch",
+    "test:ci": "jest --ci --runInBand --reporters=default --reporters=jest-junit --coverage --passWithNoTests",
     "storybook": "storybook dev -p 6006",
     "storybook-build": "storybook build",
     "chromatic": "npx chromatic --project-token=CHROMATIC_PROJECT_TOKEN"
@@ -63,6 +64,7 @@
     "storybook": "^10.1.10",
     "ts-node": "^10.9.2",
     "tsconfig-paths-webpack-plugin": "^4.0.0",
+    "jest-junit": "^13.0.0",
     "typescript": "^5.9.3",
     "vite": "^7.3.0",
     "vite-tsconfig-paths": "^6.0.3"
