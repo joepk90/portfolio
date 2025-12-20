@@ -1,4 +1,4 @@
-import { Link, LinkProps } from '@src/components/common';
+import { Link, LinkProps } from '@components';
 import type { Meta, StoryFn } from '@storybook/nextjs-vite';
 import React from 'react';
 

@@ -1,5 +1,5 @@
-import { useIsClient } from '@src/hooks';
-import { portalRootId } from '@src/lib/utilities';
+import { useIsClient } from '@hooks';
+import { portalRootId } from '@lib';
 import { FC, ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 

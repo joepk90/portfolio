@@ -1,7 +1,7 @@
 // .storybook/main.ts
+import type { StorybookConfig } from '@storybook/nextjs-vite';
 import path from 'path';
 import tsconfigPaths from 'vite-tsconfig-paths';
-import type { StorybookConfig } from '@storybook/nextjs-vite';
 
 const config: StorybookConfig = {
   framework: '@storybook/nextjs-vite',

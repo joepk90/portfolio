@@ -1,9 +1,11 @@
-import { Section } from '@components/common';
-import { Layout } from '@components/Layout';
-import { ContentfulCollectionManager } from '@src/lib/contentful/ContentfulCollectionManager';
-import { ContentfulPage, Page } from '@src/lib/contentful/ContentfulPage';
-import { contentfulClient } from '@src/lib/services/contentful';
-import { setGTMOptOutCookie } from '@src/lib/utilities/googleTagManager';
+import { Layout, Section } from '@components';
+import {
+  ContentfulCollectionManager,
+  ContentfulPage,
+  Page,
+  contentfulClient,
+  setGTMOptOutCookie,
+} from '@lib';
 import { EntryCollection } from 'contentful';
 import { GetStaticPathsResult, GetStaticPropsResult, NextPage } from 'next';
 import { useEffect } from 'react';

@@ -1,6 +1,6 @@
 import '@components/ContactPage/components/LetsConnect/LetsConnect.scss';
 
-import { Heading, List, Panel, Typography } from '@components/common';
+import { Heading, List, Panel, Typography } from '@components';
 import { FC, ReactNode } from 'react';
 
 /**

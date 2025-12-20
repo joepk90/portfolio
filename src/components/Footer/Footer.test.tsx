@@ -1,5 +1,5 @@
-import { Footer } from '@components/Footer/Footer';
-import { siteDescription } from '@src/config';
+import { Footer } from '@components';
+import { siteDescription } from '@config';
 import { render, screen } from '@testing-library/react';
 
 const renderMockedElement = () => {

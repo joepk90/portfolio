@@ -1,4 +1,4 @@
-import { DangerousHTML } from '@src/types';
+import { DangerousHTML } from '@types';
 import { cloneElement, FC, PropsWithChildren, ReactElement, ReactNode } from 'react';
 
 /**

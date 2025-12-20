@@ -1,4 +1,4 @@
-import { MenuItem } from '@components/common';
+import { MenuItem } from '@components';
 import { render, screen } from '@testing-library/react';
 import React from 'react';
 

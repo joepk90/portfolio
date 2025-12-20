@@ -1,8 +1,7 @@
 import '@components/Header/Header.scss';
 
-import { DropdownNavigation, Hamburger, Navigation, Seperator } from '@components/common';
-import { SiteBranding } from '@components/SiteBranding';
-import { indexURL, menuItems } from '@src/config';
+import { DropdownNavigation, Hamburger, Navigation, Seperator, SiteBranding } from '@components';
+import { indexURL, menuItems } from '@config';
 import Link from 'next/link';
 import { useState } from 'react';
 

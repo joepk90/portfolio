@@ -1,13 +1,11 @@
-import { BrushStrokeSVGClipPath } from '@components/common/BrushStroke/BrushStroke';
-import {
-  BrushStrokeWrapper,
-  BrushStrokeWrapperProps,
-} from '@components/common/BrushStrokeWrapper/BrushStrokeWrapper';
 // import Image from 'next/image';
 import {
   ContentfulImageAlias as ContentfulImage,
   ContentfulImageProps,
-} from '@components/common/ContentfulImage/ContentfulImage';
+  BrushStrokeSVGClipPath,
+  BrushStrokeWrapper,
+  BrushStrokeWrapperProps,
+} from '@components';
 import type { Meta, StoryFn } from '@storybook/nextjs-vite';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

@@ -1,4 +1,4 @@
-import { GlobalCSS } from '@components/GlobalCSS/GlobalCSS';
+import { GlobalCSS } from '@components';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

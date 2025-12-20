@@ -1,6 +1,5 @@
-import { ProjectCard } from '@components/ProjectCard/ProjectCard';
-import { ProjectProps } from '@src/lib/contentful/ContentfulProject';
-import { ThemeVariant } from '@src/lib/utilities';
+import { ProjectCard } from '@components';
+import { ThemeVariant, ProjectProps } from '@lib';
 import { render, screen } from '@testing-library/react';
 
 const project: ProjectProps = {

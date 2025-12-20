@@ -1,4 +1,4 @@
-import { Heading, HeadingLevels } from '@components/common';
+import { Heading, HeadingLevels } from '@components';
 import { render, screen } from '@testing-library/react';
 
 const headingText = 'The Title';

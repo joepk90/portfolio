@@ -1,4 +1,4 @@
-import { SiteBranding } from '@components/SiteBranding/SiteBranding';
+import { SiteBranding } from '@components';
 import { render } from '@testing-library/react';
 
 describe('SiteBranding', () => {

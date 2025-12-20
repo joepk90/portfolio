@@ -1,6 +1,6 @@
 import '@components/common/Navigation/Navigation.scss';
 
-import { MenuItem, MenuItemProps } from '@components/common';
+import { MenuItem, MenuItemProps } from '@components';
 
 type Variant = 'dark' | 'light';
 

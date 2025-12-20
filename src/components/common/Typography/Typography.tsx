@@ -1,6 +1,6 @@
 import '@components/common/Typography/Typography.scss';
 
-import { generateBEMModifiersClassList } from '@src/lib/utilities';
+import { generateBEMModifiersClassList } from '@lib';
 import React, { FC, HTMLAttributes, PropsWithChildren } from 'react';
 
 /**

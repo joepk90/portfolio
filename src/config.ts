@@ -1,4 +1,4 @@
-import { getSiteUrl } from '@lib/utilities/environmentVars';
+import { getSiteUrl } from '@lib/core';
 
 /**
  * HOST

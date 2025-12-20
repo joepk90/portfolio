@@ -1,6 +1,6 @@
 import '@components/common/BrushStrokeWrapper/BrushStrokeWrapper.scss';
 
-import { BrushStroke } from '@components/common';
+import { BrushStroke } from '@components';
 import { ReactNode } from 'react';
 
 export type BrushStrokeWrapperProps = {

@@ -1,6 +1,6 @@
 import { ContentfulCollectionManager } from '@lib/contentful/ContentfulCollectionManager';
+import { ContentfulPage, ContentfulPageInterface, Page } from '@lib/contentful/ContentfulPage';
 import { contentfulClient } from '@lib/services/contentful';
-import { ContentfulPage, ContentfulPageInterface, Page } from '@src/lib/contentful/ContentfulPage';
 import { Entry, EntryCollection } from 'contentful';
 
 type Item = {
@@ -17,7 +17,7 @@ const item: Item = {
   fields: itemFields,
 };
 
-jest.mock('@lib/services/contentful.ts', () => ({
+jest.mock('@lib/services/contentful', () => ({
   contentfulClient: {
     getEntries: jest.fn(() => ({
       items: [item],

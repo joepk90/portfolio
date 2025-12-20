@@ -1,8 +1,8 @@
 import '@components/common/SectionWithSeperator/SectionWithSeperator.scss';
 
-import { DiagonalSeperator, Section, SectionProps } from '@components/common';
+import { DiagonalSeperator, Section, SectionProps } from '@components';
 import styles from '@components/common/SectionWithSeperator/SectionWithSeperator.module.scss';
-import { BackgroundVariant, ThemeVariant } from '@src/lib/utilities';
+import { BackgroundVariant, ThemeVariant } from '@lib';
 import { FC, PropsWithChildren } from 'react';
 
 const { sectionWithSeperator } = styles;

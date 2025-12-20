@@ -1,4 +1,4 @@
-import { SideTab, SideTabProps } from '@src/components/common/SideTab/SideTab'; // TODO setup aliases in storybook..
+import { SideTab, SideTabProps } from '@components'; // TODO setup aliases in storybook..
 import type { Meta, StoryFn } from '@storybook/nextjs-vite';
 import React from 'react';
 

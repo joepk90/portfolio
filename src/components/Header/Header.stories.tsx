@@ -1,4 +1,4 @@
-import { Header } from '@components/Header/Header';
+import { Header } from '@components';
 import type { Meta } from '@storybook/nextjs-vite';
 import React from 'react';
 

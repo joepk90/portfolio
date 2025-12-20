@@ -1,6 +1,6 @@
 import '@components/common/MenuItem/MenuItem.scss';
 
-import { generateBEMModifiersClassList } from '@src/lib/utilities/utilities';
+import { generateBEMModifiersClassList } from '@lib';
 import Link from 'next/link';
 import React from 'react';
 

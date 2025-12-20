@@ -1,7 +1,7 @@
 import '@components/common/SideTab/SideTab.scss';
 
-import { Button } from '@components/common';
-import { generateBEMModifiersClassList } from '@src/lib/utilities/utilities';
+import { Button } from '@components';
+import { generateBEMModifiersClassList } from '@lib';
 import { ReactNode, useState } from 'react';
 
 export type SideTabProps = {

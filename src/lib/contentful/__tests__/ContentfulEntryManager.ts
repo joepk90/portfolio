@@ -1,6 +1,6 @@
 import { ContentfulCollectionManager } from '@lib/contentful/ContentfulCollectionManager';
+import { ContentfulEntryManager } from '@lib/contentful/ContentfulEntryManager';
 import { contentfulClient } from '@lib/services/contentful';
-import { ContentfulEntryManager } from '@src/lib/contentful/ContentfulEntryManager';
 import { EntryCollection, Metadata, TagLink } from 'contentful';
 
 type ItemFields = {
@@ -35,7 +35,7 @@ const item: Item = {
   metadata: metadata,
 };
 
-jest.mock('@lib/services/contentful.ts', () => ({
+jest.mock('@lib/services/contentful', () => ({
   contentfulClient: {
     getEntries: jest.fn(() => ({
       items: [item],

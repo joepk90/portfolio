@@ -1,4 +1,4 @@
-import { Button } from '@src/components/common/Button/Button'; // TODO setup aliases in storybook..
+import { Button } from '@components'; // TODO setup aliases in storybook..
 import { render, screen } from '@testing-library/react';
 
 const buttonText = `Button Text`;

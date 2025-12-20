@@ -1,9 +1,8 @@
 import '@components/Footer/Footer.scss';
 
-import { Container, Navigation, Section } from '@components/common';
-import { SiteTitle } from '@components/SiteTitle';
-import { menuItems, siteDescription } from '@src/config';
-import { ThemeVariant } from '@src/lib/utilities';
+import { Container, Navigation, Section, SiteTitle } from '@components';
+import { menuItems, siteDescription } from '@config';
+import { ThemeVariant } from '@lib';
 
 export const Footer = () => {
   return (

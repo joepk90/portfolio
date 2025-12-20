@@ -1,7 +1,6 @@
 import '@components/SiteBranding/SiteBranding.scss';
 
-import { SiteLogo } from '@components/SiteLogo';
-import { SiteTitle } from '@components/SiteTitle';
+import { SiteLogo, SiteTitle } from '@components';
 import React from 'react';
 
 // TODO setup mobile first media query logic (client or SSR?)

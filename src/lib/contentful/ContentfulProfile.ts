@@ -1,4 +1,4 @@
-import { ContentfulEntryManager } from '@src/lib/contentful/ContentfulEntryManager';
+import { ContentfulEntryManager } from '@lib/contentful/ContentfulEntryManager';
 import { Asset } from 'contentful';
 
 export interface ContentfulProfileInterface {

@@ -1,4 +1,4 @@
-import { SiteTagline } from '@components/SiteTagline/SiteTagline';
+import { SiteTagline } from '@components';
 import type { Meta } from '@storybook/nextjs-vite';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

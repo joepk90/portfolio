@@ -1,4 +1,4 @@
-import { Section } from '@components/common';
+import { Section } from '@components';
 import { render, screen } from '@testing-library/react';
 
 const lorum = `Lorem ipsum dolor`;

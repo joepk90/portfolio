@@ -1,10 +1,6 @@
 import '@components/common/Link/Link.scss';
 
-import {
-  appendString,
-  generateBEMModifiersClassList,
-  ThemeVariant,
-} from '@src/lib/utilities/utilities';
+import { appendString, generateBEMModifiersClassList, ThemeVariant } from '@lib';
 import { FC, HTMLAttributeAnchorTarget, PropsWithChildren } from 'react';
 
 export type LinkProps = {

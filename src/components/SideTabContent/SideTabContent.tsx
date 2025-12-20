@@ -1,5 +1,5 @@
-import { Heading } from '@components/common';
-import { getComponentLibraryUrl, getSourceCodeUrl } from '@lib/utilities/environmentVars';
+import { Heading } from '@components';
+import { getComponentLibraryUrl, getSourceCodeUrl } from '@lib/core';
 
 /**
  * component not built for reuse: no tests or story setup

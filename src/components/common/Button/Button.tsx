@@ -1,7 +1,7 @@
 import '@components/common/Button/Button.scss';
 
 import styles from '@components/common/Button/Button.module.scss';
-import { appendString } from '@src/lib/utilities/utilities';
+import { appendString } from '@lib';
 import { FC, PropsWithChildren } from 'react';
 const { buttonClass } = styles;
 

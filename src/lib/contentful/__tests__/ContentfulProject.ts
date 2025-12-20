@@ -1,6 +1,6 @@
 import { ContentfulCollectionManager } from '@lib/contentful/ContentfulCollectionManager';
+import { ContentfulProject, ProjectProps } from '@lib/contentful/ContentfulProject';
 import { contentfulClient } from '@lib/services/contentful';
-import { ContentfulProject, ProjectProps } from '@src/lib/contentful/ContentfulProject';
 import { Entry, EntryCollection, TagLink } from 'contentful';
 
 const tagLink: TagLink = {
@@ -30,7 +30,7 @@ const item = {
   },
 };
 
-jest.mock('@lib/services/contentful.ts', () => ({
+jest.mock('@lib/services/contentful', () => ({
   contentfulClient: {
     getEntries: jest.fn(() => ({
       items: [item],

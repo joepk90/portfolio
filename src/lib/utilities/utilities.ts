@@ -1,4 +1,4 @@
-import { siteURL } from '@src/config';
+import { getSiteUrl } from '@lib/core';
 
 /**
  *
@@ -30,7 +30,7 @@ export const appendString = (
 export const getPageUrl = (slug: string): string => {
   if (slug === '') return '';
 
-  return `${siteURL}/${slug}`;
+  return `${getSiteUrl()}/${slug}`;
 };
 
 export enum ThemeVariant {

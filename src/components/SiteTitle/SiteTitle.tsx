@@ -1,7 +1,7 @@
 import '@components/SiteTitle/SiteTitle.scss';
 
-import { siteAuthor } from '@src/config';
-import { generateBEMModifiersClassList, ThemeVariant } from '@src/lib/utilities';
+import { siteAuthor } from '@config';
+import { generateBEMModifiersClassList, ThemeVariant } from '@lib';
 
 export type SiteTitleProps = {
   variant?: ThemeVariant;

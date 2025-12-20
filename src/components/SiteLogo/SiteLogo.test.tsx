@@ -1,4 +1,4 @@
-import { SiteLogo } from '@components/SiteLogo/SiteLogo';
+import { SiteLogo } from '@components';
 import { render, screen } from '@testing-library/react';
 
 describe('SiteLogo', () => {
