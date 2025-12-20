@@ -1,11 +1,11 @@
 import {
   ContentfulCollectionManager,
   ContentfulCollectionManagerInterface,
-  contentfulClient,
-} from '@lib';
+} from '@lib/contentful/ContentfulCollectionManager';
+import { contentfulClient } from '@lib/services/contentful';
 import { EntryCollection } from 'contentful';
 
-jest.mock('@lib/services/contentful.ts', () => ({
+jest.mock('@lib/services/contentful', () => ({
   contentfulClient: {
     getEntries: jest.fn(() => ({
       sys: [],
