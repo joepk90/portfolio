@@ -1,6 +1,7 @@
 import '@components/HomePage/components/AboutCard/AboutCard.scss';
 
-import { Heading, ReactMarkdownAlias as ReactMarkdown } from '@components/common';
+import { Heading } from '@components/common';
+import { ReactMarkdownAlias as ReactMarkdown } from '@components/common/ReactMarkdown';
 import { FC } from 'react';
 
 export type AboutCardProps = {
