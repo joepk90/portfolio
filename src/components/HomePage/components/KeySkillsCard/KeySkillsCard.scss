@@ -52,19 +52,12 @@
     line-height: 1em;
     font-weight: bold;
     text-align: center;
-    font-size: 110px;
+    font-size: rem(110px);
 
     @include breakpoint($smallTabletLandscapeName) {
       width: 50%;
-      font-size: 120px;
+      font-size: rem(120px);
       text-align: left;
-    }
-
-    &:first-letter {
-      font-size: 140px;
-      @include breakpoint($smallTabletLandscapeName) {
-        font-size: 200px;
-      }
     }
   }
 }
