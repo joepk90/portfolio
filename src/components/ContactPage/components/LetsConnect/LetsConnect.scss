@@ -19,18 +19,14 @@
 
   &__heading {
     text-align: center;
-    font-size: rem(80px);
-    margin-bottom: rem(5px);
+    font-size: rem(100px);
+    margin-bottom: rem(10px);
     margin-top: 0;
     font-weight: 700;
-    text-transform: uppercase;
 
     @include breakpoint($smallTabletLandscapeName) {
+      font-size: rem(110px);
       text-align: right;
-    }
-    @include breakpoint($largeDesktopName) {
-      text-align: right;
-      font-size: rem(100px);
     }
   }
 
