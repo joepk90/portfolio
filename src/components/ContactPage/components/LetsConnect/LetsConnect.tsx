@@ -20,7 +20,7 @@ export const LetsConnect: FC<LetsConnectProps> = ({ contactListItems }) => {
   return (
     <div className="lets-connect">
       <div className="lets-connect__header">
-        <Heading className="lets-connect__heading">{`Let's connect!`}</Heading>
+        <Heading className="lets-connect__heading">{`Let's Connect!`}</Heading>
         <Typography variant="heading4" className="lets-connect__sub-heading">
           Have a project in mind? Or just want to say hello?
         </Typography>
