@@ -27,7 +27,7 @@ export const ViewCV: FC<ViewCVProps> = ({ cvLink }) => {
         </Link>
       </div>
 
-      <Heading className="view-cv__heading">{`See My CV`}</Heading>
+      <Heading className="view-cv__heading">{`See My CV.`}</Heading>
     </div>
   );
 };
