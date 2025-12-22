@@ -26,7 +26,7 @@ export const LetsConnect: FC<LetsConnectProps> = ({ contactListItems }) => {
         </Typography>
       </div>
 
-      <Panel>
+      <Panel className="lets-connect__panel">
         <List listItems={contactListItems} />
       </Panel>
     </div>

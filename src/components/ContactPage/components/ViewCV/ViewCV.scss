@@ -25,22 +25,23 @@
 
   &__heading {
     max-width: rem(400px);
-    font-size: rem(100px);
+    font-size: rem(80px);
     margin-bottom: 0.2em;
     margin-top: 0;
     font-weight: 700;
     color: white;
     text-align: center;
-    @include breakpoint($smallTabletLandscapeName) {
-      text-align: right;
-      font-size: rem(110px);
+
+     @include breakpoint($largeHandsetLandscapeName) {
+      font-size: rem(100px);
     }
 
     // TODO: remove custom styles - make heading component styles more customisable
 
     @include breakpoint($smallTabletLandscapeName) {
-      text-align: left;
       max-width: 50%;
+      text-align: left;
+      font-size: rem(110px);
     }
   }
 

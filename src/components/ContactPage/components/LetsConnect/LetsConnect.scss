@@ -19,14 +19,36 @@
 
   &__heading {
     text-align: center;
-    font-size: rem(100px);
+    font-size: rem(80px);
     margin-bottom: rem(10px);
     margin-top: 0;
     font-weight: 700;
 
+    @include breakpoint($largeHandsetLandscapeName) {
+      font-size: rem(100px);
+    }
+
     @include breakpoint($smallTabletLandscapeName) {
       font-size: rem(110px);
       text-align: right;
+    }
+  }
+  &__panel {
+    width: 100%;
+    @include breakpoint($smallHandsetLandscapeName) {
+      width: auto;
+    }
+
+    // TODO - this is a hack - intead override the list styles by importing the name as a module
+    .typography--heading5 {
+      font-size: rem(12px);
+    }
+
+    // TODO - this is a hack - intead override the list styles by importing the name as a module
+    @include breakpoint($smallHandsetLandscapeName) {
+      .typography--heading5 {
+      font-size: rem(18px);
+    }
     }
   }
 
