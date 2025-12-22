@@ -12,13 +12,15 @@ export type IntroCardProps = {
 export const IntroCard: FC<IntroCardProps> = ({ image, text }) => {
   return (
     <div className="intro-card">
-      <div className="intro-card__image">
-        <BrushStrokeWrapper>
-          <ContentfulImage image={image} width={325} height={325} />
-        </BrushStrokeWrapper>
-      </div>
+      <div className="intro-card__wrapper">
+        <div className="intro-card__image">
+          <BrushStrokeWrapper>
+            <ContentfulImage image={image} width={500} height={500} />
+          </BrushStrokeWrapper>
+        </div>
 
-      <Heading className="intro-card__heading">{text}</Heading>
+        <Heading className="intro-card__heading">{text}</Heading>
+      </div>
     </div>
   );
 };
