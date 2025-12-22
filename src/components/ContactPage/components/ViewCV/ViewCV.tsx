@@ -1,7 +1,7 @@
 import '@components/ContactPage/components/ViewCV/ViewCV.scss';
 
 import { Button, Heading, Link, Typography } from '@components';
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 /**
  * ViewCV Component
