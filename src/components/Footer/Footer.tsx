@@ -5,6 +5,8 @@ import { menuItems, siteDescription } from '@config';
 import { ThemeVariant } from '@lib';
 
 export const Footer = () => {
+  const currentYear = new Date().getUTCFullYear();
+
   return (
     <footer className="footer">
       <Section margin="lg">
@@ -30,7 +32,7 @@ export const Footer = () => {
       <Section marginBottom="sm">
         <Container>
           <div className="footer__copyright" data-testid="footer-copyright">
-            @ Joe Park-Kennaby 2022
+            @ Joe Park-Kennaby {currentYear}
           </div>
         </Container>
       </Section>
