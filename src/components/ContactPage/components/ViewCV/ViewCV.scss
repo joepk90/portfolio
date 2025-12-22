@@ -10,31 +10,37 @@
   flex-direction: column-reverse;
   gap: rem(50px); // TODO REVIEW - browser incompatiblity
   align-items: center;
+  width: 100%;
   @include breakpoint($smallTabletLandscapeName) {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
   }
 
+  &__button-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+
   &__heading {
     max-width: rem(400px);
-    font-size: rem(80px);
+    font-size: rem(100px);
     margin-bottom: 0.2em;
     margin-top: 0;
     font-weight: 700;
-    text-transform: uppercase;
     color: white;
     text-align: center;
     @include breakpoint($smallTabletLandscapeName) {
       text-align: right;
-      font-size: rem(90px);
+      font-size: rem(110px);
     }
 
     // TODO: remove custom styles - make heading component styles more customisable
 
     @include breakpoint($smallTabletLandscapeName) {
       text-align: left;
-      max-width: rem(400px);
+      max-width: 50%;
     }
   }
 

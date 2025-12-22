@@ -19,12 +19,15 @@ type ViewCVProps = {
 export const ViewCV: FC<ViewCVProps> = ({ cvLink }) => {
   return (
     <div className="view-cv">
-      <Link target="_blank" href={cvLink} title="">
-        <Button>
-          <Typography variant="heading2">View CV</Typography>
-        </Button>
-      </Link>
-      <Heading className="view-cv__heading">See my latest CV.</Heading>
+      <div className="view-cv__button-wrapper">
+        <Link target="_blank" href={cvLink} title="">
+          <Button>
+            <Typography variant="heading2">View CV</Typography>
+          </Button>
+        </Link>
+      </div>
+
+      <Heading className="view-cv__heading">{`See My CV`}</Heading>
     </div>
   );
 };
