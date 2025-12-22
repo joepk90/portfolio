@@ -29,6 +29,24 @@
       text-align: right;
     }
   }
+  &__panel {
+    width: 100%;
+    @include breakpoint($smallHandsetLandscapeName) {
+      width: auto;
+    }
+
+    // TODO - this is a hack - intead override the list styles by importing the name as a module
+    .typography--heading5 {
+      font-size: rem(12px);
+    }
+
+    // TODO - this is a hack - intead override the list styles by importing the name as a module
+    @include breakpoint($smallHandsetLandscapeName) {
+      .typography--heading5 {
+      font-size: rem(18px);
+    }
+    }
+  }
 
   &__sub-heading {
     text-align: center;
