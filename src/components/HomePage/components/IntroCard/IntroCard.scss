@@ -63,13 +63,18 @@
     }
 
     @include breakpoint($smallTabletLandscapeName) {
-      font-size: rem(150px);
+      font-size: rem(155px);
     }
 
     &:first-letter {
-      font-size: rem(120px);
-      @include breakpoint($largeHandsetName) {
-        font-size: rem(170px);
+      font-size: rem(170px);
+
+      @include breakpoint($largeTabletName) {
+        font-size: rem(150px);
+      }
+
+       @include breakpoint($smallTabletLandscapeName) {
+        font-size: rem(200px);
       }
     }
   }
